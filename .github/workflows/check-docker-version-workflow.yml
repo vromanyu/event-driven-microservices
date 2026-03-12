@@ -1,0 +1,17 @@
+name: docker-version-workflow.yml
+on:
+  workflow_dispatch:
+
+jobs:
+  demo-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check Docker
+        id: docker-version
+        run: |
+          DOCKER_VERSION=$(docker version --format '{{.Server.Version}}')
+          echo "version=$DOCKER_VERSION" >> $GITHUB_OUTPUT
+      - name: Display Docker Version
+        id: display-docker-version
+        run: |
+          echo ${{ steps.docker-version.outputs.version }}
