@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  demo-job:
+  check-docker-version:
     runs-on: ubuntu-latest
     steps:
       - name: Check Docker
