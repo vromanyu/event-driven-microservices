@@ -1,3 +1,15 @@
 spring:
   application:
     name: order-ms
+  datasource:
+    username: order
+    password: order
+    url: jdbc:h2:mem:orderDb
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+        globally_quoted_identifiers: true
