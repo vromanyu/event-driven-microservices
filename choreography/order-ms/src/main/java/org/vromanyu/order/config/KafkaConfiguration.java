@@ -55,5 +55,5 @@ public class KafkaConfiguration {
                 .replicas(1)
                 .build();
     }
-    
+
 }

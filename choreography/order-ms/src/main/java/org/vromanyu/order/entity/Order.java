@@ -10,7 +10,8 @@ import java.time.LocalDateTime;
 @Entity
 public class Order {
 
-    @Id @GeneratedValue
+    @Id
+    @GeneratedValue
     private Integer id;
 
     private Integer userId;
@@ -28,7 +29,8 @@ public class Order {
     @CreationTimestamp
     private LocalDateTime createdAt;
 
-    public Order() {}
+    public Order() {
+    }
 
     public Integer getId() {
         return id;
