@@ -4,16 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f53cd7e9-042e-48da-856a-18c59663b55c" name="Changes" comment="add kafka dependency">
-      <change afterPath="$PROJECT_DIR$/choreography/order-ms/src/main/java/org/vromanyu/order/config/KafkaConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/choreography/order-ms/src/main/java/org/vromanyu/order/controller/OrderController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/choreography/order-ms/src/main/java/org/vromanyu/order/controller/OrderControllerAdvice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/choreography/order-ms/src/main/java/org/vromanyu/order/service/OrderPublisher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/choreography/order-ms/src/main/java/org/vromanyu/order/service/OrderService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/choreography/order-ms/src/main/java/org/vromanyu/order/service/OrderServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/choreography/core/src/main/java/org/vromanyu/core/OrderEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/choreography/core/src/main/java/org/vromanyu/core/OrderEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/choreography/order-ms/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/choreography/order-ms/src/main/resources/application.yaml" afterDir="false" />
+    <list default="true" id="f53cd7e9-042e-48da-856a-18c59663b55c" name="Changes" comment="add .gitignore">
+      <change beforePath="$PROJECT_DIR$/choreography/payment-ms/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/choreography/payment-ms/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +46,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Maven.choreography [clean].executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
@@ -119,7 +112,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1773609093086</updated>
-      <workItem from="1773609094271" duration="4060000" />
+      <workItem from="1773609094271" duration="4509000" />
     </task>
     <task id="LOCAL-00001" summary="init choreography services">
       <option name="closed" value="true" />
@@ -201,7 +194,71 @@
       <option name="project" value="LOCAL" />
       <updated>1773611188172</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="add orderId">
+      <option name="closed" value="true" />
+      <created>1773613290428</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1773613290428</updated>
+    </task>
+    <task id="LOCAL-00012" summary="add kafka configuration">
+      <option name="closed" value="true" />
+      <created>1773613301741</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1773613301741</updated>
+    </task>
+    <task id="LOCAL-00013" summary="add kafka configuration">
+      <option name="closed" value="true" />
+      <created>1773613306495</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1773613306495</updated>
+    </task>
+    <task id="LOCAL-00014" summary="add OrderService and OrderPublisher to publish OrderEvent">
+      <option name="closed" value="true" />
+      <created>1773613344025</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1773613344025</updated>
+    </task>
+    <task id="LOCAL-00015" summary="add OrderController">
+      <option name="closed" value="true" />
+      <created>1773613357382</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1773613357382</updated>
+    </task>
+    <task id="LOCAL-00016" summary="add OrderControllerAdvice">
+      <option name="closed" value="true" />
+      <created>1773613361033</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1773613361033</updated>
+    </task>
+    <task id="LOCAL-00017" summary="reformat">
+      <option name="closed" value="true" />
+      <created>1773613374108</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1773613374108</updated>
+    </task>
+    <task id="LOCAL-00018" summary="add .gitignore">
+      <option name="closed" value="true" />
+      <created>1773613404603</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1773613404603</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -217,6 +274,13 @@
     <MESSAGE value="remove orderId from dto" />
     <MESSAGE value="add OrderRepository" />
     <MESSAGE value="add kafka dependency" />
-    <option name="LAST_COMMIT_MESSAGE" value="add kafka dependency" />
+    <MESSAGE value="add orderId" />
+    <MESSAGE value="add kafka configuration" />
+    <MESSAGE value="add OrderService and OrderPublisher to publish OrderEvent" />
+    <MESSAGE value="add OrderController" />
+    <MESSAGE value="add OrderControllerAdvice" />
+    <MESSAGE value="reformat" />
+    <MESSAGE value="add .gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="add .gitignore" />
   </component>
 </project>
