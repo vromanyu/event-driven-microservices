@@ -2,6 +2,7 @@ package org.vromanyu.order.entity;
 
 import jakarta.persistence.*;
 import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 import org.vromanyu.core.OrderStatus;
 import org.vromanyu.core.PaymentStatus;
 
@@ -28,6 +29,9 @@ public class Order {
 
     @CreationTimestamp
     private LocalDateTime createdAt;
+
+    @UpdateTimestamp
+    private LocalDateTime updatedAt;
 
     public Order() {
     }
@@ -88,6 +92,14 @@ public class Order {
         this.createdAt = createdAt;
     }
 
+    public LocalDateTime getUpdatedAt() {
+        return updatedAt;
+    }
+
+    public void setUpdatedAt(LocalDateTime updatedAt) {
+        this.updatedAt = updatedAt;
+    }
+
     @Override
     public String toString() {
         return "Order{" +
@@ -98,6 +110,7 @@ public class Order {
                 ", orderStatus=" + orderStatus +
                 ", paymentStatus=" + paymentStatus +
                 ", createdAt=" + createdAt +
+                ", updatedAt=" + updatedAt +
                 '}';
     }
 }
