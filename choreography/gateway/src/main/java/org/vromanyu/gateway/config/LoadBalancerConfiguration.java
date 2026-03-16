@@ -6,6 +6,7 @@ import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.loadbalancer.core.ServiceInstanceListSupplier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Profile;
 import reactor.core.publisher.Flux;
 
 import java.util.List;
@@ -14,8 +15,15 @@ import java.util.List;
 public class LoadBalancerConfiguration {
 
     @Bean
+    @Profile("!prod")
     public ServiceInstanceListSupplier userBalanceSupplier() {
         return new InstanceSupplier("order-ms", "localhost", 8085);
+    }
+
+    @Bean
+    @Profile("prod")
+    public ServiceInstanceListSupplier userBalanceProdSupplier() {
+        return new InstanceSupplier("order-ms", "order-ms", 8085);
     }
 
     static class InstanceSupplier implements ServiceInstanceListSupplier {
