@@ -42,7 +42,7 @@ public class OrderServiceTests {
 
         Order createdOrder = orderService.createOrder(orderRequest);
 
-        Mockito.verify(orderPublisher).publishOrderCreatedEvent(1, orderRequest);
+        Mockito.verify(orderPublisher, Mockito.times(1)).publishOrderCreatedEvent(1, orderRequest);
 
         Assertions.assertThat(createdOrder).isNotNull();
         Assertions.assertThat(createdOrder.getId()).isEqualTo(1);
