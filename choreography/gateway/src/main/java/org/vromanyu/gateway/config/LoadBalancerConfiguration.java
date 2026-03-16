@@ -39,7 +39,7 @@ public class LoadBalancerConfiguration {
         public Flux<List<ServiceInstance>> get() {
             return Flux.just(List.of(
                     new DefaultServiceInstance(serviceId + "1", serviceId, host, port, false)
-                    ));
+            ));
         }
     }
 }

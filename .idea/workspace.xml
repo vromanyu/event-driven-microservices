@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f53cd7e9-042e-48da-856a-18c59663b55c" name="Changes" comment=".idea" />
+    <list default="true" id="f53cd7e9-042e-48da-856a-18c59663b55c" name="Changes" comment="add loadbalancer dependency">
+      <change afterPath="$PROJECT_DIR$/choreography/gateway/src/main/java/org/vromanyu/gateway/config/GatewayRoutesConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/choreography/gateway/src/main/java/org/vromanyu/gateway/config/LoadBalancerConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/choreography/gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/choreography/gateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/choreography/gateway/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/choreography/gateway/src/main/resources/application.yaml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,6 +51,8 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Maven.choreography [clean].executor": "Run",
+    "Maven.gateway [clean,install].executor": "Run",
+    "Maven.gateway [clean].executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "Notification.DisplayName-DoNotAsk-DatabaseConfigFileWatcher.found": "New/updated database configurations found",
     "Notification.DoNotAsk-DatabaseConfigFileWatcher.found": "true",
@@ -57,6 +65,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.GatewayApplication.executor": "Run",
     "Spring Boot.OrderMsApplication.executor": "Run",
     "Spring Boot.PaymentMsApplication.executor": "Run",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
@@ -72,6 +81,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
+    "run.configurations.included.in.services": "true",
     "settings.editor.selected.configurable": "settings.sync",
     "to.speed.mode.migration.done": "true",
     "vue.rearranger.settings.migration": "true"
@@ -85,7 +95,30 @@
       <recent name="$PROJECT_DIR$/choreography/payment-ms/src/main/java/org/vromanyu/payment" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.PaymentMsApplication">
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="KtorApplicationConfigurationType" />
+        <option value="MicronautRunConfigurationType" />
+        <option value="QuarkusRunConfigurationType" />
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+    <option name="configurationStatuses">
+      <map>
+        <entry key="SpringBootApplicationConfigurationType">
+          <value>
+            <map>
+              <entry key="GatewayApplication" value="STOPPED" />
+              <entry key="OrderMsApplication" value="STOPPED" />
+              <entry key="PaymentMsApplication" value="STOPPED" />
+            </map>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.GatewayApplication">
     <configuration name="GatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="gateway" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="org.vromanyu.gateway.GatewayApplication" />
@@ -124,7 +157,7 @@
       <option name="presentableId" value="Default" />
       <updated>1773609093086</updated>
       <workItem from="1773609094271" duration="8349000" />
-      <workItem from="1773656806558" duration="683000" />
+      <workItem from="1773656806558" duration="2262000" />
     </task>
     <task id="LOCAL-00001" summary="init choreography services">
       <option name="closed" value="true" />
@@ -374,7 +407,23 @@
       <option name="project" value="LOCAL" />
       <updated>1773657175072</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="add gateway module">
+      <option name="closed" value="true" />
+      <created>1773657519002</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1773657519002</updated>
+    </task>
+    <task id="LOCAL-00033" summary="add loadbalancer dependency">
+      <option name="closed" value="true" />
+      <created>1773657821198</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1773657821198</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -392,8 +441,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add Order entity" />
-    <MESSAGE value="add h2 database dependency" />
     <MESSAGE value="add h2 datasource and hibernate configurations" />
     <MESSAGE value="remove orderId from dto" />
     <MESSAGE value="add OrderRepository" />
@@ -417,6 +464,8 @@
     <MESSAGE value="add method to find UserBalance by userId" />
     <MESSAGE value="add PaymentService and PaymentPublisher to pay the order or send a failed payment event" />
     <MESSAGE value=".idea" />
-    <option name="LAST_COMMIT_MESSAGE" value=".idea" />
+    <MESSAGE value="add gateway module" />
+    <MESSAGE value="add loadbalancer dependency" />
+    <option name="LAST_COMMIT_MESSAGE" value="add loadbalancer dependency" />
   </component>
 </project>
