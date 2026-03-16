@@ -25,3 +25,4 @@ kafka:
     server: localhost:29092
   topics:
     order: order-topic
+    payment: payment-topic
