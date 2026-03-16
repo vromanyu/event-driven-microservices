@@ -34,4 +34,14 @@ public class PaymentPublisher {
                 PaymentStatus.FAILED);
         kafkaTemplate.send(paymentTopic, orderEvent.orderId().toString(), paymentEvent);
     }
+
+    @Transactional(propagation = Propagation.REQUIRED)
+    public void sendPaidEvent(PaymentRequestDto paymentRequestDto, OrderEvent orderEvent) {
+        PaymentEvent paymentEvent = new PaymentEvent(
+                UUID.randomUUID().toString(),
+                LocalDate.now(),
+                paymentRequestDto,
+                PaymentStatus.PAID);
+        kafkaTemplate.send(paymentTopic, orderEvent.orderId().toString(), paymentEvent);
+    }
 }

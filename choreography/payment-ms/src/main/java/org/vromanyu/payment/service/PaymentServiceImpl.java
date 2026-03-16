@@ -2,21 +2,18 @@ package org.vromanyu.payment.service;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.kafka.annotation.KafkaHandler;
 import org.springframework.kafka.annotation.KafkaListener;
-import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.messaging.handler.annotation.Payload;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.vromanyu.core.*;
+import org.vromanyu.core.OrderEvent;
+import org.vromanyu.core.OrderStatus;
+import org.vromanyu.core.PaymentRequestDto;
 import org.vromanyu.payment.entity.UserBalance;
 import org.vromanyu.payment.entity.UserTransaction;
 import org.vromanyu.payment.repository.UserBalanceRepository;
 import org.vromanyu.payment.repository.UserTransactionRepository;
-
-import java.time.LocalDate;
-import java.util.UUID;
 
 @Service
 @KafkaListener(topics = "${kafka.topics.order}")
@@ -26,16 +23,11 @@ public class PaymentServiceImpl implements PaymentService {
 
     private final UserBalanceRepository userBalanceRepository;
     private final UserTransactionRepository userTransactionRepository;
-    private final KafkaTemplate<String, Object> kafkaTemplate;
     private final PaymentPublisher paymentPublisher;
 
-    @Value("${kafka.topics.payment}")
-    private String paymentTopic;
-
-    public PaymentServiceImpl(UserBalanceRepository userBalanceRepository, UserTransactionRepository userTransactionRepository, KafkaTemplate<String, Object> kafkaTemplate, PaymentPublisher paymentPublisher) {
+    public PaymentServiceImpl(UserBalanceRepository userBalanceRepository, UserTransactionRepository userTransactionRepository, PaymentPublisher paymentPublisher) {
         this.userBalanceRepository = userBalanceRepository;
         this.userTransactionRepository = userTransactionRepository;
-        this.kafkaTemplate = kafkaTemplate;
         this.paymentPublisher = paymentPublisher;
     }
 
@@ -76,11 +68,6 @@ public class PaymentServiceImpl implements PaymentService {
         userTransaction.setAmount(orderEvent.orderRequestDto().amount());
         userTransactionRepository.save(userTransaction);
 
-        PaymentEvent paymentEvent = new PaymentEvent(
-                UUID.randomUUID().toString(),
-                LocalDate.now(),
-                paymentRequestDto,
-                PaymentStatus.PAID);
-        kafkaTemplate.send(paymentTopic, orderEvent.orderId().toString(), paymentEvent);
+        paymentPublisher.sendPaidEvent(paymentRequestDto, orderEvent);
     }
 }
