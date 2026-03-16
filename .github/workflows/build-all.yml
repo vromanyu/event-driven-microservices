@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  event-driven-microservices-ci:
+  gateway-ci:
     runs-on: ubuntu-latest
     env:
       DOCKER_USERNAME: ${{secrets.DOCKER_USERNAME}}
@@ -20,4 +20,40 @@ jobs:
           cache: 'maven'
       - name: Build/Test
         id: build
-        run: mvn -B package --file choreography/pom.xml
+        run: mvn -B package --file choreography/gateway/pom.xml
+  order-ms:
+    runs-on: ubuntu-latest
+    env:
+      DOCKER_USERNAME: ${{secrets.DOCKER_USERNAME}}
+      DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
+    steps:
+      - name: Clone
+        uses: actions/checkout@v5
+      - name: JDK Setup
+        uses: actions/setup-java@v4
+        with:
+          java-version: 25
+          distribution: 'temurin'
+          architecture: x64
+          cache: 'maven'
+      - name: Build/Test
+        id: build
+        run: mvn -B package --file choreography/order-ms/pom.xml
+  payment-ms:
+    runs-on: ubuntu-latest
+    env:
+      DOCKER_USERNAME: ${{secrets.DOCKER_USERNAME}}
+      DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
+    steps:
+      - name: Clone
+        uses: actions/checkout@v5
+      - name: JDK Setup
+        uses: actions/setup-java@v4
+        with:
+          java-version: 25
+          distribution: 'temurin'
+          architecture: x64
+          cache: 'maven'
+      - name: Build/Test
+        id: build
+        run: mvn -B package --file choreography/payment-ms/pom.xml
