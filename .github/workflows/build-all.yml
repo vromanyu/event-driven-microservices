@@ -1,0 +1,23 @@
+name: build-all-workflow
+on:
+  workflow_dispatch:
+
+jobs:
+  event-driven-microservices-ci:
+    runs-on: ubuntu-latest
+    env:
+      DOCKER_USERNAME: ${{secrets.DOCKER_USERNAME}}
+      DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
+    steps:
+      - name: Clone
+        uses: actions/checkout@v5
+      - name: JDK Setup
+        uses: actions/setup-java@v4
+        with:
+          java-version: 25
+          distribution: 'temurin'
+          architecture: x64
+          cache: 'maven'
+      - name: Build/Test
+        id: build
+        run: mvn -B package --file choreography/pom.xml
