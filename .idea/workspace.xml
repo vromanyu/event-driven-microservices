@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f53cd7e9-042e-48da-856a-18c59663b55c" name="Changes" comment="use bootstrapServer property">
-      <change afterPath="$PROJECT_DIR$/choreography/docker/docker-compose.yml" afterDir="false" />
+    <list default="true" id="f53cd7e9-042e-48da-856a-18c59663b55c" name="Changes" comment="add sendPaidEvent method to PaymentPublisher for sending successful payment events">
+      <change afterPath="$PROJECT_DIR$/choreography/order-ms/src/main/java/org/vromanyu/order/service/PaymentEventListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/choreography/gateway/src/main/java/org/vromanyu/gateway/config/LoadBalancerConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/choreography/gateway/src/main/java/org/vromanyu/gateway/config/LoadBalancerConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/choreography/order-ms/src/main/java/org/vromanyu/order/config/KafkaConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/choreography/order-ms/src/main/java/org/vromanyu/order/config/KafkaConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/choreography/order-ms/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/choreography/order-ms/src/main/resources/application.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,8 +25,8 @@
         <option value="Record" />
         <option value="Enum" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="GitHub Workflow" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -59,78 +60,78 @@
     <option name="showLibraryContents" value="true" />
     <option name="showScratchesAndConsoles" value="false" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "JUnit.All in gateway (1).executor": "Run",
-    "JUnit.All in gateway (2).executor": "Run",
-    "JUnit.All in gateway (3).executor": "Run",
-    "JUnit.All in gateway.executor": "Run",
-    "JUnit.All in order-ms (1).executor": "Run",
-    "JUnit.All in order-ms.executor": "Run",
-    "JUnit.GatewayTests.executor": "Run",
-    "JUnit.GatewayTests.givenInvalidOrderId_shouldReturnNotFound.executor": "Run",
-    "JUnit.GatewayTests.givenOrderRequest_shouldReturnCreated.executor": "Run",
-    "JUnit.GatewayTests.test.executor": "Run",
-    "JUnit.OrderControllerTests.whenCreateOrder_thenSuccess.executor": "Run",
-    "JUnit.OrderControllerTests.whenGetOrderByInvalidId_thenFail.executor": "Run",
-    "JUnit.OrderControllerTests.whenGetOrderByValidId_thenSuccess.executor": "Run",
-    "JUnit.OrderPublisherTests.whenSend_thenFail.executor": "Run",
-    "JUnit.OrderPublisherTests.whenSend_thenSuccess.executor": "Run",
-    "JUnit.OrderRepositoryTests.givenInvalidOrderId_whenFindBy_shouldThrowException.executor": "Run",
-    "JUnit.OrderRepositoryTests.givenOrder_whenSave_thenPopulateAuditFields.executor": "Run",
-    "JUnit.OrderRepositoryTests.givenOrder_whenSave_thenSuccess.executor": "Run",
-    "JUnit.OrderRepositoryTests.givenThreeOrders_whenFindAll_shouldReturnThreeOrders.executor": "Run",
-    "JUnit.OrderRepositoryTests.givenValidOrderId_whenFindBy_shouldReturnOrder.executor": "Run",
-    "JUnit.OrderServiceTests.givenInvalidOrderId_whenGetOrder_thenThrowException.executor": "Run",
-    "JUnit.OrderServiceTests.givenOrderId_whenGetOrder_thenSuccess.executor": "Run",
-    "JUnit.OrderServiceTests.givenOrderRequest_whenCreateOrder_thenSuccess.executor": "Run",
-    "JUnit.OrderServiceTests.test.executor": "Run",
-    "JUnit.PaymentServiceTests.whenInvalidOrderStatus_thenThrowException.executor": "Run",
-    "JUnit.PaymentServiceTests.whenInvalidUserBalance_thenThrowException.executor": "Run",
-    "JUnit.PaymentServiceTests.whenValidPaymentEvent_thenSuccess.executor": "Run",
-    "JUnit.UserBalanceRepositoryTest.executor": "Run",
-    "JUnit.UserBalanceRepositoryTest.givenInvalidUserId_whenFindByUserId_shouldReturnEmptyList.executor": "Run",
-    "JUnit.UserBalanceRepositoryTest.givenValidUserId_whenFindByUserId_shouldReturnUserBalance.executor": "Run",
-    "JUnit.UserTransactionRepositoryTests.executor": "Run",
-    "JUnit.gateway in gateway.executor": "Run",
-    "Maven.choreography [clean].executor": "Run",
-    "Maven.gateway [clean,install].executor": "Run",
-    "Maven.gateway [clean].executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Notification.DisplayName-DoNotAsk-DatabaseConfigFileWatcher.found": "New/updated database configurations found",
-    "Notification.DoNotAsk-DatabaseConfigFileWatcher.found": "true",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.MCP Project settings loaded": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.GatewayApplication.executor": "Run",
-    "Spring Boot.OrderMsApplication.executor": "Run",
-    "Spring Boot.PaymentMsApplication.executor": "Run",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "main",
-    "junie.onboarding.icon.badge.shown": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/vromanyu/Repositories/event-driven-microservices/choreography/payment-ms/src/main/java/org/vromanyu/payment",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "run.configurations.included.in.services": "true",
-    "settings.editor.selected.configurable": "settings.sync",
-    "to.speed.mode.migration.done": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JUnit.All in gateway (1).executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.All in gateway (2).executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.All in gateway (3).executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.All in gateway.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.All in order-ms (1).executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.All in order-ms.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.GatewayTests.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.GatewayTests.givenInvalidOrderId_shouldReturnNotFound.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.GatewayTests.givenOrderRequest_shouldReturnCreated.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.GatewayTests.test.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.OrderControllerTests.whenCreateOrder_thenSuccess.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.OrderControllerTests.whenGetOrderByInvalidId_thenFail.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.OrderControllerTests.whenGetOrderByValidId_thenSuccess.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.OrderPublisherTests.whenSend_thenFail.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.OrderPublisherTests.whenSend_thenSuccess.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.OrderRepositoryTests.givenInvalidOrderId_whenFindBy_shouldThrowException.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.OrderRepositoryTests.givenOrder_whenSave_thenPopulateAuditFields.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.OrderRepositoryTests.givenOrder_whenSave_thenSuccess.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.OrderRepositoryTests.givenThreeOrders_whenFindAll_shouldReturnThreeOrders.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.OrderRepositoryTests.givenValidOrderId_whenFindBy_shouldReturnOrder.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.OrderServiceTests.givenInvalidOrderId_whenGetOrder_thenThrowException.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.OrderServiceTests.givenOrderId_whenGetOrder_thenSuccess.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.OrderServiceTests.givenOrderRequest_whenCreateOrder_thenSuccess.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.OrderServiceTests.test.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PaymentServiceTests.whenInvalidOrderStatus_thenThrowException.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PaymentServiceTests.whenInvalidUserBalance_thenThrowException.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PaymentServiceTests.whenValidPaymentEvent_thenSuccess.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserBalanceRepositoryTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserBalanceRepositoryTest.givenInvalidUserId_whenFindByUserId_shouldReturnEmptyList.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserBalanceRepositoryTest.givenValidUserId_whenFindByUserId_shouldReturnUserBalance.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserTransactionRepositoryTests.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.gateway in gateway.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.choreography [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.gateway [clean,install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.gateway [clean].executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Notification.DisplayName-DoNotAsk-DatabaseConfigFileWatcher.found&quot;: &quot;New/updated database configurations found&quot;,
+    &quot;Notification.DoNotAsk-DatabaseConfigFileWatcher.found&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.GatewayApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.OrderMsApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.PaymentMsApplication.executor&quot;: &quot;Run&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/vromanyu/Repositories/event-driven-microservices/choreography/payment-ms/src/main/java/org/vromanyu/payment&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.sync&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="org.vromanyu.order.service" />
@@ -259,47 +260,7 @@
       <workItem from="1773609094271" duration="8349000" />
       <workItem from="1773656806558" duration="4589000" />
       <workItem from="1773661405128" duration="11815000" />
-      <workItem from="1773673790966" duration="2588000" />
-    </task>
-    <task id="LOCAL-00022" summary="add UserBalanceRepository and UserTransactionRepository repositories">
-      <option name="closed" value="true" />
-      <created>1773614075514</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1773614075514</updated>
-    </task>
-    <task id="LOCAL-00023" summary="remove Spring Web dependency">
-      <option name="closed" value="true" />
-      <created>1773614194331</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1773614194331</updated>
-    </task>
-    <task id="LOCAL-00024" summary="use application.yaml bootstrap server value">
-      <option name="closed" value="true" />
-      <created>1773614338516</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1773614338516</updated>
-    </task>
-    <task id="LOCAL-00025" summary="add kafka configuration">
-      <option name="closed" value="true" />
-      <created>1773615072209</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1773615072209</updated>
-    </task>
-    <task id="LOCAL-00026" summary="add web dependency from jackson/json">
-      <option name="closed" value="true" />
-      <created>1773657003085</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1773657003085</updated>
+      <workItem from="1773673790966" duration="4643000" />
     </task>
     <task id="LOCAL-00027" summary="format">
       <option name="closed" value="true" />
@@ -653,7 +614,47 @@
       <option name="project" value="LOCAL" />
       <updated>1773680629868</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="loadbalancer configuration based on active profile">
+      <option name="closed" value="true" />
+      <created>1773681724502</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1773681724502</updated>
+    </task>
+    <task id="LOCAL-00072" summary="provide docker-compose.yml">
+      <option name="closed" value="true" />
+      <created>1773681731364</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1773681731364</updated>
+    </task>
+    <task id="LOCAL-00073" summary=".idea">
+      <option name="closed" value="true" />
+      <created>1773681735373</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1773681735373</updated>
+    </task>
+    <task id="LOCAL-00074" summary="add sendPaidEvent method to PaymentPublisher for sending successful payment events">
+      <option name="closed" value="true" />
+      <created>1773686614267</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1773686614267</updated>
+    </task>
+    <task id="LOCAL-00075" summary="add sendPaidEvent method to PaymentPublisher for sending successful payment events">
+      <option name="closed" value="true" />
+      <created>1773686639295</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1773686639295</updated>
+    </task>
+    <option name="localTasksCounter" value="76" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -686,9 +687,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add OrderPublisherTests" />
-    <MESSAGE value="format" />
-    <MESSAGE value="add webmvc-test dependency" />
     <MESSAGE value="add OrderControllerTests" />
     <MESSAGE value="add PaymentServiceTests" />
     <MESSAGE value="add jpa test and UserBalanceRepositoryTest" />
@@ -709,8 +707,11 @@
     <MESSAGE value="add build-all workflow" />
     <MESSAGE value="build services parallel" />
     <MESSAGE value="fix mvn command" />
-    <MESSAGE value=".idea" />
     <MESSAGE value="use bootstrapServer property" />
-    <option name="LAST_COMMIT_MESSAGE" value="use bootstrapServer property" />
+    <MESSAGE value="loadbalancer configuration based on active profile" />
+    <MESSAGE value="provide docker-compose.yml" />
+    <MESSAGE value=".idea" />
+    <MESSAGE value="add sendPaidEvent method to PaymentPublisher for sending successful payment events" />
+    <option name="LAST_COMMIT_MESSAGE" value="add sendPaidEvent method to PaymentPublisher for sending successful payment events" />
   </component>
 </project>
