@@ -38,7 +38,7 @@ jobs:
           cache: 'maven'
       - name: Build/Test
         id: build
-        run: mvn -B package --file choreography/order-ms/pom.xml
+        run: mvn -B package --file choreography/pom.xml -pl order-ms -am
   payment-ms:
     runs-on: ubuntu-latest
     env:
@@ -56,4 +56,4 @@ jobs:
           cache: 'maven'
       - name: Build/Test
         id: build
-        run: mvn -B package --file choreography/payment-ms/pom.xml
+        run: mvn -B package --file choreography/pom.xml -pl payment-ms -am
