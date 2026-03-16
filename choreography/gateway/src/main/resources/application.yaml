@@ -4,5 +4,10 @@ spring:
   threads:
     virtual:
       enabled: true
+  cloud:
+    gateway:
+      server:
+        webmvc:
+          trusted-proxies: ".*"
 server:
   port: 8585
