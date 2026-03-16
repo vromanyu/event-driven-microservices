@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f53cd7e9-042e-48da-856a-18c59663b55c" name="Changes" comment="add loadbalancer dependency">
-      <change afterPath="$PROJECT_DIR$/choreography/gateway/src/main/java/org/vromanyu/gateway/config/GatewayRoutesConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/choreography/gateway/src/main/java/org/vromanyu/gateway/config/LoadBalancerConfiguration.java" afterDir="false" />
+    <list default="true" id="f53cd7e9-042e-48da-856a-18c59663b55c" name="Changes" comment="trust all IPs to send X-Forwarded-* headers to downstream services">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/choreography/core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/choreography/core/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/choreography/gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/choreography/gateway/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/choreography/gateway/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/choreography/gateway/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/choreography/order-ms/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/choreography/order-ms/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/choreography/payment-ms/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/choreography/payment-ms/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,7 +18,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="57" />
+    <option name="cachedIndexableFilesCount" value="71" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
@@ -33,6 +34,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "vromanyu"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "git@github.com:vromanyu/event-driven-microservices.git",
+    "accountId": "e7f8e21a-3b99-4e9f-9cd7-1295ec96f54d"
+  }
+}]]></component>
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
@@ -50,6 +63,36 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "JUnit.All in gateway (1).executor": "Run",
+    "JUnit.All in gateway.executor": "Run",
+    "JUnit.All in order-ms (1).executor": "Run",
+    "JUnit.All in order-ms.executor": "Run",
+    "JUnit.GatewayTests.executor": "Run",
+    "JUnit.GatewayTests.givenInvalidOrderId_shouldReturnNotFound.executor": "Run",
+    "JUnit.GatewayTests.givenOrderRequest_shouldReturnCreated.executor": "Run",
+    "JUnit.GatewayTests.test.executor": "Run",
+    "JUnit.OrderControllerTests.whenCreateOrder_thenSuccess.executor": "Run",
+    "JUnit.OrderControllerTests.whenGetOrderByInvalidId_thenFail.executor": "Run",
+    "JUnit.OrderControllerTests.whenGetOrderByValidId_thenSuccess.executor": "Run",
+    "JUnit.OrderPublisherTests.whenSend_thenFail.executor": "Run",
+    "JUnit.OrderPublisherTests.whenSend_thenSuccess.executor": "Run",
+    "JUnit.OrderRepositoryTests.givenInvalidOrderId_whenFindBy_shouldThrowException.executor": "Run",
+    "JUnit.OrderRepositoryTests.givenOrder_whenSave_thenPopulateAuditFields.executor": "Run",
+    "JUnit.OrderRepositoryTests.givenOrder_whenSave_thenSuccess.executor": "Run",
+    "JUnit.OrderRepositoryTests.givenThreeOrders_whenFindAll_shouldReturnThreeOrders.executor": "Run",
+    "JUnit.OrderRepositoryTests.givenValidOrderId_whenFindBy_shouldReturnOrder.executor": "Run",
+    "JUnit.OrderServiceTests.givenInvalidOrderId_whenGetOrder_thenThrowException.executor": "Run",
+    "JUnit.OrderServiceTests.givenOrderId_whenGetOrder_thenSuccess.executor": "Run",
+    "JUnit.OrderServiceTests.givenOrderRequest_whenCreateOrder_thenSuccess.executor": "Run",
+    "JUnit.OrderServiceTests.test.executor": "Run",
+    "JUnit.PaymentServiceTests.whenInvalidOrderStatus_thenThrowException.executor": "Run",
+    "JUnit.PaymentServiceTests.whenInvalidUserBalance_thenThrowException.executor": "Run",
+    "JUnit.PaymentServiceTests.whenValidPaymentEvent_thenSuccess.executor": "Run",
+    "JUnit.UserBalanceRepositoryTest.executor": "Run",
+    "JUnit.UserBalanceRepositoryTest.givenInvalidUserId_whenFindByUserId_shouldReturnEmptyList.executor": "Run",
+    "JUnit.UserBalanceRepositoryTest.givenValidUserId_whenFindByUserId_shouldReturnUserBalance.executor": "Run",
+    "JUnit.UserTransactionRepositoryTests.executor": "Run",
+    "JUnit.gateway in gateway.executor": "Run",
     "Maven.choreography [clean].executor": "Run",
     "Maven.gateway [clean,install].executor": "Run",
     "Maven.gateway [clean].executor": "Run",
@@ -62,6 +105,7 @@
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.MCP Project settings loaded": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -118,7 +162,62 @@
       </map>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.PaymentMsApplication">
+  <component name="RunManager" selected="JUnit.All in gateway (1)">
+    <configuration name="All in gateway (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="gateway" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in gateway" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="gateway" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GatewayTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="gateway" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.vromanyu.gateway.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.vromanyu.gateway" />
+      <option name="MAIN_CLASS_NAME" value="org.vromanyu.gateway.GatewayTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GatewayTests.givenOrderRequest_shouldReturnCreated" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="gateway" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.vromanyu.gateway.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.vromanyu.gateway" />
+      <option name="MAIN_CLASS_NAME" value="org.vromanyu.gateway.GatewayTests" />
+      <option name="METHOD_NAME" value="givenOrderRequest_shouldReturnCreated" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="gateway in gateway" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="gateway" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/choreography/gateway/src/test/java/org/vromanyu/gateway" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="GatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="gateway" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="org.vromanyu.gateway.GatewayApplication" />
@@ -140,6 +239,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.All in gateway (1)" />
+        <item itemvalue="JUnit.All in gateway" />
+        <item itemvalue="JUnit.GatewayTests" />
+        <item itemvalue="JUnit.gateway in gateway" />
+        <item itemvalue="JUnit.GatewayTests.givenOrderRequest_shouldReturnCreated" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -157,95 +265,8 @@
       <option name="presentableId" value="Default" />
       <updated>1773609093086</updated>
       <workItem from="1773609094271" duration="8349000" />
-      <workItem from="1773656806558" duration="2262000" />
-    </task>
-    <task id="LOCAL-00001" summary="init choreography services">
-      <option name="closed" value="true" />
-      <created>1773609296562</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1773609296562</updated>
-    </task>
-    <task id="LOCAL-00002" summary="add request/response and event dtos">
-      <option name="closed" value="true" />
-      <created>1773610100925</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1773610100925</updated>
-    </task>
-    <task id="LOCAL-00003" summary="add web and jpa deps">
-      <option name="closed" value="true" />
-      <created>1773610165609</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1773610165609</updated>
-    </task>
-    <task id="LOCAL-00004" summary="add web and jpa deps">
-      <option name="closed" value="true" />
-      <created>1773610291106</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1773610291106</updated>
-    </task>
-    <task id="LOCAL-00005" summary="add Order entity">
-      <option name="closed" value="true" />
-      <created>1773610296333</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1773610296333</updated>
-    </task>
-    <task id="LOCAL-00006" summary="add h2 database dependency">
-      <option name="closed" value="true" />
-      <created>1773610348876</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1773610348876</updated>
-    </task>
-    <task id="LOCAL-00007" summary="add h2 datasource and hibernate configurations">
-      <option name="closed" value="true" />
-      <created>1773610571799</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1773610571799</updated>
-    </task>
-    <task id="LOCAL-00008" summary="remove orderId from dto">
-      <option name="closed" value="true" />
-      <created>1773611144582</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1773611144582</updated>
-    </task>
-    <task id="LOCAL-00009" summary="add OrderRepository">
-      <option name="closed" value="true" />
-      <created>1773611152973</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1773611152973</updated>
-    </task>
-    <task id="LOCAL-00010" summary="add kafka dependency">
-      <option name="closed" value="true" />
-      <created>1773611188172</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1773611188172</updated>
-    </task>
-    <task id="LOCAL-00011" summary="add orderId">
-      <option name="closed" value="true" />
-      <created>1773613290428</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1773613290428</updated>
+      <workItem from="1773656806558" duration="4589000" />
+      <workItem from="1773661405128" duration="10855000" />
     </task>
     <task id="LOCAL-00012" summary="add kafka configuration">
       <option name="closed" value="true" />
@@ -423,11 +444,242 @@
       <option name="project" value="LOCAL" />
       <updated>1773657821198</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="add jackson2 dependency to fix spring cloud gateway mvc">
+      <option name="closed" value="true" />
+      <created>1773659173854</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1773659173854</updated>
+    </task>
+    <task id="LOCAL-00035" summary="change gateway port">
+      <option name="closed" value="true" />
+      <created>1773659188472</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1773659188472</updated>
+    </task>
+    <task id="LOCAL-00036" summary="add order-ms route to gateway">
+      <option name="closed" value="true" />
+      <created>1773659201959</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1773659201959</updated>
+    </task>
+    <task id="LOCAL-00037" summary="add order-ms to loadbalancer">
+      <option name="closed" value="true" />
+      <created>1773659209784</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1773659209784</updated>
+    </task>
+    <task id="LOCAL-00038" summary="reformat">
+      <option name="closed" value="true" />
+      <created>1773659229804</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1773659229804</updated>
+    </task>
+    <task id="LOCAL-00039" summary="enable virtual threads">
+      <option name="closed" value="true" />
+      <created>1773659316591</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1773659316591</updated>
+    </task>
+    <task id="LOCAL-00040" summary=".idea">
+      <option name="closed" value="true" />
+      <created>1773659320269</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1773659320269</updated>
+    </task>
+    <task id="LOCAL-00041" summary="add OrderRepositoryTests">
+      <option name="closed" value="true" />
+      <created>1773660320030</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1773660320030</updated>
+    </task>
+    <task id="LOCAL-00042" summary="add OrderServiceTests">
+      <option name="closed" value="true" />
+      <created>1773660782651</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1773660782651</updated>
+    </task>
+    <task id="LOCAL-00043" summary="add OrderPublisherTests">
+      <option name="closed" value="true" />
+      <created>1773661852555</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1773661852555</updated>
+    </task>
+    <task id="LOCAL-00044" summary="format">
+      <option name="closed" value="true" />
+      <created>1773661871247</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1773661871247</updated>
+    </task>
+    <task id="LOCAL-00045" summary="add webmvc-test dependency">
+      <option name="closed" value="true" />
+      <created>1773663065182</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1773663065182</updated>
+    </task>
+    <task id="LOCAL-00046" summary="add OrderControllerTests">
+      <option name="closed" value="true" />
+      <created>1773663911521</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1773663911521</updated>
+    </task>
+    <task id="LOCAL-00047" summary="add PaymentServiceTests">
+      <option name="closed" value="true" />
+      <created>1773665375887</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1773665375887</updated>
+    </task>
+    <task id="LOCAL-00048" summary="add jpa test and UserBalanceRepositoryTest">
+      <option name="closed" value="true" />
+      <created>1773665386263</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1773665386263</updated>
+    </task>
+    <task id="LOCAL-00049" summary="remove PaymentMsApplicationTests">
+      <option name="closed" value="true" />
+      <created>1773665394967</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1773665394967</updated>
+    </task>
+    <task id="LOCAL-00050" summary="rename">
+      <option name="closed" value="true" />
+      <created>1773665431311</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1773665431311</updated>
+    </task>
+    <task id="LOCAL-00051" summary="add UserTransactionRepositoryTests">
+      <option name="closed" value="true" />
+      <created>1773665730780</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1773665730780</updated>
+    </task>
+    <task id="LOCAL-00052" summary="delete OrderPublisherTests">
+      <option name="closed" value="true" />
+      <created>1773666125353</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1773666125353</updated>
+    </task>
+    <task id="LOCAL-00053" summary="verify that event was published once">
+      <option name="closed" value="true" />
+      <created>1773666262004</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1773666262004</updated>
+    </task>
+    <task id="LOCAL-00054" summary="verify that event was published once">
+      <option name="closed" value="true" />
+      <created>1773666390411</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1773666390411</updated>
+    </task>
+    <task id="LOCAL-00055" summary="verify that kafkaTemplate and paymentPublisher were called">
+      <option name="closed" value="true" />
+      <created>1773666635133</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1773666635133</updated>
+    </task>
+    <task id="LOCAL-00056" summary="preserve host header in gateway routes configuration">
+      <option name="closed" value="true" />
+      <created>1773668273509</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1773668273509</updated>
+    </task>
+    <task id="LOCAL-00057" summary="add wiremock dependency for testing">
+      <option name="closed" value="true" />
+      <created>1773668298087</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1773668298087</updated>
+    </task>
+    <task id="LOCAL-00058" summary="add GatewayTests">
+      <option name="closed" value="true" />
+      <created>1773668307933</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1773668307933</updated>
+    </task>
+    <task id="LOCAL-00059" summary="remove preserveHostHeader">
+      <option name="closed" value="true" />
+      <created>1773670050474</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1773670050474</updated>
+    </task>
+    <task id="LOCAL-00060" summary="trust all IPs to send X-Forwarded-* headers to downstream services">
+      <option name="closed" value="true" />
+      <created>1773670079742</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1773670079742</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-core" />
+    <option featureType="dependencySupport" implementationName="java:org.apache.kafka:kafka_2.13" />
+    <option featureType="dependencySupport" implementationName="java:jakarta.validation:jakarta.validation-api" />
+    <option featureType="dependencySupport" implementationName="java:io.projectreactor:reactor-core" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.data:spring-data-commons" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.cloud:spring-cloud-context" />
+    <option featureType="dependencySupport" implementationName="java:org.hibernate.validator:hibernate-validator" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-webmvc" />
+    <option featureType="dependencySupport" implementationName="executable:docker" />
+    <option featureType="dependencySupport" implementationName="java:jakarta.persistence:jakarta.persistence-api" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-messaging" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.boot:spring-boot" />
+    <option featureType="dependencySupport" implementationName="java:org.wiremock:wiremock" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -441,31 +693,31 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add h2 datasource and hibernate configurations" />
-    <MESSAGE value="remove orderId from dto" />
-    <MESSAGE value="add OrderRepository" />
-    <MESSAGE value="add kafka dependency" />
-    <MESSAGE value="add orderId" />
-    <MESSAGE value="add OrderService and OrderPublisher to publish OrderEvent" />
-    <MESSAGE value="add OrderController" />
-    <MESSAGE value="add OrderControllerAdvice" />
+    <MESSAGE value="change gateway port" />
+    <MESSAGE value="add order-ms route to gateway" />
+    <MESSAGE value="add order-ms to loadbalancer" />
     <MESSAGE value="reformat" />
-    <MESSAGE value="add .gitignore" />
-    <MESSAGE value="add web, jpa, kafka, h2 dependencies" />
-    <MESSAGE value="add updatedAt audit field" />
-    <MESSAGE value="add UserBalance and UserTransaction entities" />
-    <MESSAGE value="add UserBalanceRepository and UserTransactionRepository repositories" />
-    <MESSAGE value="remove Spring Web dependency" />
-    <MESSAGE value="use application.yaml bootstrap server value" />
-    <MESSAGE value="add kafka configuration" />
-    <MESSAGE value="add web dependency from jackson/json" />
-    <MESSAGE value="format" />
-    <MESSAGE value="populate UserBalance on startup with predefined values" />
-    <MESSAGE value="add method to find UserBalance by userId" />
-    <MESSAGE value="add PaymentService and PaymentPublisher to pay the order or send a failed payment event" />
+    <MESSAGE value="enable virtual threads" />
     <MESSAGE value=".idea" />
-    <MESSAGE value="add gateway module" />
-    <MESSAGE value="add loadbalancer dependency" />
-    <option name="LAST_COMMIT_MESSAGE" value="add loadbalancer dependency" />
+    <MESSAGE value="add OrderRepositoryTests" />
+    <MESSAGE value="add OrderServiceTests" />
+    <MESSAGE value="add OrderPublisherTests" />
+    <MESSAGE value="format" />
+    <MESSAGE value="add webmvc-test dependency" />
+    <MESSAGE value="add OrderControllerTests" />
+    <MESSAGE value="add PaymentServiceTests" />
+    <MESSAGE value="add jpa test and UserBalanceRepositoryTest" />
+    <MESSAGE value="remove PaymentMsApplicationTests" />
+    <MESSAGE value="rename" />
+    <MESSAGE value="add UserTransactionRepositoryTests" />
+    <MESSAGE value="delete OrderPublisherTests" />
+    <MESSAGE value="verify that event was published once" />
+    <MESSAGE value="verify that kafkaTemplate and paymentPublisher were called" />
+    <MESSAGE value="preserve host header in gateway routes configuration" />
+    <MESSAGE value="add wiremock dependency for testing" />
+    <MESSAGE value="add GatewayTests" />
+    <MESSAGE value="remove preserveHostHeader" />
+    <MESSAGE value="trust all IPs to send X-Forwarded-* headers to downstream services" />
+    <option name="LAST_COMMIT_MESSAGE" value="trust all IPs to send X-Forwarded-* headers to downstream services" />
   </component>
 </project>
