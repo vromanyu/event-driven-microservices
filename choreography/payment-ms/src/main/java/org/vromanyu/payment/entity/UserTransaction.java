@@ -12,7 +12,8 @@ import java.time.LocalDateTime;
 @Entity
 public class UserTransaction {
 
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     private Integer orderId;
@@ -27,7 +28,8 @@ public class UserTransaction {
     @UpdateTimestamp
     private LocalDateTime updatedAt;
 
-    public UserTransaction() {}
+    public UserTransaction() {
+    }
 
     public Integer getId() {
         return id;

@@ -12,7 +12,8 @@ import java.time.LocalDateTime;
 @Entity
 public class UserBalance {
 
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     private Integer userId;
