@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f53cd7e9-042e-48da-856a-18c59663b55c" name="Changes" comment="add .gitignore">
-      <change beforePath="$PROJECT_DIR$/choreography/payment-ms/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/choreography/payment-ms/pom.xml" afterDir="false" />
+    <list default="true" id="f53cd7e9-042e-48da-856a-18c59663b55c" name="Changes" comment="add method to find UserBalance by userId">
+      <change afterPath="$PROJECT_DIR$/choreography/payment-ms/src/main/java/org/vromanyu/payment/service/PaymentPublisher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/choreography/payment-ms/src/main/java/org/vromanyu/payment/service/PaymentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/choreography/payment-ms/src/main/java/org/vromanyu/payment/service/PaymentServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/choreography/payment-ms/src/main/java/org/vromanyu/payment/config/KafkaConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/choreography/payment-ms/src/main/java/org/vromanyu/payment/config/KafkaConfiguration.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,7 +17,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="14" />
+    <option name="cachedIndexableFilesCount" value="57" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
@@ -36,9 +40,9 @@
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="3AzxFCykEz6BXOIJ8Dr2bRunjv8" />
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
@@ -48,6 +52,8 @@
   "keyToString": {
     "Maven.choreography [clean].executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Notification.DisplayName-DoNotAsk-DatabaseConfigFileWatcher.found": "New/updated database configurations found",
+    "Notification.DoNotAsk-DatabaseConfigFileWatcher.found": "true",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
@@ -58,19 +64,20 @@
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Spring Boot.OrderMsApplication.executor": "Run",
+    "Spring Boot.PaymentMsApplication.executor": "Run",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
     "git-widget-placeholder": "main",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/vromanyu/Repositories/event-driven-microservices",
+    "last_opened_file_path": "/home/vromanyu/Repositories/event-driven-microservices/choreography/payment-ms/src/main/java/org/vromanyu/payment",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "settings.sync",
     "to.speed.mode.migration.done": "true",
     "vue.rearranger.settings.migration": "true"
@@ -80,8 +87,11 @@
     <key name="CreateClassDialog.RecentsKey">
       <recent name="org.vromanyu.order.service" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/choreography/payment-ms/src/main/java/org/vromanyu/payment" />
+    </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.OrderMsApplication">
+  <component name="RunManager" selected="Spring Boot.PaymentMsApplication">
     <configuration name="OrderMsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="order-ms" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="org.vromanyu.order.OrderMsApplication" />
@@ -112,7 +122,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1773609093086</updated>
-      <workItem from="1773609094271" duration="4509000" />
+      <workItem from="1773609094271" duration="8349000" />
+      <workItem from="1773656806558" duration="310000" />
     </task>
     <task id="LOCAL-00001" summary="init choreography services">
       <option name="closed" value="true" />
@@ -258,14 +269,112 @@
       <option name="project" value="LOCAL" />
       <updated>1773613404603</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="add web, jpa, kafka, h2 dependencies">
+      <option name="closed" value="true" />
+      <created>1773613614916</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1773613614916</updated>
+    </task>
+    <task id="LOCAL-00020" summary="add updatedAt audit field">
+      <option name="closed" value="true" />
+      <created>1773613810329</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1773613810329</updated>
+    </task>
+    <task id="LOCAL-00021" summary="add UserBalance and UserTransaction entities">
+      <option name="closed" value="true" />
+      <created>1773613917926</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1773613917926</updated>
+    </task>
+    <task id="LOCAL-00022" summary="add UserBalanceRepository and UserTransactionRepository repositories">
+      <option name="closed" value="true" />
+      <created>1773614075514</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1773614075514</updated>
+    </task>
+    <task id="LOCAL-00023" summary="remove Spring Web dependency">
+      <option name="closed" value="true" />
+      <created>1773614194331</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1773614194331</updated>
+    </task>
+    <task id="LOCAL-00024" summary="use application.yaml bootstrap server value">
+      <option name="closed" value="true" />
+      <created>1773614338516</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1773614338516</updated>
+    </task>
+    <task id="LOCAL-00025" summary="add kafka configuration">
+      <option name="closed" value="true" />
+      <created>1773615072209</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1773615072209</updated>
+    </task>
+    <task id="LOCAL-00026" summary="add web dependency from jackson/json">
+      <option name="closed" value="true" />
+      <created>1773657003085</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1773657003085</updated>
+    </task>
+    <task id="LOCAL-00027" summary="format">
+      <option name="closed" value="true" />
+      <created>1773657020914</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1773657020914</updated>
+    </task>
+    <task id="LOCAL-00028" summary="populate UserBalance on startup with predefined values">
+      <option name="closed" value="true" />
+      <created>1773657042713</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1773657042713</updated>
+    </task>
+    <task id="LOCAL-00029" summary="add method to find UserBalance by userId">
+      <option name="closed" value="true" />
+      <created>1773657059257</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1773657059257</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="init choreography services" />
     <MESSAGE value="add request/response and event dtos" />
     <MESSAGE value="add web and jpa deps" />
     <MESSAGE value="add Order entity" />
@@ -275,12 +384,22 @@
     <MESSAGE value="add OrderRepository" />
     <MESSAGE value="add kafka dependency" />
     <MESSAGE value="add orderId" />
-    <MESSAGE value="add kafka configuration" />
     <MESSAGE value="add OrderService and OrderPublisher to publish OrderEvent" />
     <MESSAGE value="add OrderController" />
     <MESSAGE value="add OrderControllerAdvice" />
     <MESSAGE value="reformat" />
     <MESSAGE value="add .gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="add .gitignore" />
+    <MESSAGE value="add web, jpa, kafka, h2 dependencies" />
+    <MESSAGE value="add updatedAt audit field" />
+    <MESSAGE value="add UserBalance and UserTransaction entities" />
+    <MESSAGE value="add UserBalanceRepository and UserTransactionRepository repositories" />
+    <MESSAGE value="remove Spring Web dependency" />
+    <MESSAGE value="use application.yaml bootstrap server value" />
+    <MESSAGE value="add kafka configuration" />
+    <MESSAGE value="add web dependency from jackson/json" />
+    <MESSAGE value="format" />
+    <MESSAGE value="populate UserBalance on startup with predefined values" />
+    <MESSAGE value="add method to find UserBalance by userId" />
+    <option name="LAST_COMMIT_MESSAGE" value="add method to find UserBalance by userId" />
   </component>
 </project>
