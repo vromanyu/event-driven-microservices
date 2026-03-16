@@ -34,7 +34,7 @@ public class OrderPublisherTests {
 
     @Test
     public void whenSend_thenFail() {
-        CompletableFuture<SendResult<String,Object>> failedFuture =
+        CompletableFuture<SendResult<String, Object>> failedFuture =
                 CompletableFuture.failedFuture(new RuntimeException("fail"));
 
         Mockito.when(kafkaTemplate.send(Mockito.any(), Mockito.anyString(), Mockito.any()))
