@@ -9,7 +9,7 @@ import org.vromanyu.payment.entity.UserBalance;
 import java.util.List;
 
 @DataJpaTest
-public class UserBalanceRepositoryTest {
+public class UserBalanceRepositoryTests {
 
     @Autowired
     private UserBalanceRepository userBalanceRepository;
