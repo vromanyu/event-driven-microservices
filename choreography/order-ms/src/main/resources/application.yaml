@@ -13,6 +13,9 @@ spring:
       hibernate:
         format_sql: true
         globally_quoted_identifiers: true
+  threads:
+    virtual:
+      enabled: true
 
 server:
   port: 8085
