@@ -4,14 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f53cd7e9-042e-48da-856a-18c59663b55c" name="Changes" comment="build services parallel" />
+    <list default="true" id="f53cd7e9-042e-48da-856a-18c59663b55c" name="Changes" comment="use bootstrapServer property">
+      <change afterPath="$PROJECT_DIR$/choreography/docker/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/choreography/gateway/src/main/java/org/vromanyu/gateway/config/LoadBalancerConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/choreography/gateway/src/main/java/org/vromanyu/gateway/config/LoadBalancerConfiguration.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="71" />
+    <option name="cachedIndexableFilesCount" value="74" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
@@ -28,18 +32,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "vromanyu"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;vromanyu&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "git@github.com:vromanyu/event-driven-microservices.git",
-    "accountId": "e7f8e21a-3b99-4e9f-9cd7-1295ec96f54d"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:vromanyu/event-driven-microservices.git&quot;,
+    &quot;accountId&quot;: &quot;e7f8e21a-3b99-4e9f-9cd7-1295ec96f54d&quot;
   }
-}]]></component>
+}</component>
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
@@ -58,6 +62,8 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "JUnit.All in gateway (1).executor": "Run",
+    "JUnit.All in gateway (2).executor": "Run",
+    "JUnit.All in gateway (3).executor": "Run",
     "JUnit.All in gateway.executor": "Run",
     "JUnit.All in order-ms (1).executor": "Run",
     "JUnit.All in order-ms.executor": "Run",
@@ -156,8 +162,24 @@
       </map>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.All in gateway (1)">
+  <component name="RunManager" selected="JUnit.All in gateway (3)">
     <configuration name="All in gateway (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="gateway" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in gateway (2)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="gateway" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in gateway (3)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="gateway" />
       <option name="PACKAGE_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
@@ -188,30 +210,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GatewayTests.givenOrderRequest_shouldReturnCreated" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="gateway" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.vromanyu.gateway.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.vromanyu.gateway" />
-      <option name="MAIN_CLASS_NAME" value="org.vromanyu.gateway.GatewayTests" />
-      <option name="METHOD_NAME" value="givenOrderRequest_shouldReturnCreated" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="gateway in gateway" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="gateway" />
-      <option name="TEST_OBJECT" value="directory" />
-      <dir value="$PROJECT_DIR$/choreography/gateway/src/test/java/org/vromanyu/gateway" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="GatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="gateway" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="org.vromanyu.gateway.GatewayApplication" />
@@ -235,11 +233,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.All in gateway (3)" />
+        <item itemvalue="JUnit.All in gateway (2)" />
         <item itemvalue="JUnit.All in gateway (1)" />
         <item itemvalue="JUnit.All in gateway" />
         <item itemvalue="JUnit.GatewayTests" />
-        <item itemvalue="JUnit.gateway in gateway" />
-        <item itemvalue="JUnit.GatewayTests.givenOrderRequest_shouldReturnCreated" />
       </list>
     </recent_temporary>
   </component>
@@ -260,31 +258,8 @@
       <updated>1773609093086</updated>
       <workItem from="1773609094271" duration="8349000" />
       <workItem from="1773656806558" duration="4589000" />
-      <workItem from="1773661405128" duration="11533000" />
-    </task>
-    <task id="LOCAL-00019" summary="add web, jpa, kafka, h2 dependencies">
-      <option name="closed" value="true" />
-      <created>1773613614916</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1773613614916</updated>
-    </task>
-    <task id="LOCAL-00020" summary="add updatedAt audit field">
-      <option name="closed" value="true" />
-      <created>1773613810329</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1773613810329</updated>
-    </task>
-    <task id="LOCAL-00021" summary="add UserBalance and UserTransaction entities">
-      <option name="closed" value="true" />
-      <created>1773613917926</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1773613917926</updated>
+      <workItem from="1773661405128" duration="11815000" />
+      <workItem from="1773673790966" duration="2588000" />
     </task>
     <task id="LOCAL-00022" summary="add UserBalanceRepository and UserTransactionRepository repositories">
       <option name="closed" value="true" />
@@ -654,7 +629,31 @@
       <option name="project" value="LOCAL" />
       <updated>1773672858461</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="fix mvn command">
+      <option name="closed" value="true" />
+      <created>1773673247734</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1773673247734</updated>
+    </task>
+    <task id="LOCAL-00069" summary=".idea">
+      <option name="closed" value="true" />
+      <created>1773673296744</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1773673296744</updated>
+    </task>
+    <task id="LOCAL-00070" summary="use bootstrapServer property">
+      <option name="closed" value="true" />
+      <created>1773680629868</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1773680629868</updated>
+    </task>
+    <option name="localTasksCounter" value="71" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -687,8 +686,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add OrderRepositoryTests" />
-    <MESSAGE value="add OrderServiceTests" />
     <MESSAGE value="add OrderPublisherTests" />
     <MESSAGE value="format" />
     <MESSAGE value="add webmvc-test dependency" />
@@ -710,8 +707,10 @@
     <MESSAGE value="update core dependency" />
     <MESSAGE value="build image for each service" />
     <MESSAGE value="add build-all workflow" />
-    <MESSAGE value=".idea" />
     <MESSAGE value="build services parallel" />
-    <option name="LAST_COMMIT_MESSAGE" value="build services parallel" />
+    <MESSAGE value="fix mvn command" />
+    <MESSAGE value=".idea" />
+    <MESSAGE value="use bootstrapServer property" />
+    <option name="LAST_COMMIT_MESSAGE" value="use bootstrapServer property" />
   </component>
 </project>
