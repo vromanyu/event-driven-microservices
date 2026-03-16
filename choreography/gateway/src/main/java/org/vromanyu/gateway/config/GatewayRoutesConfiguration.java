@@ -19,7 +19,6 @@ public class GatewayRoutesConfiguration {
         return RouterFunctions.route()
                 .route(RequestPredicates.path("/api/orders/**"), HandlerFunctions.http())
                 .before(BeforeFilterFunctions.addRequestHeader("X-Gateway", "true"))
-                .before(BeforeFilterFunctions.preserveHostHeader())
                 .filter(LoadBalancerFilterFunctions.lb("order-ms"))
                 .after(AfterFilterFunctions.addResponseHeader("X-Gateway", "true"))
                 .build();
