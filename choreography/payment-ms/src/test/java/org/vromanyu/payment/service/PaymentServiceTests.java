@@ -57,6 +57,10 @@ public class PaymentServiceTests {
         Mockito.when(userTransactionRepository.save(Mockito.any())).thenReturn(new UserTransaction());
 
         Assertions.assertThatCode(() -> paymentService.pay(orderEvent)).doesNotThrowAnyException();
+
+        Mockito.verify(kafkaTemplate, Mockito.times(1)).send(Mockito.any(), Mockito.anyString(), Mockito.any());
+        Mockito.verify(paymentPublisher, Mockito.never()).sendFailedEvent(Mockito.any(), Mockito.any());
+
     }
 
     @Test
@@ -70,6 +74,7 @@ public class PaymentServiceTests {
         );
 
         Assertions.assertThatThrownBy(() -> paymentService.pay(orderEvent));
+        Mockito.verify(paymentPublisher, Mockito.times(1)).sendFailedEvent(Mockito.any(), Mockito.any());
     }
 
     @Test
@@ -91,6 +96,7 @@ public class PaymentServiceTests {
                 Collections.singletonList(userBalance));
 
         Assertions.assertThatThrownBy(() -> paymentService.pay(orderEvent));
+        Mockito.verify(paymentPublisher, Mockito.times(1)).sendFailedEvent(Mockito.any(), Mockito.any());
     }
 
 }
