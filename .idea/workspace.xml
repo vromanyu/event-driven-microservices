@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f53cd7e9-042e-48da-856a-18c59663b55c" name="Changes" comment="trust all IPs to send X-Forwarded-* headers to downstream services">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/choreography/core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/choreography/core/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/choreography/gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/choreography/gateway/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/choreography/order-ms/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/choreography/order-ms/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/choreography/payment-ms/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/choreography/payment-ms/pom.xml" afterDir="false" />
+    <list default="true" id="f53cd7e9-042e-48da-856a-18c59663b55c" name="Changes" comment=".idea">
+      <change afterPath="$PROJECT_DIR$/.github/workflows/build-all.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +23,7 @@
         <option value="Enum" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="GitHub Workflow" />
       </list>
     </option>
   </component>
@@ -266,39 +262,7 @@
       <updated>1773609093086</updated>
       <workItem from="1773609094271" duration="8349000" />
       <workItem from="1773656806558" duration="4589000" />
-      <workItem from="1773661405128" duration="10855000" />
-    </task>
-    <task id="LOCAL-00012" summary="add kafka configuration">
-      <option name="closed" value="true" />
-      <created>1773613301741</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1773613301741</updated>
-    </task>
-    <task id="LOCAL-00013" summary="add kafka configuration">
-      <option name="closed" value="true" />
-      <created>1773613306495</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1773613306495</updated>
-    </task>
-    <task id="LOCAL-00014" summary="add OrderService and OrderPublisher to publish OrderEvent">
-      <option name="closed" value="true" />
-      <created>1773613344025</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1773613344025</updated>
-    </task>
-    <task id="LOCAL-00015" summary="add OrderController">
-      <option name="closed" value="true" />
-      <created>1773613357382</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1773613357382</updated>
+      <workItem from="1773661405128" duration="11189000" />
     </task>
     <task id="LOCAL-00016" summary="add OrderControllerAdvice">
       <option name="closed" value="true" />
@@ -660,7 +624,39 @@
       <option name="project" value="LOCAL" />
       <updated>1773670079742</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="add groupId">
+      <option name="closed" value="true" />
+      <created>1773672511226</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1773672511227</updated>
+    </task>
+    <task id="LOCAL-00062" summary="update core dependency">
+      <option name="closed" value="true" />
+      <created>1773672525954</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1773672525954</updated>
+    </task>
+    <task id="LOCAL-00063" summary="build image for each service">
+      <option name="closed" value="true" />
+      <created>1773672533979</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1773672533979</updated>
+    </task>
+    <task id="LOCAL-00064" summary=".idea">
+      <option name="closed" value="true" />
+      <created>1773672537161</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1773672537161</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -693,12 +689,8 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="change gateway port" />
-    <MESSAGE value="add order-ms route to gateway" />
-    <MESSAGE value="add order-ms to loadbalancer" />
     <MESSAGE value="reformat" />
     <MESSAGE value="enable virtual threads" />
-    <MESSAGE value=".idea" />
     <MESSAGE value="add OrderRepositoryTests" />
     <MESSAGE value="add OrderServiceTests" />
     <MESSAGE value="add OrderPublisherTests" />
@@ -718,6 +710,10 @@
     <MESSAGE value="add GatewayTests" />
     <MESSAGE value="remove preserveHostHeader" />
     <MESSAGE value="trust all IPs to send X-Forwarded-* headers to downstream services" />
-    <option name="LAST_COMMIT_MESSAGE" value="trust all IPs to send X-Forwarded-* headers to downstream services" />
+    <MESSAGE value="add groupId" />
+    <MESSAGE value="update core dependency" />
+    <MESSAGE value="build image for each service" />
+    <MESSAGE value=".idea" />
+    <option name="LAST_COMMIT_MESSAGE" value=".idea" />
   </component>
 </project>
