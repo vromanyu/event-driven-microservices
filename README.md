@@ -1,0 +1,1 @@
+[![build-all-workflow](https://github.com/vromanyu/event-driven-microservices/actions/workflows/build-all.yml/badge.svg)](https://github.com/vromanyu/event-driven-microservices/actions/workflows/build-all.yml)
