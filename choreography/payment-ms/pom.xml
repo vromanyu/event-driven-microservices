@@ -67,7 +67,7 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>org.example</groupId>
+            <groupId>org.vromanyu</groupId>
             <artifactId>core</artifactId>
             <version>1.0.0</version>
             <scope>compile</scope>
