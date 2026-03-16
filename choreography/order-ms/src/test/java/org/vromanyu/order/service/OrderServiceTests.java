@@ -39,9 +39,11 @@ public class OrderServiceTests {
         mockOrder.setUpdatedAt(LocalDateTime.now());
 
         Mockito.when(orderRepository.save(Mockito.any())).thenReturn(mockOrder);
-        Mockito.doNothing().when(orderPublisher).publishOrderCreatedEvent(1, orderRequest);
 
         Order createdOrder = orderService.createOrder(orderRequest);
+
+        Mockito.verify(orderPublisher).publishOrderCreatedEvent(1, orderRequest);
+
         Assertions.assertThat(createdOrder).isNotNull();
         Assertions.assertThat(createdOrder.getId()).isEqualTo(1);
         Assertions.assertThat(createdOrder.getUserId()).isEqualTo(1);
@@ -50,6 +52,7 @@ public class OrderServiceTests {
         Assertions.assertThat(createdOrder.getOrderStatus()).isEqualTo(OrderStatus.CREATED);
         Assertions.assertThat(createdOrder.getCreatedAt()).isNotNull();
         Assertions.assertThat(createdOrder.getUpdatedAt()).isNotNull();
+
     }
 
     @Test
