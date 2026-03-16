@@ -13,6 +13,7 @@
         <module>order-ms</module>
         <module>payment-ms</module>
         <module>core</module>
+        <module>gateway</module>
     </modules>
 
 </project>

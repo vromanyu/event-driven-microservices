@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f53cd7e9-042e-48da-856a-18c59663b55c" name="Changes" comment="add method to find UserBalance by userId">
-      <change afterPath="$PROJECT_DIR$/choreography/payment-ms/src/main/java/org/vromanyu/payment/service/PaymentPublisher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/choreography/payment-ms/src/main/java/org/vromanyu/payment/service/PaymentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/choreography/payment-ms/src/main/java/org/vromanyu/payment/service/PaymentServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/choreography/payment-ms/src/main/java/org/vromanyu/payment/config/KafkaConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/choreography/payment-ms/src/main/java/org/vromanyu/payment/config/KafkaConfiguration.java" afterDir="false" />
-    </list>
+    <list default="true" id="f53cd7e9-042e-48da-856a-18c59663b55c" name="Changes" comment=".idea" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -92,6 +86,13 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.PaymentMsApplication">
+    <configuration name="GatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="gateway" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.vromanyu.gateway.GatewayApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="OrderMsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="order-ms" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="org.vromanyu.order.OrderMsApplication" />
@@ -123,7 +124,7 @@
       <option name="presentableId" value="Default" />
       <updated>1773609093086</updated>
       <workItem from="1773609094271" duration="8349000" />
-      <workItem from="1773656806558" duration="310000" />
+      <workItem from="1773656806558" duration="683000" />
     </task>
     <task id="LOCAL-00001" summary="init choreography services">
       <option name="closed" value="true" />
@@ -357,7 +358,23 @@
       <option name="project" value="LOCAL" />
       <updated>1773657059257</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="add PaymentService and PaymentPublisher to pay the order or send a failed payment event">
+      <option name="closed" value="true" />
+      <created>1773657169079</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1773657169079</updated>
+    </task>
+    <task id="LOCAL-00031" summary=".idea">
+      <option name="closed" value="true" />
+      <created>1773657175072</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1773657175072</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -375,8 +392,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add request/response and event dtos" />
-    <MESSAGE value="add web and jpa deps" />
     <MESSAGE value="add Order entity" />
     <MESSAGE value="add h2 database dependency" />
     <MESSAGE value="add h2 datasource and hibernate configurations" />
@@ -400,6 +415,8 @@
     <MESSAGE value="format" />
     <MESSAGE value="populate UserBalance on startup with predefined values" />
     <MESSAGE value="add method to find UserBalance by userId" />
-    <option name="LAST_COMMIT_MESSAGE" value="add method to find UserBalance by userId" />
+    <MESSAGE value="add PaymentService and PaymentPublisher to pay the order or send a failed payment event" />
+    <MESSAGE value=".idea" />
+    <option name="LAST_COMMIT_MESSAGE" value=".idea" />
   </component>
 </project>
