@@ -12,7 +12,7 @@ import org.vromanyu.core.GetProductListResponse;
 import org.vromanyu.core.GetProductResponse;
 
 @RestController
-@RequestMapping("/api/products")
+@RequestMapping("/api/products/get")
 public class ProductController {
 
     private static final Logger logger = LoggerFactory.getLogger(ProductController.class);
