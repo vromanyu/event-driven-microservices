@@ -4,11 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f53cd7e9-042e-48da-856a-18c59663b55c" name="Changes" comment="add sendPaidEvent method to PaymentPublisher for sending successful payment events">
-      <change afterPath="$PROJECT_DIR$/choreography/order-ms/src/main/java/org/vromanyu/order/service/PaymentEventListener.java" afterDir="false" />
+    <list default="true" id="f53cd7e9-042e-48da-856a-18c59663b55c" name="Changes" comment=".idea">
+      <change afterPath="$PROJECT_DIR$/choreography/core/src/main/java/org/vromanyu/core/UserBalanceDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/choreography/gateway/src/main/java/org/vromanyu/gateway/config/OrderServiceLoadBalancerConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/choreography/gateway/src/main/java/org/vromanyu/gateway/config/PaymentServiceLoadBalancerConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/choreography/payment-ms/src/main/java/org/vromanyu/payment/controller/UserBalanceController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/choreography/payment-ms/src/main/java/org/vromanyu/payment/controller/UserBalanceControllerAdvice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/choreography/payment-ms/src/main/java/org/vromanyu/payment/service/UserBalanceService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/choreography/payment-ms/src/main/java/org/vromanyu/payment/service/UserBalanceServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/choreography/order-ms/src/main/java/org/vromanyu/order/config/KafkaConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/choreography/order-ms/src/main/java/org/vromanyu/order/config/KafkaConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/choreography/order-ms/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/choreography/order-ms/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/choreography/gateway/src/main/java/org/vromanyu/gateway/config/GatewayRoutesConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/choreography/gateway/src/main/java/org/vromanyu/gateway/config/GatewayRoutesConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/choreography/gateway/src/main/java/org/vromanyu/gateway/config/LoadBalancerConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/choreography/gateway/src/main/java/org/vromanyu/gateway/config/LoadBalancerConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/choreography/payment-ms/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/choreography/payment-ms/src/main/resources/application.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,16 +23,16 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="74" />
+    <option name="cachedIndexableFilesCount" value="83" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Record" />
         <option value="Enum" />
-        <option value="Interface" />
         <option value="GitHub Workflow" />
+        <option value="Record" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -117,7 +124,7 @@
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/vromanyu/Repositories/event-driven-microservices/choreography/payment-ms/src/main/java/org/vromanyu/payment&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/vromanyu/Repositories/event-driven-microservices/choreography/gateway/src/main/java/org/vromanyu/gateway/config&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -137,6 +144,8 @@
       <recent name="org.vromanyu.order.service" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/choreography/gateway/src/main/java/org/vromanyu/gateway/config" />
+      <recent name="$PROJECT_DIR$/choreography/payment-ms/src/main/java/org/vromanyu/controller" />
       <recent name="$PROJECT_DIR$/choreography/payment-ms/src/main/java/org/vromanyu/payment" />
     </key>
   </component>
@@ -261,6 +270,7 @@
       <workItem from="1773656806558" duration="4589000" />
       <workItem from="1773661405128" duration="11815000" />
       <workItem from="1773673790966" duration="4643000" />
+      <workItem from="1773734949091" duration="1919000" />
     </task>
     <task id="LOCAL-00027" summary="format">
       <option name="closed" value="true" />
