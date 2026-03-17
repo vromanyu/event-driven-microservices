@@ -3,6 +3,7 @@ package org.vromanyu.query.product;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.vromanyu.core.GetProductListResponse;
 import org.vromanyu.core.GetProductResponse;
 
@@ -19,6 +20,7 @@ public class ProductServiceImpl implements ProductService{
     }
 
     @Override
+    @Transactional(readOnly = true)
     public GetProductResponse getProductById(Integer productId) {
         logger.info("getProductById called with productId: {}", productId);
         Product product = productRepository.findById(productId).orElseThrow(() -> new RuntimeException("product with id " + productId + " not found"));
@@ -27,6 +29,7 @@ public class ProductServiceImpl implements ProductService{
     }
 
     @Override
+    @Transactional(readOnly = true)
     public GetProductListResponse getAllProducts() {
         logger.info("getAllProducts called");
         List<GetProductResponse> productResponses = productRepository.findAll().stream().map(this::toGetProductResponse).toList();
