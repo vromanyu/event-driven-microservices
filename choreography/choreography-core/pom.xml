@@ -10,7 +10,7 @@
     </parent>
 
     <groupId>org.vromanyu</groupId>
-    <artifactId>core</artifactId>
+    <artifactId>choreography-core</artifactId>
     <packaging>jar</packaging>
 
     <properties>

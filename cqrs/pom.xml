@@ -12,6 +12,7 @@
     <modules>
         <module>query-ms</module>
         <module>write-ms</module>
+        <module>cqrs-core</module>
     </modules>
 
 </project>

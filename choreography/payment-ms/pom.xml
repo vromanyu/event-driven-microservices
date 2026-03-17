@@ -68,7 +68,7 @@
         </dependency>
         <dependency>
             <groupId>org.vromanyu</groupId>
-            <artifactId>core</artifactId>
+            <artifactId>choreography-core</artifactId>
             <version>1.0.0</version>
             <scope>compile</scope>
         </dependency>
