@@ -31,7 +31,7 @@ public class ProductController {
         return ResponseEntity.ok(product);
     }
 
-    @GetMapping(value = "/", produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value = "/all", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<GetProductListResponse> getAllProducts() {
         logger.info("getAllProducts called");
         GetProductListResponse products = productService.getAllProducts();
