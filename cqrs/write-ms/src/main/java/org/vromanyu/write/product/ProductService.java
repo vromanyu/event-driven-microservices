@@ -7,6 +7,8 @@ import org.vromanyu.core.UpdateProductResponse;
 
 public interface ProductService {
     CreateProductResponse createProduct(CreateProductRequest request);
+
     UpdateProductResponse updateProduct(Integer productId, UpdateProductRequest request);
+
     void deleteProduct(Integer productId);
 }
