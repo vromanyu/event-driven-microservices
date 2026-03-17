@@ -11,7 +11,7 @@ This repository explores **event-driven microservices** patterns, with an emphas
 Additionally, the project now includes a Docker Compose setup that allows you to easily run and experiment with the SAGA Choreography pattern locally, providing a ready-to-use environment for testing interactions between services!
 
 ```bash
-cd choreography
+cd choreography/docker
 docker compose up -d
 ```
 
