@@ -7,7 +7,6 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
-import org.springframework.kafka.core.KafkaTemplate;
 import org.vromanyu.core.OrderEvent;
 import org.vromanyu.core.OrderRequestDto;
 import org.vromanyu.core.OrderStatus;
@@ -30,9 +29,6 @@ public class PaymentServiceTests {
 
     @Mock
     private UserTransactionRepository userTransactionRepository;
-
-    @Mock
-    private KafkaTemplate<String, Object> kafkaTemplate;
 
     @InjectMocks
     private PaymentServiceImpl paymentService;
@@ -58,7 +54,7 @@ public class PaymentServiceTests {
 
         Assertions.assertThatCode(() -> paymentService.pay(orderEvent)).doesNotThrowAnyException();
 
-        Mockito.verify(kafkaTemplate, Mockito.times(1)).send(Mockito.any(), Mockito.anyString(), Mockito.any());
+        Mockito.verify(paymentPublisher, Mockito.times(1)).sendPaidEvent(Mockito.any(), Mockito.any());
         Mockito.verify(paymentPublisher, Mockito.never()).sendFailedEvent(Mockito.any(), Mockito.any());
 
     }
