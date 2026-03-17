@@ -4,19 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f53cd7e9-042e-48da-856a-18c59663b55c" name="Changes" comment=".idea">
-      <change afterPath="$PROJECT_DIR$/choreography/core/src/main/java/org/vromanyu/core/UserBalanceDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/choreography/gateway/src/main/java/org/vromanyu/gateway/config/OrderServiceLoadBalancerConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/choreography/gateway/src/main/java/org/vromanyu/gateway/config/PaymentServiceLoadBalancerConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/choreography/payment-ms/src/main/java/org/vromanyu/payment/controller/UserBalanceController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/choreography/payment-ms/src/main/java/org/vromanyu/payment/controller/UserBalanceControllerAdvice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/choreography/payment-ms/src/main/java/org/vromanyu/payment/service/UserBalanceService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/choreography/payment-ms/src/main/java/org/vromanyu/payment/service/UserBalanceServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/choreography/gateway/src/main/java/org/vromanyu/gateway/config/GatewayRoutesConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/choreography/gateway/src/main/java/org/vromanyu/gateway/config/GatewayRoutesConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/choreography/gateway/src/main/java/org/vromanyu/gateway/config/LoadBalancerConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/choreography/gateway/src/main/java/org/vromanyu/gateway/config/LoadBalancerConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/choreography/payment-ms/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/choreography/payment-ms/src/main/resources/application.yaml" afterDir="false" />
-    </list>
+    <list default="true" id="f53cd7e9-042e-48da-856a-18c59663b55c" name="Changes" comment=".idea" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -67,78 +55,79 @@
     <option name="showLibraryContents" value="true" />
     <option name="showScratchesAndConsoles" value="false" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;JUnit.All in gateway (1).executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.All in gateway (2).executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.All in gateway (3).executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.All in gateway.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.All in order-ms (1).executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.All in order-ms.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.GatewayTests.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.GatewayTests.givenInvalidOrderId_shouldReturnNotFound.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.GatewayTests.givenOrderRequest_shouldReturnCreated.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.GatewayTests.test.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.OrderControllerTests.whenCreateOrder_thenSuccess.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.OrderControllerTests.whenGetOrderByInvalidId_thenFail.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.OrderControllerTests.whenGetOrderByValidId_thenSuccess.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.OrderPublisherTests.whenSend_thenFail.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.OrderPublisherTests.whenSend_thenSuccess.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.OrderRepositoryTests.givenInvalidOrderId_whenFindBy_shouldThrowException.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.OrderRepositoryTests.givenOrder_whenSave_thenPopulateAuditFields.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.OrderRepositoryTests.givenOrder_whenSave_thenSuccess.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.OrderRepositoryTests.givenThreeOrders_whenFindAll_shouldReturnThreeOrders.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.OrderRepositoryTests.givenValidOrderId_whenFindBy_shouldReturnOrder.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.OrderServiceTests.givenInvalidOrderId_whenGetOrder_thenThrowException.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.OrderServiceTests.givenOrderId_whenGetOrder_thenSuccess.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.OrderServiceTests.givenOrderRequest_whenCreateOrder_thenSuccess.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.OrderServiceTests.test.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.PaymentServiceTests.whenInvalidOrderStatus_thenThrowException.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.PaymentServiceTests.whenInvalidUserBalance_thenThrowException.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.PaymentServiceTests.whenValidPaymentEvent_thenSuccess.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserBalanceRepositoryTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserBalanceRepositoryTest.givenInvalidUserId_whenFindByUserId_shouldReturnEmptyList.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserBalanceRepositoryTest.givenValidUserId_whenFindByUserId_shouldReturnUserBalance.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserTransactionRepositoryTests.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.gateway in gateway.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.choreography [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.gateway [clean,install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.gateway [clean].executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Notification.DisplayName-DoNotAsk-DatabaseConfigFileWatcher.found&quot;: &quot;New/updated database configurations found&quot;,
-    &quot;Notification.DoNotAsk-DatabaseConfigFileWatcher.found&quot;: &quot;true&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Spring Boot.GatewayApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.OrderMsApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.PaymentMsApplication.executor&quot;: &quot;Run&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/vromanyu/Repositories/event-driven-microservices/choreography/gateway/src/main/java/org/vromanyu/gateway/config&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.sync&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JUnit.All in gateway (1).executor": "Run",
+    "JUnit.All in gateway (2).executor": "Run",
+    "JUnit.All in gateway (3).executor": "Run",
+    "JUnit.All in gateway.executor": "Run",
+    "JUnit.All in order-ms (1).executor": "Run",
+    "JUnit.All in order-ms.executor": "Run",
+    "JUnit.GatewayTests.executor": "Run",
+    "JUnit.GatewayTests.givenInvalidOrderId_shouldReturnNotFound.executor": "Run",
+    "JUnit.GatewayTests.givenOrderRequest_shouldReturnCreated.executor": "Run",
+    "JUnit.GatewayTests.test.executor": "Run",
+    "JUnit.OrderControllerTests.whenCreateOrder_thenSuccess.executor": "Run",
+    "JUnit.OrderControllerTests.whenGetOrderByInvalidId_thenFail.executor": "Run",
+    "JUnit.OrderControllerTests.whenGetOrderByValidId_thenSuccess.executor": "Run",
+    "JUnit.OrderPublisherTests.whenSend_thenFail.executor": "Run",
+    "JUnit.OrderPublisherTests.whenSend_thenSuccess.executor": "Run",
+    "JUnit.OrderRepositoryTests.givenInvalidOrderId_whenFindBy_shouldThrowException.executor": "Run",
+    "JUnit.OrderRepositoryTests.givenOrder_whenSave_thenPopulateAuditFields.executor": "Run",
+    "JUnit.OrderRepositoryTests.givenOrder_whenSave_thenSuccess.executor": "Run",
+    "JUnit.OrderRepositoryTests.givenThreeOrders_whenFindAll_shouldReturnThreeOrders.executor": "Run",
+    "JUnit.OrderRepositoryTests.givenValidOrderId_whenFindBy_shouldReturnOrder.executor": "Run",
+    "JUnit.OrderServiceTests.givenInvalidOrderId_whenGetOrder_thenThrowException.executor": "Run",
+    "JUnit.OrderServiceTests.givenOrderId_whenGetOrder_thenSuccess.executor": "Run",
+    "JUnit.OrderServiceTests.givenOrderRequest_whenCreateOrder_thenSuccess.executor": "Run",
+    "JUnit.OrderServiceTests.test.executor": "Run",
+    "JUnit.PaymentServiceTests.whenInvalidOrderStatus_thenThrowException.executor": "Run",
+    "JUnit.PaymentServiceTests.whenInvalidUserBalance_thenThrowException.executor": "Run",
+    "JUnit.PaymentServiceTests.whenValidPaymentEvent_thenSuccess.executor": "Run",
+    "JUnit.UserBalanceRepositoryTest.executor": "Run",
+    "JUnit.UserBalanceRepositoryTest.givenInvalidUserId_whenFindByUserId_shouldReturnEmptyList.executor": "Run",
+    "JUnit.UserBalanceRepositoryTest.givenValidUserId_whenFindByUserId_shouldReturnUserBalance.executor": "Run",
+    "JUnit.UserTransactionRepositoryTests.executor": "Run",
+    "JUnit.gateway in gateway.executor": "Run",
+    "JUnit.java in payment-ms.executor": "Run",
+    "Maven.choreography [clean].executor": "Run",
+    "Maven.gateway [clean,install].executor": "Run",
+    "Maven.gateway [clean].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Notification.DisplayName-DoNotAsk-DatabaseConfigFileWatcher.found": "New/updated database configurations found",
+    "Notification.DoNotAsk-DatabaseConfigFileWatcher.found": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.GatewayApplication.executor": "Run",
+    "Spring Boot.OrderMsApplication.executor": "Run",
+    "Spring Boot.PaymentMsApplication.executor": "Run",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "main",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/vromanyu/Repositories/event-driven-microservices/choreography/gateway/src/main/java/org/vromanyu/gateway/config",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "run.configurations.included.in.services": "true",
+    "settings.editor.selected.configurable": "settings.sync",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="org.vromanyu.order.service" />
@@ -172,7 +161,7 @@
       </map>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.All in gateway (3)">
+  <component name="RunManager" selected="JUnit.PaymentServiceTests.whenValidPaymentEvent_thenSuccess">
     <configuration name="All in gateway (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="gateway" />
       <option name="PACKAGE_NAME" value="" />
@@ -197,25 +186,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="All in gateway" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="gateway" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
+    <configuration name="PaymentServiceTests.whenValidPaymentEvent_thenSuccess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="payment-ms" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.vromanyu.payment.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.vromanyu.payment.service" />
+      <option name="MAIN_CLASS_NAME" value="org.vromanyu.payment.service.PaymentServiceTests" />
+      <option name="METHOD_NAME" value="whenValidPaymentEvent_thenSuccess" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GatewayTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="gateway" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.vromanyu.gateway.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.vromanyu.gateway" />
-      <option name="MAIN_CLASS_NAME" value="org.vromanyu.gateway.GatewayTests" />
-      <option name="TEST_OBJECT" value="class" />
+    <configuration name="java in payment-ms" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="payment-ms" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/choreography/payment-ms/src/test/java" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -243,11 +233,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.PaymentServiceTests.whenValidPaymentEvent_thenSuccess" />
+        <item itemvalue="JUnit.java in payment-ms" />
         <item itemvalue="JUnit.All in gateway (3)" />
         <item itemvalue="JUnit.All in gateway (2)" />
         <item itemvalue="JUnit.All in gateway (1)" />
-        <item itemvalue="JUnit.All in gateway" />
-        <item itemvalue="JUnit.GatewayTests" />
       </list>
     </recent_temporary>
   </component>
@@ -270,47 +260,7 @@
       <workItem from="1773656806558" duration="4589000" />
       <workItem from="1773661405128" duration="11815000" />
       <workItem from="1773673790966" duration="4643000" />
-      <workItem from="1773734949091" duration="1919000" />
-    </task>
-    <task id="LOCAL-00027" summary="format">
-      <option name="closed" value="true" />
-      <created>1773657020914</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1773657020914</updated>
-    </task>
-    <task id="LOCAL-00028" summary="populate UserBalance on startup with predefined values">
-      <option name="closed" value="true" />
-      <created>1773657042713</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1773657042713</updated>
-    </task>
-    <task id="LOCAL-00029" summary="add method to find UserBalance by userId">
-      <option name="closed" value="true" />
-      <created>1773657059257</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1773657059257</updated>
-    </task>
-    <task id="LOCAL-00030" summary="add PaymentService and PaymentPublisher to pay the order or send a failed payment event">
-      <option name="closed" value="true" />
-      <created>1773657169079</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1773657169079</updated>
-    </task>
-    <task id="LOCAL-00031" summary=".idea">
-      <option name="closed" value="true" />
-      <created>1773657175072</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1773657175072</updated>
+      <workItem from="1773734949091" duration="2408000" />
     </task>
     <task id="LOCAL-00032" summary="add gateway module">
       <option name="closed" value="true" />
@@ -664,7 +614,47 @@
       <option name="project" value="LOCAL" />
       <updated>1773686639295</updated>
     </task>
-    <option name="localTasksCounter" value="76" />
+    <task id="LOCAL-00076" summary="expose endpoint to obtain all users balances">
+      <option name="closed" value="true" />
+      <created>1773737021684</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1773737021685</updated>
+    </task>
+    <task id="LOCAL-00077" summary="fix UserInitService to populate userIds">
+      <option name="closed" value="true" />
+      <created>1773737035608</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1773737035608</updated>
+    </task>
+    <task id="LOCAL-00078" summary="modularize load balancer configuration">
+      <option name="closed" value="true" />
+      <created>1773737051697</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1773737051698</updated>
+    </task>
+    <task id="LOCAL-00079" summary="break down routes to paymentRoutes and orderRoutes">
+      <option name="closed" value="true" />
+      <created>1773737072896</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1773737072896</updated>
+    </task>
+    <task id="LOCAL-00080" summary=".idea">
+      <option name="closed" value="true" />
+      <created>1773737076246</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1773737076246</updated>
+    </task>
+    <option name="localTasksCounter" value="81" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -697,10 +687,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add OrderControllerTests" />
-    <MESSAGE value="add PaymentServiceTests" />
-    <MESSAGE value="add jpa test and UserBalanceRepositoryTest" />
-    <MESSAGE value="remove PaymentMsApplicationTests" />
     <MESSAGE value="rename" />
     <MESSAGE value="add UserTransactionRepositoryTests" />
     <MESSAGE value="delete OrderPublisherTests" />
@@ -720,8 +706,12 @@
     <MESSAGE value="use bootstrapServer property" />
     <MESSAGE value="loadbalancer configuration based on active profile" />
     <MESSAGE value="provide docker-compose.yml" />
-    <MESSAGE value=".idea" />
     <MESSAGE value="add sendPaidEvent method to PaymentPublisher for sending successful payment events" />
-    <option name="LAST_COMMIT_MESSAGE" value="add sendPaidEvent method to PaymentPublisher for sending successful payment events" />
+    <MESSAGE value="expose endpoint to obtain all users balances" />
+    <MESSAGE value="fix UserInitService to populate userIds" />
+    <MESSAGE value="modularize load balancer configuration" />
+    <MESSAGE value="break down routes to paymentRoutes and orderRoutes" />
+    <MESSAGE value=".idea" />
+    <option name="LAST_COMMIT_MESSAGE" value=".idea" />
   </component>
 </project>
