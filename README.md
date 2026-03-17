@@ -6,13 +6,13 @@ A hands-on playground for experimenting with **event-driven communication** usin
 
 ## Overview
 
-This repository explores **event-driven microservices** patterns, with an emphasis on **SAGA choreography** for managing distributed transactions. It demonstrates how microservices can collaborate asynchronously using events, without tight coupling.
+This repository explores **event-driven microservices** patterns. It demonstrates how microservices can collaborate asynchronously using events, without tight coupling.
 
-Additionally, the project now includes a Docker Compose setup that allows you to easily run and experiment with the SAGA Choreography pattern locally, providing a ready-to-use environment for testing interactions between services!
+The project now includes a Docker Compose setup that allows you to easily run and experiment with the SAGA Choreography pattern locally, providing a ready-to-use environment for testing interactions between services!
 
 ```bash
 cd choreography/docker
 docker compose up -d
 ```
 
-SAGA Orchestration pattern is on the works!
+SAGA Orchestration pattern, and CQRS are on the works!
