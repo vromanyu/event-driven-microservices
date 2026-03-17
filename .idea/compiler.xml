@@ -9,7 +9,9 @@
         <module name="core" />
         <module name="order-ms" />
         <module name="payment-ms" />
+        <module name="write-ms" />
         <module name="gateway" />
+        <module name="query-ms" />
       </profile>
     </annotationProcessing>
   </component>
@@ -18,6 +20,8 @@
       <module name="gateway" options="-parameters" />
       <module name="order-ms" options="-parameters" />
       <module name="payment-ms" options="-parameters" />
+      <module name="query-ms" options="-parameters" />
+      <module name="write-ms" options="-parameters" />
     </option>
   </component>
 </project>
