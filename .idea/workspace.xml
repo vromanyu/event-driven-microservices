@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f53cd7e9-042e-48da-856a-18c59663b55c" name="Changes" comment=".idea">
+    <list default="true" id="f53cd7e9-042e-48da-856a-18c59663b55c" name="Changes" comment="change request mapping for query-ms">
+      <change afterPath="$PROJECT_DIR$/cqrs/write-ms/src/main/java/org/vromanyu/write/product/ProductController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -149,19 +150,6 @@
         <option value="SpringBootApplicationConfigurationType" />
       </set>
     </option>
-    <option name="configurationStatuses">
-      <map>
-        <entry key="SpringBootApplicationConfigurationType">
-          <value>
-            <map>
-              <entry key="GatewayApplication" value="STOPPED" />
-              <entry key="OrderMsApplication" value="STOPPED" />
-              <entry key="PaymentMsApplication" value="STOPPED" />
-            </map>
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
   <component name="RunManager" selected="JUnit.PaymentServiceTests.whenValidPaymentEvent_thenSuccess">
     <configuration name="All in gateway (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
@@ -279,14 +267,6 @@
       <workItem from="1773734949091" duration="3695000" />
       <workItem from="1773740955594" duration="549000" />
       <workItem from="1773747168706" duration="697000" />
-    </task>
-    <task id="LOCAL-00034" summary="add jackson2 dependency to fix spring cloud gateway mvc">
-      <option name="closed" value="true" />
-      <created>1773659173854</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1773659173854</updated>
     </task>
     <task id="LOCAL-00035" summary="change gateway port">
       <option name="closed" value="true" />
@@ -672,7 +652,15 @@
       <option name="project" value="LOCAL" />
       <updated>1773737468895</updated>
     </task>
-    <option name="localTasksCounter" value="83" />
+    <task id="LOCAL-00083" summary="change request mapping for query-ms">
+      <option name="closed" value="true" />
+      <created>1773774613974</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1773774613974</updated>
+    </task>
+    <option name="localTasksCounter" value="84" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -705,7 +693,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add UserTransactionRepositoryTests" />
     <MESSAGE value="delete OrderPublisherTests" />
     <MESSAGE value="verify that event was published once" />
     <MESSAGE value="verify that kafkaTemplate and paymentPublisher were called" />
@@ -730,6 +717,7 @@
     <MESSAGE value="break down routes to paymentRoutes and orderRoutes" />
     <MESSAGE value="fix test since kafkaTemplate has been removed" />
     <MESSAGE value=".idea" />
-    <option name="LAST_COMMIT_MESSAGE" value=".idea" />
+    <MESSAGE value="change request mapping for query-ms" />
+    <option name="LAST_COMMIT_MESSAGE" value="change request mapping for query-ms" />
   </component>
 </project>
