@@ -14,6 +14,7 @@ import org.vromanyu.core.CreateProductResponse;
 import org.vromanyu.core.UpdateProductRequest;
 import org.vromanyu.core.UpdateProductResponse;
 import org.vromanyu.write.product.Product;
+import org.vromanyu.write.product.ProductEventPublisherServiceImpl;
 import org.vromanyu.write.product.ProductRepository;
 import org.vromanyu.write.product.ProductServiceImpl;
 
@@ -27,6 +28,9 @@ public class ProductServiceTests {
 
     @Mock
     private ProductRepository productRepository;
+
+    @Mock
+    private ProductEventPublisherServiceImpl productEventPublisherService;
 
     @InjectMocks
     private ProductServiceImpl productService;
@@ -52,6 +56,7 @@ public class ProductServiceTests {
         CreateProductRequest productRequest = new CreateProductRequest("cookies", 100, 10);
 
         Mockito.when(productRepository.save(Mockito.any(Product.class))).thenReturn(mockedProduct);
+        Mockito.doNothing().when(productEventPublisherService).publishProductCreatedEvent(Mockito.any());
 
         CreateProductResponse response = productService.createProduct(productRequest);
 
@@ -63,12 +68,23 @@ public class ProductServiceTests {
     }
 
     @Test
+    public void givenProductRequest_whenPublishFails_throwException() {
+        CreateProductRequest productRequest = new CreateProductRequest("cookies", 100, 10);
+
+        Mockito.when(productRepository.save(Mockito.any(Product.class))).thenReturn(mockedProduct);
+        Mockito.doThrow(RuntimeException.class).when(productEventPublisherService).publishProductCreatedEvent(Mockito.any());
+
+        Assertions.assertThatThrownBy(() -> productService.createProduct(productRequest));
+    }
+
+    @Test
     public void givenValidProductIdAndUpdateProductRequest_whenUpdateProduct_thenReturnProduct() {
         UpdateProductRequest updateProductRequest = new UpdateProductRequest("cookies", 150, 10);
 
         Mockito.when(productRepository.findById(Mockito.anyInt())).thenReturn(Optional.ofNullable(mockedProduct));
         mockedProduct.setPrice(150);
         Mockito.when(productRepository.save(Mockito.any(Product.class))).thenReturn(mockedProduct);
+        Mockito.doNothing().when(productEventPublisherService).publishProductUpdatedEvent(Mockito.any());
 
         UpdateProductResponse response = productService.updateProduct(1, updateProductRequest);
 
@@ -89,6 +105,7 @@ public class ProductServiceTests {
     @Test
     public void givenProductId_whenDeleteProduct_thenReturnNothing() {
         Mockito.when(productRepository.findById(Mockito.anyInt())).thenReturn(Optional.ofNullable(mockedProduct));
+        Mockito.doNothing().when(productEventPublisherService).publishProductDeletedEvent(Mockito.any());
         Assertions.assertThatCode(() -> productService.deleteProduct(1)).doesNotThrowAnyException();
         Mockito.verify(productRepository, Mockito.times(1)).findById(Mockito.anyInt());
         Mockito.verify(productRepository, Mockito.times(1)).delete(Mockito.any(Product.class));
@@ -97,6 +114,13 @@ public class ProductServiceTests {
     @Test
     public void givenInvalidProductId_whenDeleteProduct_thenThrowException() {
         Mockito.when(productRepository.findById(Mockito.anyInt())).thenReturn(Optional.empty());
+        Assertions.assertThatThrownBy(() -> productService.deleteProduct(1));
+    }
+
+    @Test
+    public void givenValidProductId_whenPublishDeleteEvent_thenThrowException() {
+        Mockito.when(productRepository.findById(Mockito.anyInt())).thenReturn(Optional.ofNullable(mockedProduct));
+        Mockito.doThrow(RuntimeException.class).when(productEventPublisherService).publishProductDeletedEvent(Mockito.any());
         Assertions.assertThatThrownBy(() -> productService.deleteProduct(1));
     }
 
