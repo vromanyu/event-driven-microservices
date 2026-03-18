@@ -14,5 +14,11 @@ The project now includes a Docker Compose setup that allows you to easily run an
 cd choreography/docker
 docker compose up -d
 ```
+The CQRS pattern has been implemented! Here's the Docker Compose command:
 
-SAGA Orchestration pattern, and CQRS are on the works!
+```bash
+cd cqrs/docker
+docker compose up -d
+```
+
+SAGA Orchestration pattern is on the works!
