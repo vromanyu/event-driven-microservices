@@ -13,7 +13,7 @@
         <module>order-ms</module>
         <module>payment-ms</module>
         <module>choreography-core</module>
-        <module>gateway</module>
+        <module>choreography-gateway</module>
     </modules>
 
 </project>

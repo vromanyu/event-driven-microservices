@@ -9,16 +9,16 @@
         <module name="order-ms" />
         <module name="write-ms" />
         <module name="cqrs-core" />
+        <module name="choreography-gateway" />
         <module name="choreography-core" />
         <module name="payment-ms" />
-        <module name="gateway" />
         <module name="query-ms" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="gateway" options="-parameters" />
+      <module name="choreography-gateway" options="-parameters" />
       <module name="order-ms" options="-parameters" />
       <module name="payment-ms" options="-parameters" />
       <module name="query-ms" options="-parameters" />

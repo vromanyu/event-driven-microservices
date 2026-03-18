@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f53cd7e9-042e-48da-856a-18c59663b55c" name="Changes" comment=".idea">
-      <change afterPath="$PROJECT_DIR$/cqrs/cqrs-core/.gitignore" afterDir="false" />
+    <list default="true" id="f53cd7e9-042e-48da-856a-18c59663b55c" name="Changes" comment="add docker oci plugin and configuration">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/build-all.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/build-all.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +30,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -119,6 +121,8 @@
     "JUnit.query in query-ms.executor": "Run",
     "JUnit.write in write-ms.executor": "Run",
     "Maven.choreography [clean].executor": "Run",
+    "Maven.cqrs [clean].executor": "Run",
+    "Maven.cqrs-core [clean].executor": "Run",
     "Maven.gateway [clean,install].executor": "Run",
     "Maven.gateway [clean].executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
@@ -258,7 +262,7 @@
       </method>
     </configuration>
     <configuration name="GatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="gateway" />
+      <module name="choreography-gateway" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="org.vromanyu.gateway.GatewayApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -324,39 +328,7 @@
       <workItem from="1773734949091" duration="3695000" />
       <workItem from="1773740955594" duration="549000" />
       <workItem from="1773747168706" duration="697000" />
-      <workItem from="1773826693808" duration="4847000" />
-    </task>
-    <task id="LOCAL-00053" summary="verify that event was published once">
-      <option name="closed" value="true" />
-      <created>1773666262004</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1773666262004</updated>
-    </task>
-    <task id="LOCAL-00054" summary="verify that event was published once">
-      <option name="closed" value="true" />
-      <created>1773666390411</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1773666390411</updated>
-    </task>
-    <task id="LOCAL-00055" summary="verify that kafkaTemplate and paymentPublisher were called">
-      <option name="closed" value="true" />
-      <created>1773666635133</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1773666635133</updated>
-    </task>
-    <task id="LOCAL-00056" summary="preserve host header in gateway routes configuration">
-      <option name="closed" value="true" />
-      <created>1773668273509</created>
-      <option name="number" value="00056" />
-      <option name="presentableId" value="LOCAL-00056" />
-      <option name="project" value="LOCAL" />
-      <updated>1773668273509</updated>
+      <workItem from="1773826693808" duration="5178000" />
     </task>
     <task id="LOCAL-00057" summary="add wiremock dependency for testing">
       <option name="closed" value="true" />
@@ -718,7 +690,39 @@
       <option name="project" value="LOCAL" />
       <updated>1773832757744</updated>
     </task>
-    <option name="localTasksCounter" value="102" />
+    <task id="LOCAL-00102" summary="add .gitignore">
+      <option name="closed" value="true" />
+      <created>1773832772298</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1773832772298</updated>
+    </task>
+    <task id="LOCAL-00103" summary=".idea">
+      <option name="closed" value="true" />
+      <created>1773832777605</created>
+      <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1773832777606</updated>
+    </task>
+    <task id="LOCAL-00104" summary="remove duplicate dependencies">
+      <option name="closed" value="true" />
+      <created>1773832856561</created>
+      <option name="number" value="00104" />
+      <option name="presentableId" value="LOCAL-00104" />
+      <option name="project" value="LOCAL" />
+      <updated>1773832856561</updated>
+    </task>
+    <task id="LOCAL-00105" summary="add docker oci plugin and configuration">
+      <option name="closed" value="true" />
+      <created>1773833073793</created>
+      <option name="number" value="00105" />
+      <option name="presentableId" value="LOCAL-00105" />
+      <option name="project" value="LOCAL" />
+      <updated>1773833073793</updated>
+    </task>
+    <option name="localTasksCounter" value="106" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -751,9 +755,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="use bootstrapServer property" />
-    <MESSAGE value="loadbalancer configuration based on active profile" />
-    <MESSAGE value="provide docker-compose.yml" />
     <MESSAGE value="add sendPaidEvent method to PaymentPublisher for sending successful payment events" />
     <MESSAGE value="expose endpoint to obtain all users balances" />
     <MESSAGE value="fix UserInitService to populate userIds" />
@@ -775,7 +776,10 @@
     <MESSAGE value="search for product before deleting to throw exception if id is invalid" />
     <MESSAGE value="add logging statements" />
     <MESSAGE value="add tests for publisher and listener" />
+    <MESSAGE value="add .gitignore" />
     <MESSAGE value=".idea" />
-    <option name="LAST_COMMIT_MESSAGE" value=".idea" />
+    <MESSAGE value="remove duplicate dependencies" />
+    <MESSAGE value="add docker oci plugin and configuration" />
+    <option name="LAST_COMMIT_MESSAGE" value="add docker oci plugin and configuration" />
   </component>
 </project>

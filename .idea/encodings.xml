@@ -3,7 +3,7 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/choreography/choreography-core/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/choreography/choreography-core/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/choreography/gateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/choreography/choreography-gateway/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/choreography/order-ms/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/choreography/payment-ms/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cqrs/cqrs-core/src/main/java" charset="UTF-8" />
