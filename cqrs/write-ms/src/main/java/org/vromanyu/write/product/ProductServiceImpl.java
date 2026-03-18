@@ -46,6 +46,7 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
+    @Transactional
     public UpdateProductResponse updateProduct(Integer productId, UpdateProductRequest request) {
         logger.info("updateProduct called with productId: {}, request: {}", productId, request);
         Product product = findProductById(productId);
@@ -58,6 +59,7 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
+    @Transactional
     public void deleteProduct(Integer productId) {
         logger.info("deleteProduct called with productId: {}", productId);
         Product product = findProductById(productId);
