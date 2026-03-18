@@ -20,7 +20,7 @@ jobs:
           cache: 'maven'
       - name: Build/Test
         id: build
-        run: mvn -B package --file choreography/gateway/pom.xml
+        run: mvn -B package --file choreography/choreography-gateway/pom.xml
   order-ms:
     runs-on: ubuntu-latest
     env:
@@ -74,7 +74,7 @@ jobs:
           cache: 'maven'
       - name: Build/Test
         id: build
-        run: mvn -B package --file cqrs/gateway/pom.xml
+        run: mvn -B package --file cqrs/cqrs-gateway/pom.xml
   query-ms:
     runs-on: ubuntu-latest
     env:
