@@ -4,19 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f53cd7e9-042e-48da-856a-18c59663b55c" name="Changes" comment="add @Transactional annotation to all methods">
-      <change afterPath="$PROJECT_DIR$/cqrs/query-ms/src/main/java/org/vromanyu/query/config/KafkaConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cqrs/query-ms/src/main/java/org/vromanyu/query/product/ProductEventConsumerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cqrs/query-ms/src/main/java/org/vromanyu/query/product/ProductEventConsumerServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cqrs/write-ms/src/main/java/org/vromanyu/write/config/KafkaConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cqrs/write-ms/src/main/java/org/vromanyu/write/product/ProductEventPublisherService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cqrs/write-ms/src/main/java/org/vromanyu/write/product/ProductEventPublisherServiceImpl.java" afterDir="false" />
+    <list default="true" id="f53cd7e9-042e-48da-856a-18c59663b55c" name="Changes" comment="add logging statements">
+      <change afterPath="$PROJECT_DIR$/cqrs/query-ms/src/test/java/org/vromanyu/query/ProductEventConsumerServiceTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cqrs/query-ms/src/main/java/org/vromanyu/query/product/ProductControllerAdvice.java" beforeDir="false" afterPath="$PROJECT_DIR$/cqrs/query-ms/src/main/java/org/vromanyu/query/product/ProductControllerAdvice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cqrs/query-ms/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/cqrs/query-ms/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cqrs/write-ms/src/main/java/org/vromanyu/write/product/ProductControllerAdvice.java" beforeDir="false" afterPath="$PROJECT_DIR$/cqrs/write-ms/src/main/java/org/vromanyu/write/product/ProductControllerAdvice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cqrs/write-ms/src/main/java/org/vromanyu/write/product/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/cqrs/write-ms/src/main/java/org/vromanyu/write/product/ProductServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cqrs/write-ms/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/cqrs/write-ms/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cqrs/write-ms/src/test/java/org/vromanyu/write/ProductServiceTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/cqrs/write-ms/src/test/java/org/vromanyu/write/ProductServiceTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,13 +98,25 @@
     "JUnit.ProductControllerTests.whenGetProductById_thenSuccess.executor": "Run",
     "JUnit.ProductControllerTests.whenUpdateProductWithInValidId_thenReturnBadRequest.executor": "Run",
     "JUnit.ProductControllerTests.whenUpdateProductWithValidId_thenReturnUpdatedProduct.executor": "Run",
+    "JUnit.ProductEventConsumerServiceTests.executor": "Run",
+    "JUnit.ProductEventConsumerServiceTests.whenProductCreatedEvent_thenProductSaved.executor": "Run",
+    "JUnit.ProductEventConsumerServiceTests.whenProductDeletedEvent_thenSuccess.executor": "Run",
+    "JUnit.ProductEventConsumerServiceTests.whenProductDeletedEvent_thenThrowException.executor": "Run",
+    "JUnit.ProductEventConsumerServiceTests.whenProductUpdatedEvent_thenThrowException.executor": "Run",
+    "JUnit.ProductEventConsumerServiceTests.whenProductUpdatedEvent_thenUpdateProduct.executor": "Run",
+    "JUnit.ProductServiceTests.givenInvalidProductId_whenPublishUpdateProduct_thenThrowException.executor": "Run",
+    "JUnit.ProductServiceTests.givenProductRequest_whenCreateProduct_thenReturnProduct.executor": "Run",
+    "JUnit.ProductServiceTests.givenProductRequest_whenPublishFails_throwException.executor": "Run",
+    "JUnit.ProductServiceTests.givenValidProductIdAndUpdateProductRequest_whenUpdateProduct_thenReturnProduct.executor": "Run",
     "JUnit.UserBalanceRepositoryTest.executor": "Run",
     "JUnit.UserBalanceRepositoryTest.givenInvalidUserId_whenFindByUserId_shouldReturnEmptyList.executor": "Run",
     "JUnit.UserBalanceRepositoryTest.givenValidUserId_whenFindByUserId_shouldReturnUserBalance.executor": "Run",
     "JUnit.UserTransactionRepositoryTests.executor": "Run",
     "JUnit.gateway in gateway.executor": "Run",
     "JUnit.java in payment-ms.executor": "Run",
+    "JUnit.java in query-ms.executor": "Run",
     "JUnit.query in query-ms.executor": "Run",
+    "JUnit.write in write-ms.executor": "Run",
     "Maven.choreography [clean].executor": "Run",
     "Maven.gateway [clean,install].executor": "Run",
     "Maven.gateway [clean].executor": "Run",
@@ -189,7 +192,7 @@
     </option>
   </component>
   <component name="RunManager" selected="JUnit.query in query-ms">
-    <configuration name="ProductControllerTests.whenDeleteProductWithInValidId_thenReturnBadRequest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ProductServiceTests.givenInvalidProductId_whenDeleteProduct_thenThrowException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="write-ms" />
       <extension name="coverage">
         <pattern>
@@ -198,14 +201,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.vromanyu.write" />
-      <option name="MAIN_CLASS_NAME" value="org.vromanyu.write.ProductControllerTests" />
-      <option name="METHOD_NAME" value="whenDeleteProductWithInValidId_thenReturnBadRequest" />
+      <option name="MAIN_CLASS_NAME" value="org.vromanyu.write.ProductServiceTests" />
+      <option name="METHOD_NAME" value="givenInvalidProductId_whenDeleteProduct_thenThrowException" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProductControllerTests.whenDeleteProductWithValidId_thenReturnNoContent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ProductServiceTests.givenProductId_whenDeleteProduct_thenReturnNothing" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="write-ms" />
       <extension name="coverage">
         <pattern>
@@ -214,14 +217,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.vromanyu.write" />
-      <option name="MAIN_CLASS_NAME" value="org.vromanyu.write.ProductControllerTests" />
-      <option name="METHOD_NAME" value="whenDeleteProductWithValidId_thenReturnNoContent" />
+      <option name="MAIN_CLASS_NAME" value="org.vromanyu.write.ProductServiceTests" />
+      <option name="METHOD_NAME" value="givenProductId_whenDeleteProduct_thenReturnNothing" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProductControllerTests.whenUpdateProductWithInValidId_thenReturnBadRequest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ProductServiceTests.givenValidProductId_whenPublishDeleteEvent_thenThrowException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="write-ms" />
       <extension name="coverage">
         <pattern>
@@ -230,24 +233,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.vromanyu.write" />
-      <option name="MAIN_CLASS_NAME" value="org.vromanyu.write.ProductControllerTests" />
-      <option name="METHOD_NAME" value="whenUpdateProductWithInValidId_thenReturnBadRequest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ProductControllerTests.whenUpdateProductWithValidId_thenReturnUpdatedProduct" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="write-ms" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.vromanyu.write.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.vromanyu.write" />
-      <option name="MAIN_CLASS_NAME" value="org.vromanyu.write.ProductControllerTests" />
-      <option name="METHOD_NAME" value="whenUpdateProductWithValidId_thenReturnUpdatedProduct" />
+      <option name="MAIN_CLASS_NAME" value="org.vromanyu.write.ProductServiceTests" />
+      <option name="METHOD_NAME" value="givenValidProductId_whenPublishDeleteEvent_thenThrowException" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -257,6 +244,14 @@
       <module name="query-ms" />
       <option name="TEST_OBJECT" value="directory" />
       <dir value="$PROJECT_DIR$/cqrs/query-ms/src/test/java/org/vromanyu/query" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="write in write-ms" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="write-ms" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/cqrs/write-ms/src/test/java/org/vromanyu/write" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -299,10 +294,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.query in query-ms" />
-        <item itemvalue="JUnit.ProductControllerTests.whenDeleteProductWithInValidId_thenReturnBadRequest" />
-        <item itemvalue="JUnit.ProductControllerTests.whenDeleteProductWithValidId_thenReturnNoContent" />
-        <item itemvalue="JUnit.ProductControllerTests.whenUpdateProductWithInValidId_thenReturnBadRequest" />
-        <item itemvalue="JUnit.ProductControllerTests.whenUpdateProductWithValidId_thenReturnUpdatedProduct" />
+        <item itemvalue="JUnit.write in write-ms" />
+        <item itemvalue="JUnit.ProductServiceTests.givenValidProductId_whenPublishDeleteEvent_thenThrowException" />
+        <item itemvalue="JUnit.ProductServiceTests.givenInvalidProductId_whenDeleteProduct_thenThrowException" />
+        <item itemvalue="JUnit.ProductServiceTests.givenProductId_whenDeleteProduct_thenReturnNothing" />
       </list>
     </recent_temporary>
   </component>
@@ -328,63 +323,7 @@
       <workItem from="1773734949091" duration="3695000" />
       <workItem from="1773740955594" duration="549000" />
       <workItem from="1773747168706" duration="697000" />
-      <workItem from="1773826693808" duration="3493000" />
-    </task>
-    <task id="LOCAL-00044" summary="format">
-      <option name="closed" value="true" />
-      <created>1773661871247</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1773661871247</updated>
-    </task>
-    <task id="LOCAL-00045" summary="add webmvc-test dependency">
-      <option name="closed" value="true" />
-      <created>1773663065182</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1773663065182</updated>
-    </task>
-    <task id="LOCAL-00046" summary="add OrderControllerTests">
-      <option name="closed" value="true" />
-      <created>1773663911521</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1773663911521</updated>
-    </task>
-    <task id="LOCAL-00047" summary="add PaymentServiceTests">
-      <option name="closed" value="true" />
-      <created>1773665375887</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1773665375887</updated>
-    </task>
-    <task id="LOCAL-00048" summary="add jpa test and UserBalanceRepositoryTest">
-      <option name="closed" value="true" />
-      <created>1773665386263</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1773665386263</updated>
-    </task>
-    <task id="LOCAL-00049" summary="remove PaymentMsApplicationTests">
-      <option name="closed" value="true" />
-      <created>1773665394967</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1773665394967</updated>
-    </task>
-    <task id="LOCAL-00050" summary="rename">
-      <option name="closed" value="true" />
-      <created>1773665431311</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1773665431311</updated>
+      <workItem from="1773826693808" duration="4546000" />
     </task>
     <task id="LOCAL-00051" summary="add UserTransactionRepositoryTests">
       <option name="closed" value="true" />
@@ -722,7 +661,63 @@
       <option name="project" value="LOCAL" />
       <updated>1773829794809</updated>
     </task>
-    <option name="localTasksCounter" value="93" />
+    <task id="LOCAL-00093" summary="add kafka configuration">
+      <option name="closed" value="true" />
+      <created>1773831432865</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1773831432865</updated>
+    </task>
+    <task id="LOCAL-00094" summary="log the exception in ProductControllerAdvice">
+      <option name="closed" value="true" />
+      <created>1773831443161</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1773831443161</updated>
+    </task>
+    <task id="LOCAL-00095" summary="add ProductEventConsumerService to listen to Product manipulation events">
+      <option name="closed" value="true" />
+      <created>1773831499819</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1773831499819</updated>
+    </task>
+    <task id="LOCAL-00096" summary="publish Product events after manipulating product">
+      <option name="closed" value="true" />
+      <created>1773831530179</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1773831530179</updated>
+    </task>
+    <task id="LOCAL-00097" summary=".idea">
+      <option name="closed" value="true" />
+      <created>1773831535955</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1773831535955</updated>
+    </task>
+    <task id="LOCAL-00098" summary="search for product before deleting to throw exception if id is invalid">
+      <option name="closed" value="true" />
+      <created>1773832110379</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1773832110379</updated>
+    </task>
+    <task id="LOCAL-00099" summary="add logging statements">
+      <option name="closed" value="true" />
+      <created>1773832143853</created>
+      <option name="number" value="00099" />
+      <option name="presentableId" value="LOCAL-00099" />
+      <option name="project" value="LOCAL" />
+      <updated>1773832143853</updated>
+    </task>
+    <option name="localTasksCounter" value="100" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -755,12 +750,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="trust all IPs to send X-Forwarded-* headers to downstream services" />
-    <MESSAGE value="add groupId" />
-    <MESSAGE value="update core dependency" />
-    <MESSAGE value="build image for each service" />
-    <MESSAGE value="add build-all workflow" />
-    <MESSAGE value="build services parallel" />
     <MESSAGE value="fix mvn command" />
     <MESSAGE value="use bootstrapServer property" />
     <MESSAGE value="loadbalancer configuration based on active profile" />
@@ -773,13 +762,19 @@
     <MESSAGE value="fix test since kafkaTemplate has been removed" />
     <MESSAGE value="change request mapping for query-ms" />
     <MESSAGE value="add ProductController and ProductControllerAdvice classes for writing and updating products" />
-    <MESSAGE value=".idea" />
     <MESSAGE value="add webmvc-test dependency for testing controllers" />
     <MESSAGE value="change endpoint for all products" />
     <MESSAGE value="add ProductControllerTests for writing and querying" />
     <MESSAGE value="add Product events" />
     <MESSAGE value="remove auto generation of id, since the write-ms provides as with the id" />
     <MESSAGE value="add @Transactional annotation to all methods" />
-    <option name="LAST_COMMIT_MESSAGE" value="add @Transactional annotation to all methods" />
+    <MESSAGE value="add kafka configuration" />
+    <MESSAGE value="log the exception in ProductControllerAdvice" />
+    <MESSAGE value="add ProductEventConsumerService to listen to Product manipulation events" />
+    <MESSAGE value="publish Product events after manipulating product" />
+    <MESSAGE value=".idea" />
+    <MESSAGE value="search for product before deleting to throw exception if id is invalid" />
+    <MESSAGE value="add logging statements" />
+    <option name="LAST_COMMIT_MESSAGE" value="add logging statements" />
   </component>
 </project>
