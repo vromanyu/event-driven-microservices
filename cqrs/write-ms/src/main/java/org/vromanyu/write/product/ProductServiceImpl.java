@@ -4,19 +4,22 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.vromanyu.core.CreateProductRequest;
-import org.vromanyu.core.CreateProductResponse;
-import org.vromanyu.core.UpdateProductRequest;
-import org.vromanyu.core.UpdateProductResponse;
+import org.vromanyu.core.*;
+
+import java.util.UUID;
 
 @Service
 public class ProductServiceImpl implements ProductService {
 
     private static final Logger logger = LoggerFactory.getLogger(ProductServiceImpl.class);
+
     private final ProductRepository productRepository;
 
-    public ProductServiceImpl(ProductRepository productRepository) {
+    private final ProductEventPublisherService productEventPublisherService;
+
+    public ProductServiceImpl(ProductRepository productRepository, ProductEventPublisherService productEventPublisherService) {
         this.productRepository = productRepository;
+        this.productEventPublisherService = productEventPublisherService;
     }
 
     private Product findProductById(Integer productId) {
@@ -42,6 +45,13 @@ public class ProductServiceImpl implements ProductService {
         Product newProduct = toProduct(request);
         Product savedProduct = productRepository.save(newProduct);
         logger.info("product saved: {}", savedProduct);
+        ProductCreatedEvent productCreatedEvent = new ProductCreatedEvent(UUID.randomUUID().toString(),
+                savedProduct.getId(),
+                savedProduct.getName(),
+                savedProduct.getPrice(),
+                savedProduct.getQuantity());
+        logger.info("publishing product created event: {}", productCreatedEvent);
+        productEventPublisherService.publishProductCreatedEvent(productCreatedEvent);
         return toCreateProductResponse(savedProduct);
     }
 
@@ -55,6 +65,13 @@ public class ProductServiceImpl implements ProductService {
         product.setQuantity(request.quantity());
         Product updatedProduct = productRepository.save(product);
         logger.info("product updated: {}", updatedProduct);
+        ProductUpdatedEvent productUpdatedEvent = new ProductUpdatedEvent(UUID.randomUUID().toString(),
+                updatedProduct.getId(),
+                updatedProduct.getName(),
+                updatedProduct.getPrice(),
+                updatedProduct.getQuantity());
+        logger.info("publishing product updated event: {}", productUpdatedEvent);
+        productEventPublisherService.publishProductUpdatedEvent(productUpdatedEvent);
         return toUpdateProductResponse(updatedProduct);
     }
 
@@ -65,5 +82,8 @@ public class ProductServiceImpl implements ProductService {
         Product product = findProductById(productId);
         productRepository.delete(product);
         logger.info("product deleted");
+        ProductDeletedEvent productDeletedEvent = new ProductDeletedEvent(UUID.randomUUID().toString(), productId);
+        logger.info("publishing product deleted event: {}", productDeletedEvent);
+        productEventPublisherService.publishProductDeletedEvent(productDeletedEvent);
     }
 }
