@@ -1,0 +1,259 @@
+{
+  "info": {
+    "_postman_id": "04090970-652a-4b6e-9f7f-aea8be5da20d",
+    "name": "event-driven-microservices",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "47304262"
+  },
+  "item": [
+    {
+      "name": "choreography",
+      "item": [
+        {
+          "name": "getOrderById",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{gateway-server}}/api/orders/{{orderId}}",
+              "host": [
+                "{{gateway-server}}"
+              ],
+              "path": [
+                "api",
+                "orders",
+                "{{orderId}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "createOrder",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"userId\": 100,\n  \"productId\": 1234,\n  \"amount\": 155  \n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{gateway-server}}/api/orders/",
+              "host": [
+                "{{gateway-server}}"
+              ],
+              "path": [
+                "api",
+                "orders",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getAllUserBalances",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{gateway-server}}/api/payments/user-balances",
+              "host": [
+                "{{gateway-server}}"
+              ],
+              "path": [
+                "api",
+                "payments",
+                "user-balances"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "cqrs",
+      "item": [
+        {
+          "name": "getAllProductsGateway",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{cqrs-gateway-server}}/api/products/get/all",
+              "host": [
+                "{{cqrs-gateway-server}}"
+              ],
+              "path": [
+                "api",
+                "products",
+                "get",
+                "all"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getProductByIdGateway",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{cqrs-gateway-server}}/api/products/get/1",
+              "host": [
+                "{{cqrs-gateway-server}}"
+              ],
+              "path": [
+                "api",
+                "products",
+                "get",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "createProductGateway",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"productName\": \"socks\",\n    \"price\": 10,\n    \"quantity\": 100\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{cqrs-gateway-server}}/api/products/write/",
+              "host": [
+                "{{cqrs-gateway-server}}"
+              ],
+              "path": [
+                "api",
+                "products",
+                "write",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "updateProductGateway",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"productName\": \"socks 2\",\n    \"price\": 10,\n    \"quantity\": 100\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{cqrs-gateway-server}}/api/products/write/1",
+              "host": [
+                "{{cqrs-gateway-server}}"
+              ],
+              "path": [
+                "api",
+                "products",
+                "write",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "deleteProductGateway",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"productName\": \"socks\",\n    \"price\": 10,\n    \"quantity\": 100\n}"
+            },
+            "url": {
+              "raw": "{{cqrs-gateway-server}}/api/products/write/1",
+              "host": [
+                "{{cqrs-gateway-server}}"
+              ],
+              "path": [
+                "api",
+                "products",
+                "write",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "order-ms-server",
+      "value": ""
+    },
+    {
+      "key": "orderId",
+      "value": ""
+    },
+    {
+      "key": "choreography-gateway-server",
+      "value": ""
+    },
+    {
+      "key": "write-ms-server",
+      "value": ""
+    },
+    {
+      "key": "query-ms-server",
+      "value": ""
+    },
+    {
+      "key": "cqrs-gateway-server",
+      "value": "",
+      "type": "default"
+    }
+  ]
+}
