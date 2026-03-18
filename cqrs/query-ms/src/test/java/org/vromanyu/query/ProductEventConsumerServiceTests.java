@@ -9,6 +9,7 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.cache.CacheManager;
 import org.vromanyu.core.ProductCreatedEvent;
 import org.vromanyu.core.ProductDeletedEvent;
 import org.vromanyu.core.ProductUpdatedEvent;
@@ -23,6 +24,9 @@ import java.util.UUID;
 public class ProductEventConsumerServiceTests {
 
     private Product mockedProduct;
+
+    @Mock
+    private CacheManager cacheManager;
 
     @Mock
     private ProductRepository productRepository;

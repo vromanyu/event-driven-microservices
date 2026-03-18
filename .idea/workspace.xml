@@ -4,16 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f53cd7e9-042e-48da-856a-18c59663b55c" name="Changes" comment="change module name">
-      <change afterPath="$PROJECT_DIR$/cqrs/cqrs-gateway/src/main/java/org/vromanyu/gateway/config/GatewayRoutesConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cqrs/cqrs-gateway/src/main/java/org/vromanyu/gateway/config/LoadBalancerConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cqrs/cqrs-gateway/src/main/java/org/vromanyu/gateway/config/QueryServiceLoadBalancerConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cqrs/cqrs-gateway/src/main/java/org/vromanyu/gateway/config/WriteServiceLoadBalancerConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="f53cd7e9-042e-48da-856a-18c59663b55c" name="Changes" comment="add gateway tests">
+      <change afterPath="$PROJECT_DIR$/cqrs/query-ms/src/main/java/org/vromanyu/query/config/ConcurrentMapCacheConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cqrs/query-ms/src/main/java/org/vromanyu/query/config/RedisCacheConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cqrs/query-ms/src/main/resources/application-prod.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/choreography/choreography-gateway/src/main/java/org/vromanyu/gateway/config/OrderServiceLoadBalancerConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/choreography/choreography-gateway/src/main/java/org/vromanyu/gateway/config/OrderServiceLoadBalancerConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cqrs/query-ms/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cqrs/query-ms/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cqrs/query-ms/src/main/java/org/vromanyu/query/product/ProductEventConsumerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/cqrs/query-ms/src/main/java/org/vromanyu/query/product/ProductEventConsumerServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cqrs/query-ms/src/main/java/org/vromanyu/query/product/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/cqrs/query-ms/src/main/java/org/vromanyu/query/product/ProductServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,7 +19,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="130" />
+    <option name="cachedIndexableFilesCount" value="160" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
@@ -76,8 +74,16 @@
     "JUnit.All in order-ms.executor": "Run",
     "JUnit.GatewayTests.executor": "Run",
     "JUnit.GatewayTests.givenInvalidOrderId_shouldReturnNotFound.executor": "Run",
+    "JUnit.GatewayTests.givenInvalidProductId_shouldReturnNotFound.executor": "Run",
     "JUnit.GatewayTests.givenOrderRequest_shouldReturnCreated.executor": "Run",
+    "JUnit.GatewayTests.givenProductDeleteRequest_shouldReturnNoContent.executor": "Run",
+    "JUnit.GatewayTests.givenProductRequest_shouldReturnCreated.executor": "Run",
+    "JUnit.GatewayTests.givenProductUpdateRequest_shouldReturnUpdatedProduct.executor": "Run",
+    "JUnit.GatewayTests.givenValidOrderId_shouldReturnOk.executor": "Run",
+    "JUnit.GatewayTests.givenValidProductId_shouldReturnOk.executor": "Run",
     "JUnit.GatewayTests.test.executor": "Run",
+    "JUnit.GatewayTests.whenAllProductsAndThereAreNoProducts_thenReturnEmptyList.executor": "Run",
+    "JUnit.GatewayTests.whenAllProductsAndThereAreProducts_thenReturnAllProducts.executor": "Run",
     "JUnit.OrderControllerTests.whenCreateOrder_thenSuccess.executor": "Run",
     "JUnit.OrderControllerTests.whenGetOrderByInvalidId_thenFail.executor": "Run",
     "JUnit.OrderControllerTests.whenGetOrderByValidId_thenSuccess.executor": "Run",
@@ -125,6 +131,7 @@
     "JUnit.gateway in gateway.executor": "Run",
     "JUnit.java in payment-ms.executor": "Run",
     "JUnit.java in query-ms.executor": "Run",
+    "JUnit.org.vromanyu.query in query-ms.executor": "Run",
     "JUnit.query in query-ms.executor": "Run",
     "JUnit.write in write-ms.executor": "Run",
     "Maven.choreography [clean].executor": "Run",
@@ -146,6 +153,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.CqrsGatewayApplication.executor": "Run",
     "Spring Boot.GatewayApplication.executor": "Run",
     "Spring Boot.OrderMsApplication.executor": "Run",
     "Spring Boot.PaymentMsApplication.executor": "Run",
@@ -155,7 +163,7 @@
     "git-widget-placeholder": "main",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/vromanyu/Repositories/event-driven-microservices/cqrs/cqrs-gateway/src/main/java/org/vromanyu/gateway",
+    "last_opened_file_path": "/home/vromanyu/Repositories/event-driven-microservices/cqrs/write-ms/src/main/java/org/vromanyu/write/config",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -170,16 +178,19 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="org.vromanyu.order.service" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/cqrs/write-ms/src/main/java/org/vromanyu/write/config" />
+      <recent name="$PROJECT_DIR$/cqrs" />
       <recent name="$PROJECT_DIR$/cqrs/cqrs-gateway/src/main/java/org/vromanyu/gateway" />
       <recent name="$PROJECT_DIR$/cqrs/cqrs-core" />
-      <recent name="$PROJECT_DIR$/cqrs/write-ms/src/main/java/org/vromanyu/write/config" />
       <recent name="$PROJECT_DIR$/cqrs/cqrs-core/src/main/java/org/vromanyu/core" />
-      <recent name="$PROJECT_DIR$/cqrs/write-ms/src/main/java/org/vromanyu/write/product" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -204,67 +215,64 @@
       </map>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.query in query-ms">
-    <configuration name="ProductServiceTests.givenInvalidProductId_whenDeleteProduct_thenThrowException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="write-ms" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.vromanyu.write.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.vromanyu.write" />
-      <option name="MAIN_CLASS_NAME" value="org.vromanyu.write.ProductServiceTests" />
-      <option name="METHOD_NAME" value="givenInvalidProductId_whenDeleteProduct_thenThrowException" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ProductServiceTests.givenProductId_whenDeleteProduct_thenReturnNothing" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="write-ms" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.vromanyu.write.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.vromanyu.write" />
-      <option name="MAIN_CLASS_NAME" value="org.vromanyu.write.ProductServiceTests" />
-      <option name="METHOD_NAME" value="givenProductId_whenDeleteProduct_thenReturnNothing" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ProductServiceTests.givenValidProductId_whenPublishDeleteEvent_thenThrowException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="write-ms" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.vromanyu.write.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.vromanyu.write" />
-      <option name="MAIN_CLASS_NAME" value="org.vromanyu.write.ProductServiceTests" />
-      <option name="METHOD_NAME" value="givenValidProductId_whenPublishDeleteEvent_thenThrowException" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="query in query-ms" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.ProductEventConsumerServiceTests">
+    <configuration name="All in query-ms" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="query-ms" />
-      <option name="TEST_OBJECT" value="directory" />
-      <dir value="$PROJECT_DIR$/cqrs/query-ms/src/test/java/org/vromanyu/query" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="write in write-ms" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="All in write-ms" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="write-ms" />
-      <option name="TEST_OBJECT" value="directory" />
-      <dir value="$PROJECT_DIR$/cqrs/write-ms/src/test/java/org/vromanyu/write" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductControllerTests.whenCreateProduct_thenReturnCreatedProduct" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="write-ms" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.vromanyu.write.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.vromanyu.write" />
+      <option name="MAIN_CLASS_NAME" value="org.vromanyu.write.ProductControllerTests" />
+      <option name="METHOD_NAME" value="whenCreateProduct_thenReturnCreatedProduct" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductEventConsumerServiceTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="query-ms" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.vromanyu.query.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.vromanyu.query" />
+      <option name="MAIN_CLASS_NAME" value="org.vromanyu.query.ProductEventConsumerServiceTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="org.vromanyu.query in query-ms" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="query-ms" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.vromanyu.query.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.vromanyu.query" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -305,19 +313,33 @@
       </method>
     </configuration>
     <configuration name="WriteMsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="ACTIVE_PROFILES" value="prod" />
       <module name="write-ms" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="org.vromanyu.write.WriteMsApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="JUnit.All in query-ms" />
+      <item itemvalue="JUnit.ProductEventConsumerServiceTests" />
+      <item itemvalue="JUnit.All in write-ms" />
+      <item itemvalue="JUnit.org.vromanyu.query in query-ms" />
+      <item itemvalue="JUnit.ProductControllerTests.whenCreateProduct_thenReturnCreatedProduct" />
+      <item itemvalue="Spring Boot.ChoreographyGatewayApplication" />
+      <item itemvalue="Spring Boot.CqrsGatewayApplication" />
+      <item itemvalue="Spring Boot.OrderMsApplication" />
+      <item itemvalue="Spring Boot.PaymentMsApplication" />
+      <item itemvalue="Spring Boot.QueryMsApplication" />
+      <item itemvalue="Spring Boot.WriteMsApplication" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.query in query-ms" />
-        <item itemvalue="JUnit.write in write-ms" />
-        <item itemvalue="JUnit.ProductServiceTests.givenValidProductId_whenPublishDeleteEvent_thenThrowException" />
-        <item itemvalue="JUnit.ProductServiceTests.givenInvalidProductId_whenDeleteProduct_thenThrowException" />
-        <item itemvalue="JUnit.ProductServiceTests.givenProductId_whenDeleteProduct_thenReturnNothing" />
+        <item itemvalue="JUnit.ProductEventConsumerServiceTests" />
+        <item itemvalue="JUnit.All in query-ms" />
+        <item itemvalue="JUnit.org.vromanyu.query in query-ms" />
+        <item itemvalue="JUnit.ProductControllerTests.whenCreateProduct_thenReturnCreatedProduct" />
+        <item itemvalue="JUnit.All in write-ms" />
       </list>
     </recent_temporary>
   </component>
@@ -344,102 +366,6 @@
       <workItem from="1773740955594" duration="549000" />
       <workItem from="1773747168706" duration="697000" />
       <workItem from="1773826693808" duration="5178000" />
-    </task>
-    <task id="LOCAL-00062" summary="update core dependency">
-      <option name="closed" value="true" />
-      <created>1773672525954</created>
-      <option name="number" value="00062" />
-      <option name="presentableId" value="LOCAL-00062" />
-      <option name="project" value="LOCAL" />
-      <updated>1773672525954</updated>
-    </task>
-    <task id="LOCAL-00063" summary="build image for each service">
-      <option name="closed" value="true" />
-      <created>1773672533979</created>
-      <option name="number" value="00063" />
-      <option name="presentableId" value="LOCAL-00063" />
-      <option name="project" value="LOCAL" />
-      <updated>1773672533979</updated>
-    </task>
-    <task id="LOCAL-00064" summary=".idea">
-      <option name="closed" value="true" />
-      <created>1773672537161</created>
-      <option name="number" value="00064" />
-      <option name="presentableId" value="LOCAL-00064" />
-      <option name="project" value="LOCAL" />
-      <updated>1773672537161</updated>
-    </task>
-    <task id="LOCAL-00065" summary="add build-all workflow">
-      <option name="closed" value="true" />
-      <created>1773672693182</created>
-      <option name="number" value="00065" />
-      <option name="presentableId" value="LOCAL-00065" />
-      <option name="project" value="LOCAL" />
-      <updated>1773672693182</updated>
-    </task>
-    <task id="LOCAL-00066" summary=".idea">
-      <option name="closed" value="true" />
-      <created>1773672698858</created>
-      <option name="number" value="00066" />
-      <option name="presentableId" value="LOCAL-00066" />
-      <option name="project" value="LOCAL" />
-      <updated>1773672698858</updated>
-    </task>
-    <task id="LOCAL-00067" summary="build services parallel">
-      <option name="closed" value="true" />
-      <created>1773672858461</created>
-      <option name="number" value="00067" />
-      <option name="presentableId" value="LOCAL-00067" />
-      <option name="project" value="LOCAL" />
-      <updated>1773672858461</updated>
-    </task>
-    <task id="LOCAL-00068" summary="fix mvn command">
-      <option name="closed" value="true" />
-      <created>1773673247734</created>
-      <option name="number" value="00068" />
-      <option name="presentableId" value="LOCAL-00068" />
-      <option name="project" value="LOCAL" />
-      <updated>1773673247734</updated>
-    </task>
-    <task id="LOCAL-00069" summary=".idea">
-      <option name="closed" value="true" />
-      <created>1773673296744</created>
-      <option name="number" value="00069" />
-      <option name="presentableId" value="LOCAL-00069" />
-      <option name="project" value="LOCAL" />
-      <updated>1773673296744</updated>
-    </task>
-    <task id="LOCAL-00070" summary="use bootstrapServer property">
-      <option name="closed" value="true" />
-      <created>1773680629868</created>
-      <option name="number" value="00070" />
-      <option name="presentableId" value="LOCAL-00070" />
-      <option name="project" value="LOCAL" />
-      <updated>1773680629868</updated>
-    </task>
-    <task id="LOCAL-00071" summary="loadbalancer configuration based on active profile">
-      <option name="closed" value="true" />
-      <created>1773681724502</created>
-      <option name="number" value="00071" />
-      <option name="presentableId" value="LOCAL-00071" />
-      <option name="project" value="LOCAL" />
-      <updated>1773681724502</updated>
-    </task>
-    <task id="LOCAL-00072" summary="provide docker-compose.yml">
-      <option name="closed" value="true" />
-      <created>1773681731364</created>
-      <option name="number" value="00072" />
-      <option name="presentableId" value="LOCAL-00072" />
-      <option name="project" value="LOCAL" />
-      <updated>1773681731364</updated>
-    </task>
-    <task id="LOCAL-00073" summary=".idea">
-      <option name="closed" value="true" />
-      <created>1773681735373</created>
-      <option name="number" value="00073" />
-      <option name="presentableId" value="LOCAL-00073" />
-      <option name="project" value="LOCAL" />
-      <updated>1773681735373</updated>
     </task>
     <task id="LOCAL-00074" summary="add sendPaidEvent method to PaymentPublisher for sending successful payment events">
       <option name="closed" value="true" />
@@ -737,7 +663,103 @@
       <option name="project" value="LOCAL" />
       <updated>1773833712828</updated>
     </task>
-    <option name="localTasksCounter" value="111" />
+    <task id="LOCAL-00111" summary="change method name">
+      <option name="closed" value="true" />
+      <created>1773833828621</created>
+      <option name="number" value="00111" />
+      <option name="presentableId" value="LOCAL-00111" />
+      <option name="project" value="LOCAL" />
+      <updated>1773833828621</updated>
+    </task>
+    <task id="LOCAL-00112" summary="change application name">
+      <option name="closed" value="true" />
+      <created>1773833985591</created>
+      <option name="number" value="00112" />
+      <option name="presentableId" value="LOCAL-00112" />
+      <option name="project" value="LOCAL" />
+      <updated>1773833985591</updated>
+    </task>
+    <task id="LOCAL-00113" summary="add cqrs-gateway routes and loadbalancer configurations">
+      <option name="closed" value="true" />
+      <created>1773834046180</created>
+      <option name="number" value="00113" />
+      <option name="presentableId" value="LOCAL-00113" />
+      <option name="project" value="LOCAL" />
+      <updated>1773834046180</updated>
+    </task>
+    <task id="LOCAL-00114" summary=".idea">
+      <option name="closed" value="true" />
+      <created>1773834051169</created>
+      <option name="number" value="00114" />
+      <option name="presentableId" value="LOCAL-00114" />
+      <option name="project" value="LOCAL" />
+      <updated>1773834051169</updated>
+    </task>
+    <task id="LOCAL-00115" summary="build docker oci image for cqrs-gateway and add it to the build-all workflow">
+      <option name="closed" value="true" />
+      <created>1773834393619</created>
+      <option name="number" value="00115" />
+      <option name="presentableId" value="LOCAL-00115" />
+      <option name="project" value="LOCAL" />
+      <updated>1773834393619</updated>
+    </task>
+    <task id="LOCAL-00116" summary="fix build-all workflow">
+      <option name="closed" value="true" />
+      <created>1773834490984</created>
+      <option name="number" value="00116" />
+      <option name="presentableId" value="LOCAL-00116" />
+      <option name="project" value="LOCAL" />
+      <updated>1773834490984</updated>
+    </task>
+    <task id="LOCAL-00117" summary="change artifact names to plain 'gateway'">
+      <option name="closed" value="true" />
+      <created>1773834936084</created>
+      <option name="number" value="00117" />
+      <option name="presentableId" value="LOCAL-00117" />
+      <option name="project" value="LOCAL" />
+      <updated>1773834936084</updated>
+    </task>
+    <task id="LOCAL-00118" summary="fix host name">
+      <option name="closed" value="true" />
+      <created>1773835292476</created>
+      <option name="number" value="00118" />
+      <option name="presentableId" value="LOCAL-00118" />
+      <option name="project" value="LOCAL" />
+      <updated>1773835292476</updated>
+    </task>
+    <task id="LOCAL-00119" summary="add docker-compose.yml for cqrs pattern">
+      <option name="closed" value="true" />
+      <created>1773835371889</created>
+      <option name="number" value="00119" />
+      <option name="presentableId" value="LOCAL-00119" />
+      <option name="project" value="LOCAL" />
+      <updated>1773835371889</updated>
+    </task>
+    <task id="LOCAL-00120" summary="add wiremock dependency for testing gateway">
+      <option name="closed" value="true" />
+      <created>1773839124401</created>
+      <option name="number" value="00120" />
+      <option name="presentableId" value="LOCAL-00120" />
+      <option name="project" value="LOCAL" />
+      <updated>1773839124401</updated>
+    </task>
+    <task id="LOCAL-00121" summary="change Location header response">
+      <option name="closed" value="true" />
+      <created>1773839134305</created>
+      <option name="number" value="00121" />
+      <option name="presentableId" value="LOCAL-00121" />
+      <option name="project" value="LOCAL" />
+      <updated>1773839134305</updated>
+    </task>
+    <task id="LOCAL-00122" summary="add gateway tests">
+      <option name="closed" value="true" />
+      <created>1773839147539</created>
+      <option name="number" value="00122" />
+      <option name="presentableId" value="LOCAL-00122" />
+      <option name="project" value="LOCAL" />
+      <updated>1773839147539</updated>
+    </task>
+    <option name="localTasksCounter" value="123" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -770,17 +792,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="break down routes to paymentRoutes and orderRoutes" />
-    <MESSAGE value="fix test since kafkaTemplate has been removed" />
-    <MESSAGE value="change request mapping for query-ms" />
-    <MESSAGE value="add ProductController and ProductControllerAdvice classes for writing and updating products" />
-    <MESSAGE value="add webmvc-test dependency for testing controllers" />
-    <MESSAGE value="change endpoint for all products" />
-    <MESSAGE value="add ProductControllerTests for writing and querying" />
-    <MESSAGE value="add Product events" />
-    <MESSAGE value="remove auto generation of id, since the write-ms provides as with the id" />
-    <MESSAGE value="add @Transactional annotation to all methods" />
-    <MESSAGE value="add kafka configuration" />
     <MESSAGE value="log the exception in ProductControllerAdvice" />
     <MESSAGE value="add ProductEventConsumerService to listen to Product manipulation events" />
     <MESSAGE value="publish Product events after manipulating product" />
@@ -788,13 +799,24 @@
     <MESSAGE value="add logging statements" />
     <MESSAGE value="add tests for publisher and listener" />
     <MESSAGE value="add .gitignore" />
-    <MESSAGE value=".idea" />
     <MESSAGE value="remove duplicate dependencies" />
     <MESSAGE value="add docker oci plugin and configuration" />
     <MESSAGE value="change job name" />
     <MESSAGE value="init module cqrs-gateway" />
     <MESSAGE value="add jackson2 dependency for gateway" />
     <MESSAGE value="change module name" />
-    <option name="LAST_COMMIT_MESSAGE" value="change module name" />
+    <MESSAGE value="change method name" />
+    <MESSAGE value="change application name" />
+    <MESSAGE value="add cqrs-gateway routes and loadbalancer configurations" />
+    <MESSAGE value=".idea" />
+    <MESSAGE value="build docker oci image for cqrs-gateway and add it to the build-all workflow" />
+    <MESSAGE value="fix build-all workflow" />
+    <MESSAGE value="change artifact names to plain 'gateway'" />
+    <MESSAGE value="fix host name" />
+    <MESSAGE value="add docker-compose.yml for cqrs pattern" />
+    <MESSAGE value="add wiremock dependency for testing gateway" />
+    <MESSAGE value="change Location header response" />
+    <MESSAGE value="add gateway tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="add gateway tests" />
   </component>
 </project>
