@@ -30,7 +30,7 @@ public class ProductController {
         logger.info("createProduct called with request: {}", request);
         CreateProductResponse response = productService.createProduct(request);
         logger.info("product created: {}", response);
-        URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(response.productId()).toUri();
+        URI location = ServletUriComponentsBuilder.fromPath("/api/products/get/{id}").buildAndExpand(response.productId()).toUri();
         return ResponseEntity.created(location).body(response);
     }
 
