@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f53cd7e9-042e-48da-856a-18c59663b55c" name="Changes" comment="add gateway tests">
-      <change afterPath="$PROJECT_DIR$/cqrs/query-ms/src/main/java/org/vromanyu/query/config/ConcurrentMapCacheConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cqrs/query-ms/src/main/java/org/vromanyu/query/config/RedisCacheConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cqrs/query-ms/src/main/resources/application-prod.yaml" afterDir="false" />
+    <list default="true" id="f53cd7e9-042e-48da-856a-18c59663b55c" name="Changes" comment="add caching support to query-ms">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cqrs/query-ms/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cqrs/query-ms/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cqrs/query-ms/src/main/java/org/vromanyu/query/product/ProductEventConsumerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/cqrs/query-ms/src/main/java/org/vromanyu/query/product/ProductEventConsumerServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cqrs/query-ms/src/main/java/org/vromanyu/query/product/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/cqrs/query-ms/src/main/java/org/vromanyu/query/product/ProductServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cqrs/docker/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cqrs/docker/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,6 +67,7 @@
     "JUnit.All in gateway.executor": "Run",
     "JUnit.All in order-ms (1).executor": "Run",
     "JUnit.All in order-ms.executor": "Run",
+    "JUnit.All in query-ms.executor": "Run",
     "JUnit.GatewayTests.executor": "Run",
     "JUnit.GatewayTests.givenInvalidOrderId_shouldReturnNotFound.executor": "Run",
     "JUnit.GatewayTests.givenInvalidProductId_shouldReturnNotFound.executor": "Run",
@@ -137,6 +133,7 @@
     "Maven.choreography [clean].executor": "Run",
     "Maven.choreography [test].executor": "Run",
     "Maven.cqrs [clean].executor": "Run",
+    "Maven.cqrs [test].executor": "Run",
     "Maven.cqrs-core [clean].executor": "Run",
     "Maven.gateway [clean,install].executor": "Run",
     "Maven.gateway [clean].executor": "Run",
@@ -366,22 +363,6 @@
       <workItem from="1773740955594" duration="549000" />
       <workItem from="1773747168706" duration="697000" />
       <workItem from="1773826693808" duration="5178000" />
-    </task>
-    <task id="LOCAL-00074" summary="add sendPaidEvent method to PaymentPublisher for sending successful payment events">
-      <option name="closed" value="true" />
-      <created>1773686614267</created>
-      <option name="number" value="00074" />
-      <option name="presentableId" value="LOCAL-00074" />
-      <option name="project" value="LOCAL" />
-      <updated>1773686614267</updated>
-    </task>
-    <task id="LOCAL-00075" summary="add sendPaidEvent method to PaymentPublisher for sending successful payment events">
-      <option name="closed" value="true" />
-      <created>1773686639295</created>
-      <option name="number" value="00075" />
-      <option name="presentableId" value="LOCAL-00075" />
-      <option name="project" value="LOCAL" />
-      <updated>1773686639295</updated>
     </task>
     <task id="LOCAL-00076" summary="expose endpoint to obtain all users balances">
       <option name="closed" value="true" />
@@ -759,7 +740,23 @@
       <option name="project" value="LOCAL" />
       <updated>1773839147539</updated>
     </task>
-    <option name="localTasksCounter" value="123" />
+    <task id="LOCAL-00123" summary="add caching support to query-ms">
+      <option name="closed" value="true" />
+      <created>1773850501786</created>
+      <option name="number" value="00123" />
+      <option name="presentableId" value="LOCAL-00123" />
+      <option name="project" value="LOCAL" />
+      <updated>1773850501786</updated>
+    </task>
+    <task id="LOCAL-00124" summary="add caching support to query-ms">
+      <option name="closed" value="true" />
+      <created>1773850532574</created>
+      <option name="number" value="00124" />
+      <option name="presentableId" value="LOCAL-00124" />
+      <option name="project" value="LOCAL" />
+      <updated>1773850532574</updated>
+    </task>
+    <option name="localTasksCounter" value="125" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -792,7 +789,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="log the exception in ProductControllerAdvice" />
     <MESSAGE value="add ProductEventConsumerService to listen to Product manipulation events" />
     <MESSAGE value="publish Product events after manipulating product" />
     <MESSAGE value="search for product before deleting to throw exception if id is invalid" />
@@ -817,6 +813,7 @@
     <MESSAGE value="add wiremock dependency for testing gateway" />
     <MESSAGE value="change Location header response" />
     <MESSAGE value="add gateway tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="add gateway tests" />
+    <MESSAGE value="add caching support to query-ms" />
+    <option name="LAST_COMMIT_MESSAGE" value="add caching support to query-ms" />
   </component>
 </project>
