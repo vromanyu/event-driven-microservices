@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f53cd7e9-042e-48da-856a-18c59663b55c" name="Changes" comment="add logging statements">
-      <change afterPath="$PROJECT_DIR$/cqrs/query-ms/src/test/java/org/vromanyu/query/ProductEventConsumerServiceTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cqrs/write-ms/src/test/java/org/vromanyu/write/ProductServiceTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/cqrs/write-ms/src/test/java/org/vromanyu/write/ProductServiceTests.java" afterDir="false" />
+    <list default="true" id="f53cd7e9-042e-48da-856a-18c59663b55c" name="Changes" comment=".idea">
+      <change afterPath="$PROJECT_DIR$/cqrs/cqrs-core/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,10 +102,13 @@
     "JUnit.ProductEventConsumerServiceTests.whenProductDeletedEvent_thenThrowException.executor": "Run",
     "JUnit.ProductEventConsumerServiceTests.whenProductUpdatedEvent_thenThrowException.executor": "Run",
     "JUnit.ProductEventConsumerServiceTests.whenProductUpdatedEvent_thenUpdateProduct.executor": "Run",
+    "JUnit.ProductServiceTests.givenInvalidProductId_whenDeleteProduct_thenThrowException.executor": "Run",
     "JUnit.ProductServiceTests.givenInvalidProductId_whenPublishUpdateProduct_thenThrowException.executor": "Run",
+    "JUnit.ProductServiceTests.givenProductId_whenDeleteProduct_thenReturnNothing.executor": "Run",
     "JUnit.ProductServiceTests.givenProductRequest_whenCreateProduct_thenReturnProduct.executor": "Run",
     "JUnit.ProductServiceTests.givenProductRequest_whenPublishFails_throwException.executor": "Run",
     "JUnit.ProductServiceTests.givenValidProductIdAndUpdateProductRequest_whenUpdateProduct_thenReturnProduct.executor": "Run",
+    "JUnit.ProductServiceTests.givenValidProductId_whenPublishDeleteEvent_thenThrowException.executor": "Run",
     "JUnit.UserBalanceRepositoryTest.executor": "Run",
     "JUnit.UserBalanceRepositoryTest.givenInvalidUserId_whenFindByUserId_shouldReturnEmptyList.executor": "Run",
     "JUnit.UserBalanceRepositoryTest.givenValidUserId_whenFindByUserId_shouldReturnUserBalance.executor": "Run",
@@ -142,7 +143,7 @@
     "git-widget-placeholder": "main",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/vromanyu/Repositories/event-driven-microservices/cqrs/write-ms/src/main/java/org/vromanyu/write/config",
+    "last_opened_file_path": "/home/vromanyu/Repositories/event-driven-microservices/cqrs/cqrs-core",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -162,11 +163,11 @@
       <recent name="org.vromanyu.order.service" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/cqrs/cqrs-core" />
       <recent name="$PROJECT_DIR$/cqrs/write-ms/src/main/java/org/vromanyu/write/config" />
       <recent name="$PROJECT_DIR$/cqrs/cqrs-core/src/main/java/org/vromanyu/core" />
       <recent name="$PROJECT_DIR$/cqrs/write-ms/src/main/java/org/vromanyu/write/product" />
       <recent name="$PROJECT_DIR$/choreography/gateway/src/main/java/org/vromanyu/gateway/config" />
-      <recent name="$PROJECT_DIR$/choreography/payment-ms/src/main/java/org/vromanyu/controller" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -323,23 +324,7 @@
       <workItem from="1773734949091" duration="3695000" />
       <workItem from="1773740955594" duration="549000" />
       <workItem from="1773747168706" duration="697000" />
-      <workItem from="1773826693808" duration="4546000" />
-    </task>
-    <task id="LOCAL-00051" summary="add UserTransactionRepositoryTests">
-      <option name="closed" value="true" />
-      <created>1773665730780</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1773665730780</updated>
-    </task>
-    <task id="LOCAL-00052" summary="delete OrderPublisherTests">
-      <option name="closed" value="true" />
-      <created>1773666125353</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1773666125353</updated>
+      <workItem from="1773826693808" duration="4847000" />
     </task>
     <task id="LOCAL-00053" summary="verify that event was published once">
       <option name="closed" value="true" />
@@ -717,7 +702,23 @@
       <option name="project" value="LOCAL" />
       <updated>1773832143853</updated>
     </task>
-    <option name="localTasksCounter" value="100" />
+    <task id="LOCAL-00100" summary="add tests for publisher and listener">
+      <option name="closed" value="true" />
+      <created>1773832753449</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1773832753449</updated>
+    </task>
+    <task id="LOCAL-00101" summary=".idea">
+      <option name="closed" value="true" />
+      <created>1773832757744</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1773832757744</updated>
+    </task>
+    <option name="localTasksCounter" value="102" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -750,7 +751,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix mvn command" />
     <MESSAGE value="use bootstrapServer property" />
     <MESSAGE value="loadbalancer configuration based on active profile" />
     <MESSAGE value="provide docker-compose.yml" />
@@ -772,9 +772,10 @@
     <MESSAGE value="log the exception in ProductControllerAdvice" />
     <MESSAGE value="add ProductEventConsumerService to listen to Product manipulation events" />
     <MESSAGE value="publish Product events after manipulating product" />
-    <MESSAGE value=".idea" />
     <MESSAGE value="search for product before deleting to throw exception if id is invalid" />
     <MESSAGE value="add logging statements" />
-    <option name="LAST_COMMIT_MESSAGE" value="add logging statements" />
+    <MESSAGE value="add tests for publisher and listener" />
+    <MESSAGE value=".idea" />
+    <option name="LAST_COMMIT_MESSAGE" value=".idea" />
   </component>
 </project>
