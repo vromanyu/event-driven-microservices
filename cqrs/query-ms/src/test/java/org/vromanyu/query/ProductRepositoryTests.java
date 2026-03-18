@@ -22,11 +22,11 @@ public class ProductRepositoryTests {
 
     @BeforeEach
     public void setUp() {
-        product = new Product("cookies", 100, 10);
+        product = new Product(1, "cookies", 100, 10);
         products = List.of(
-                new Product("cookies", 100, 10),
-                new Product("donuts", 200, 20),
-                new Product("ice cream", 300, 30)
+                new Product(1, "cookies", 100, 10),
+                new Product(2, "donuts", 200, 20),
+                new Product(3, "ice cream", 300, 30)
         );
     }
 

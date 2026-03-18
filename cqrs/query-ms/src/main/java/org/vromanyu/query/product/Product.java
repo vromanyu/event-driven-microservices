@@ -1,6 +1,8 @@
 package org.vromanyu.query.product;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
@@ -10,7 +12,6 @@ import java.time.OffsetDateTime;
 public class Product {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     @Column(nullable = false)
@@ -31,7 +32,8 @@ public class Product {
     public Product() {
     }
 
-    public Product(String name, Integer price, Integer quantity) {
+    public Product(Integer Id, String name, Integer price, Integer quantity) {
+        this.id = Id;
         this.name = name;
         this.price = price;
         this.quantity = quantity;
