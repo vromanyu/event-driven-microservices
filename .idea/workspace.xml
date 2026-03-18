@@ -4,9 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f53cd7e9-042e-48da-856a-18c59663b55c" name="Changes" comment="change request mapping for query-ms">
-      <change afterPath="$PROJECT_DIR$/cqrs/write-ms/src/main/java/org/vromanyu/write/product/ProductController.java" afterDir="false" />
+    <list default="true" id="f53cd7e9-042e-48da-856a-18c59663b55c" name="Changes" comment="add @Transactional annotation to all methods">
+      <change afterPath="$PROJECT_DIR$/cqrs/query-ms/src/main/java/org/vromanyu/query/config/KafkaConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cqrs/query-ms/src/main/java/org/vromanyu/query/product/ProductEventConsumerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cqrs/query-ms/src/main/java/org/vromanyu/query/product/ProductEventConsumerServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cqrs/write-ms/src/main/java/org/vromanyu/write/config/KafkaConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cqrs/write-ms/src/main/java/org/vromanyu/write/product/ProductEventPublisherService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cqrs/write-ms/src/main/java/org/vromanyu/write/product/ProductEventPublisherServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cqrs/query-ms/src/main/java/org/vromanyu/query/product/ProductControllerAdvice.java" beforeDir="false" afterPath="$PROJECT_DIR$/cqrs/query-ms/src/main/java/org/vromanyu/query/product/ProductControllerAdvice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cqrs/query-ms/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/cqrs/query-ms/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cqrs/write-ms/src/main/java/org/vromanyu/write/product/ProductControllerAdvice.java" beforeDir="false" afterPath="$PROJECT_DIR$/cqrs/write-ms/src/main/java/org/vromanyu/write/product/ProductControllerAdvice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cqrs/write-ms/src/main/java/org/vromanyu/write/product/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/cqrs/write-ms/src/main/java/org/vromanyu/write/product/ProductServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cqrs/write-ms/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/cqrs/write-ms/src/main/resources/application.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,7 +24,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="84" />
+    <option name="cachedIndexableFilesCount" value="130" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
@@ -58,87 +68,102 @@
     <option name="showLibraryContents" value="true" />
     <option name="showScratchesAndConsoles" value="false" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;JUnit.All in gateway (1).executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.All in gateway (2).executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.All in gateway (3).executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.All in gateway.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.All in order-ms (1).executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.All in order-ms.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.GatewayTests.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.GatewayTests.givenInvalidOrderId_shouldReturnNotFound.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.GatewayTests.givenOrderRequest_shouldReturnCreated.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.GatewayTests.test.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.OrderControllerTests.whenCreateOrder_thenSuccess.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.OrderControllerTests.whenGetOrderByInvalidId_thenFail.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.OrderControllerTests.whenGetOrderByValidId_thenSuccess.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.OrderPublisherTests.whenSend_thenFail.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.OrderPublisherTests.whenSend_thenSuccess.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.OrderRepositoryTests.givenInvalidOrderId_whenFindBy_shouldThrowException.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.OrderRepositoryTests.givenOrder_whenSave_thenPopulateAuditFields.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.OrderRepositoryTests.givenOrder_whenSave_thenSuccess.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.OrderRepositoryTests.givenThreeOrders_whenFindAll_shouldReturnThreeOrders.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.OrderRepositoryTests.givenValidOrderId_whenFindBy_shouldReturnOrder.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.OrderServiceTests.givenInvalidOrderId_whenGetOrder_thenThrowException.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.OrderServiceTests.givenOrderId_whenGetOrder_thenSuccess.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.OrderServiceTests.givenOrderRequest_whenCreateOrder_thenSuccess.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.OrderServiceTests.test.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.PaymentServiceTests.whenInvalidOrderStatus_thenThrowException.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.PaymentServiceTests.whenInvalidUserBalance_thenThrowException.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.PaymentServiceTests.whenValidPaymentEvent_thenSuccess.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserBalanceRepositoryTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserBalanceRepositoryTest.givenInvalidUserId_whenFindByUserId_shouldReturnEmptyList.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserBalanceRepositoryTest.givenValidUserId_whenFindByUserId_shouldReturnUserBalance.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserTransactionRepositoryTests.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.gateway in gateway.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.java in payment-ms.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.choreography [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.gateway [clean,install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.gateway [clean].executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Notification.DisplayName-DoNotAsk-DatabaseConfigFileWatcher.found&quot;: &quot;New/updated database configurations found&quot;,
-    &quot;Notification.DoNotAsk-DatabaseConfigFileWatcher.found&quot;: &quot;true&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Spring Boot.GatewayApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.OrderMsApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.PaymentMsApplication.executor&quot;: &quot;Run&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/vromanyu/Repositories/event-driven-microservices/choreography/gateway/src/main/java/org/vromanyu/gateway/config&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.sync&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JUnit.All in gateway (1).executor": "Run",
+    "JUnit.All in gateway (2).executor": "Run",
+    "JUnit.All in gateway (3).executor": "Run",
+    "JUnit.All in gateway.executor": "Run",
+    "JUnit.All in order-ms (1).executor": "Run",
+    "JUnit.All in order-ms.executor": "Run",
+    "JUnit.GatewayTests.executor": "Run",
+    "JUnit.GatewayTests.givenInvalidOrderId_shouldReturnNotFound.executor": "Run",
+    "JUnit.GatewayTests.givenOrderRequest_shouldReturnCreated.executor": "Run",
+    "JUnit.GatewayTests.test.executor": "Run",
+    "JUnit.OrderControllerTests.whenCreateOrder_thenSuccess.executor": "Run",
+    "JUnit.OrderControllerTests.whenGetOrderByInvalidId_thenFail.executor": "Run",
+    "JUnit.OrderControllerTests.whenGetOrderByValidId_thenSuccess.executor": "Run",
+    "JUnit.OrderPublisherTests.whenSend_thenFail.executor": "Run",
+    "JUnit.OrderPublisherTests.whenSend_thenSuccess.executor": "Run",
+    "JUnit.OrderRepositoryTests.givenInvalidOrderId_whenFindBy_shouldThrowException.executor": "Run",
+    "JUnit.OrderRepositoryTests.givenOrder_whenSave_thenPopulateAuditFields.executor": "Run",
+    "JUnit.OrderRepositoryTests.givenOrder_whenSave_thenSuccess.executor": "Run",
+    "JUnit.OrderRepositoryTests.givenThreeOrders_whenFindAll_shouldReturnThreeOrders.executor": "Run",
+    "JUnit.OrderRepositoryTests.givenValidOrderId_whenFindBy_shouldReturnOrder.executor": "Run",
+    "JUnit.OrderServiceTests.givenInvalidOrderId_whenGetOrder_thenThrowException.executor": "Run",
+    "JUnit.OrderServiceTests.givenOrderId_whenGetOrder_thenSuccess.executor": "Run",
+    "JUnit.OrderServiceTests.givenOrderRequest_whenCreateOrder_thenSuccess.executor": "Run",
+    "JUnit.OrderServiceTests.test.executor": "Run",
+    "JUnit.PaymentServiceTests.whenInvalidOrderStatus_thenThrowException.executor": "Run",
+    "JUnit.PaymentServiceTests.whenInvalidUserBalance_thenThrowException.executor": "Run",
+    "JUnit.PaymentServiceTests.whenValidPaymentEvent_thenSuccess.executor": "Run",
+    "JUnit.ProductControllerTests.executor": "Run",
+    "JUnit.ProductControllerTests.whenCreateProduct_thenReturnCreatedProduct.executor": "Run",
+    "JUnit.ProductControllerTests.whenDeleteProductWithInValidId_thenReturnBadRequest.executor": "Run",
+    "JUnit.ProductControllerTests.whenDeleteProductWithValidId_thenReturnNoContent.executor": "Run",
+    "JUnit.ProductControllerTests.whenGetAllProductsAndThereAreNoProducts_thenSuccess.executor": "Run",
+    "JUnit.ProductControllerTests.whenGetAllProducts_thenSuccess.executor": "Run",
+    "JUnit.ProductControllerTests.whenGetProductByIdInvalidId_thenFail.executor": "Run",
+    "JUnit.ProductControllerTests.whenGetProductById_thenSuccess.executor": "Run",
+    "JUnit.ProductControllerTests.whenUpdateProductWithInValidId_thenReturnBadRequest.executor": "Run",
+    "JUnit.ProductControllerTests.whenUpdateProductWithValidId_thenReturnUpdatedProduct.executor": "Run",
+    "JUnit.UserBalanceRepositoryTest.executor": "Run",
+    "JUnit.UserBalanceRepositoryTest.givenInvalidUserId_whenFindByUserId_shouldReturnEmptyList.executor": "Run",
+    "JUnit.UserBalanceRepositoryTest.givenValidUserId_whenFindByUserId_shouldReturnUserBalance.executor": "Run",
+    "JUnit.UserTransactionRepositoryTests.executor": "Run",
+    "JUnit.gateway in gateway.executor": "Run",
+    "JUnit.java in payment-ms.executor": "Run",
+    "JUnit.query in query-ms.executor": "Run",
+    "Maven.choreography [clean].executor": "Run",
+    "Maven.gateway [clean,install].executor": "Run",
+    "Maven.gateway [clean].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Notification.DisplayName-DoNotAsk-DatabaseConfigFileWatcher.found": "New/updated database configurations found",
+    "Notification.DoNotAsk-DatabaseConfigFileWatcher.found": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.GatewayApplication.executor": "Run",
+    "Spring Boot.OrderMsApplication.executor": "Run",
+    "Spring Boot.PaymentMsApplication.executor": "Run",
+    "Spring Boot.QueryMsApplication.executor": "Run",
+    "Spring Boot.WriteMsApplication.executor": "Run",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "main",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/vromanyu/Repositories/event-driven-microservices/cqrs/write-ms/src/main/java/org/vromanyu/write/config",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "run.configurations.included.in.services": "true",
+    "settings.editor.selected.configurable": "settings.sync",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="org.vromanyu.order.service" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/cqrs/write-ms/src/main/java/org/vromanyu/write/config" />
+      <recent name="$PROJECT_DIR$/cqrs/cqrs-core/src/main/java/org/vromanyu/core" />
+      <recent name="$PROJECT_DIR$/cqrs/write-ms/src/main/java/org/vromanyu/write/product" />
       <recent name="$PROJECT_DIR$/choreography/gateway/src/main/java/org/vromanyu/gateway/config" />
       <recent name="$PROJECT_DIR$/choreography/payment-ms/src/main/java/org/vromanyu/controller" />
-      <recent name="$PROJECT_DIR$/choreography/payment-ms/src/main/java/org/vromanyu/payment" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -150,52 +175,88 @@
         <option value="SpringBootApplicationConfigurationType" />
       </set>
     </option>
+    <option name="configurationStatuses">
+      <map>
+        <entry key="SpringBootApplicationConfigurationType">
+          <value>
+            <map>
+              <entry key="QueryMsApplication" value="STOPPED" />
+              <entry key="WriteMsApplication" value="STOPPED" />
+            </map>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
-  <component name="RunManager" selected="JUnit.PaymentServiceTests.whenValidPaymentEvent_thenSuccess">
-    <configuration name="All in gateway (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="gateway" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="All in gateway (2)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="gateway" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="All in gateway (3)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="gateway" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PaymentServiceTests.whenValidPaymentEvent_thenSuccess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="payment-ms" />
+  <component name="RunManager" selected="JUnit.query in query-ms">
+    <configuration name="ProductControllerTests.whenDeleteProductWithInValidId_thenReturnBadRequest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="write-ms" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.vromanyu.payment.service.*" />
+          <option name="PATTERN" value="org.vromanyu.write.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.vromanyu.payment.service" />
-      <option name="MAIN_CLASS_NAME" value="org.vromanyu.payment.service.PaymentServiceTests" />
-      <option name="METHOD_NAME" value="whenValidPaymentEvent_thenSuccess" />
+      <option name="PACKAGE_NAME" value="org.vromanyu.write" />
+      <option name="MAIN_CLASS_NAME" value="org.vromanyu.write.ProductControllerTests" />
+      <option name="METHOD_NAME" value="whenDeleteProductWithInValidId_thenReturnBadRequest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="java in payment-ms" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="payment-ms" />
+    <configuration name="ProductControllerTests.whenDeleteProductWithValidId_thenReturnNoContent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="write-ms" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.vromanyu.write.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.vromanyu.write" />
+      <option name="MAIN_CLASS_NAME" value="org.vromanyu.write.ProductControllerTests" />
+      <option name="METHOD_NAME" value="whenDeleteProductWithValidId_thenReturnNoContent" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductControllerTests.whenUpdateProductWithInValidId_thenReturnBadRequest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="write-ms" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.vromanyu.write.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.vromanyu.write" />
+      <option name="MAIN_CLASS_NAME" value="org.vromanyu.write.ProductControllerTests" />
+      <option name="METHOD_NAME" value="whenUpdateProductWithInValidId_thenReturnBadRequest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductControllerTests.whenUpdateProductWithValidId_thenReturnUpdatedProduct" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="write-ms" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.vromanyu.write.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.vromanyu.write" />
+      <option name="MAIN_CLASS_NAME" value="org.vromanyu.write.ProductControllerTests" />
+      <option name="METHOD_NAME" value="whenUpdateProductWithValidId_thenReturnUpdatedProduct" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="query in query-ms" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="query-ms" />
       <option name="TEST_OBJECT" value="directory" />
-      <dir value="$PROJECT_DIR$/choreography/payment-ms/src/test/java" />
+      <dir value="$PROJECT_DIR$/cqrs/query-ms/src/test/java/org/vromanyu/query" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -237,19 +298,19 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.PaymentServiceTests.whenValidPaymentEvent_thenSuccess" />
-        <item itemvalue="JUnit.java in payment-ms" />
-        <item itemvalue="JUnit.All in gateway (3)" />
-        <item itemvalue="JUnit.All in gateway (2)" />
-        <item itemvalue="JUnit.All in gateway (1)" />
+        <item itemvalue="JUnit.query in query-ms" />
+        <item itemvalue="JUnit.ProductControllerTests.whenDeleteProductWithInValidId_thenReturnBadRequest" />
+        <item itemvalue="JUnit.ProductControllerTests.whenDeleteProductWithValidId_thenReturnNoContent" />
+        <item itemvalue="JUnit.ProductControllerTests.whenUpdateProductWithInValidId_thenReturnBadRequest" />
+        <item itemvalue="JUnit.ProductControllerTests.whenUpdateProductWithValidId_thenReturnUpdatedProduct" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.31033.145" />
-        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-IU-253.31033.145" />
+        <option value="bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.32098.37" />
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-IU-253.32098.37" />
       </set>
     </attachedChunks>
   </component>
@@ -267,78 +328,7 @@
       <workItem from="1773734949091" duration="3695000" />
       <workItem from="1773740955594" duration="549000" />
       <workItem from="1773747168706" duration="697000" />
-    </task>
-    <task id="LOCAL-00035" summary="change gateway port">
-      <option name="closed" value="true" />
-      <created>1773659188472</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1773659188472</updated>
-    </task>
-    <task id="LOCAL-00036" summary="add order-ms route to gateway">
-      <option name="closed" value="true" />
-      <created>1773659201959</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1773659201959</updated>
-    </task>
-    <task id="LOCAL-00037" summary="add order-ms to loadbalancer">
-      <option name="closed" value="true" />
-      <created>1773659209784</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1773659209784</updated>
-    </task>
-    <task id="LOCAL-00038" summary="reformat">
-      <option name="closed" value="true" />
-      <created>1773659229804</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1773659229804</updated>
-    </task>
-    <task id="LOCAL-00039" summary="enable virtual threads">
-      <option name="closed" value="true" />
-      <created>1773659316591</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1773659316591</updated>
-    </task>
-    <task id="LOCAL-00040" summary=".idea">
-      <option name="closed" value="true" />
-      <created>1773659320269</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1773659320269</updated>
-    </task>
-    <task id="LOCAL-00041" summary="add OrderRepositoryTests">
-      <option name="closed" value="true" />
-      <created>1773660320030</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1773660320030</updated>
-    </task>
-    <task id="LOCAL-00042" summary="add OrderServiceTests">
-      <option name="closed" value="true" />
-      <created>1773660782651</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1773660782651</updated>
-    </task>
-    <task id="LOCAL-00043" summary="add OrderPublisherTests">
-      <option name="closed" value="true" />
-      <created>1773661852555</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1773661852555</updated>
+      <workItem from="1773826693808" duration="3493000" />
     </task>
     <task id="LOCAL-00044" summary="format">
       <option name="closed" value="true" />
@@ -660,7 +650,79 @@
       <option name="project" value="LOCAL" />
       <updated>1773774613974</updated>
     </task>
-    <option name="localTasksCounter" value="84" />
+    <task id="LOCAL-00084" summary="add ProductController and ProductControllerAdvice classes for writing and updating products">
+      <option name="closed" value="true" />
+      <created>1773774874010</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1773774874010</updated>
+    </task>
+    <task id="LOCAL-00085" summary="add ProductController and ProductControllerAdvice classes for writing and updating products">
+      <option name="closed" value="true" />
+      <created>1773774883994</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1773774883994</updated>
+    </task>
+    <task id="LOCAL-00086" summary=".idea">
+      <option name="closed" value="true" />
+      <created>1773774889787</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1773774889787</updated>
+    </task>
+    <task id="LOCAL-00087" summary="add webmvc-test dependency for testing controllers">
+      <option name="closed" value="true" />
+      <created>1773774937195</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1773774937195</updated>
+    </task>
+    <task id="LOCAL-00088" summary="change endpoint for all products">
+      <option name="closed" value="true" />
+      <created>1773775680607</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1773775680607</updated>
+    </task>
+    <task id="LOCAL-00089" summary="add ProductControllerTests for writing and querying">
+      <option name="closed" value="true" />
+      <created>1773776327231</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1773776327231</updated>
+    </task>
+    <task id="LOCAL-00090" summary="add Product events">
+      <option name="closed" value="true" />
+      <created>1773828627863</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1773828627863</updated>
+    </task>
+    <task id="LOCAL-00091" summary="remove auto generation of id, since the write-ms provides as with the id">
+      <option name="closed" value="true" />
+      <created>1773829254198</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1773829254198</updated>
+    </task>
+    <task id="LOCAL-00092" summary="add @Transactional annotation to all methods">
+      <option name="closed" value="true" />
+      <created>1773829794809</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1773829794809</updated>
+    </task>
+    <option name="localTasksCounter" value="93" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -693,13 +755,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="delete OrderPublisherTests" />
-    <MESSAGE value="verify that event was published once" />
-    <MESSAGE value="verify that kafkaTemplate and paymentPublisher were called" />
-    <MESSAGE value="preserve host header in gateway routes configuration" />
-    <MESSAGE value="add wiremock dependency for testing" />
-    <MESSAGE value="add GatewayTests" />
-    <MESSAGE value="remove preserveHostHeader" />
     <MESSAGE value="trust all IPs to send X-Forwarded-* headers to downstream services" />
     <MESSAGE value="add groupId" />
     <MESSAGE value="update core dependency" />
@@ -716,8 +771,15 @@
     <MESSAGE value="modularize load balancer configuration" />
     <MESSAGE value="break down routes to paymentRoutes and orderRoutes" />
     <MESSAGE value="fix test since kafkaTemplate has been removed" />
-    <MESSAGE value=".idea" />
     <MESSAGE value="change request mapping for query-ms" />
-    <option name="LAST_COMMIT_MESSAGE" value="change request mapping for query-ms" />
+    <MESSAGE value="add ProductController and ProductControllerAdvice classes for writing and updating products" />
+    <MESSAGE value=".idea" />
+    <MESSAGE value="add webmvc-test dependency for testing controllers" />
+    <MESSAGE value="change endpoint for all products" />
+    <MESSAGE value="add ProductControllerTests for writing and querying" />
+    <MESSAGE value="add Product events" />
+    <MESSAGE value="remove auto generation of id, since the write-ms provides as with the id" />
+    <MESSAGE value="add @Transactional annotation to all methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="add @Transactional annotation to all methods" />
   </component>
 </project>
