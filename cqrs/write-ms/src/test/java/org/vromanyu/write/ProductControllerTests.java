@@ -43,7 +43,7 @@ public class ProductControllerTests {
                         .content(jsonMapper.writeValueAsString(createProductRequest)))
                 .andDo(MockMvcResultHandlers.print())
                 .andExpect(MockMvcResultMatchers.status().isCreated())
-                .andExpect(MockMvcResultMatchers.redirectedUrlPattern("**/api/products/write/1"))
+                .andExpect(MockMvcResultMatchers.redirectedUrl("/api/products/get/1"))
                 .andExpect(MockMvcResultMatchers.jsonPath("$.productId", CoreMatchers.is(1)))
                 .andExpect(MockMvcResultMatchers.jsonPath("$.productName", CoreMatchers.is("cookies")))
                 .andExpect(MockMvcResultMatchers.jsonPath("$.price", CoreMatchers.is(100)))
