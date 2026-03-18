@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>org.vromanyu</groupId>
-    <artifactId>cqrs-gateway</artifactId>
+    <artifactId>gateway</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>cqrs-gateway</name>
     <description>cqrs-gateway</description>

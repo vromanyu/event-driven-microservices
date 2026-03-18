@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>org.vromanyu</groupId>
-    <artifactId>choreography-gateway</artifactId>
+    <artifactId>gateway</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>choreography-gateway</name>
     <description>choreography-gateway</description>
