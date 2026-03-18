@@ -15,13 +15,13 @@ public class WriteServiceLoadBalancerConfiguration {
     @Bean
     @Profile("!prod")
     public ServiceInstanceListSupplier serviceInstanceListSupplier() {
-        return new InstanceSupplier("order-ms", "localhost", 8086);
+        return new InstanceSupplier("write-ms", "localhost", 8086);
     }
 
     @Bean
     @Profile("prod")
     public ServiceInstanceListSupplier writeServiceInstanceListSupplier() {
-        return new InstanceSupplier("order-ms", "order-ms", 8086);
+        return new InstanceSupplier("write-ms", "write-ms", 8086);
     }
 
     static class InstanceSupplier implements ServiceInstanceListSupplier {
