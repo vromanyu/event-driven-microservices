@@ -53,7 +53,9 @@ public class ProductEventConsumerServiceImpl implements ProductEventConsumerServ
     @KafkaHandler
     public void consumeProductDeletedEvent(@Payload ProductDeletedEvent productDeletedEvent) {
         logger.info("received product deleted event: {}", productDeletedEvent);
-        productRepository.deleteById(productDeletedEvent.productId());
+        Product product = productRepository.findById(productDeletedEvent.productId())
+                .orElseThrow(() -> new RuntimeException("product with id " + productDeletedEvent.productId() + " not found"));
+        productRepository.delete(product);
         logger.info("product deleted");
     }
 
