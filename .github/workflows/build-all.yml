@@ -57,6 +57,24 @@ jobs:
       - name: Build/Test
         id: build
         run: mvn -B package --file choreography/pom.xml -pl payment-ms -am
+  cqrs-gateway:
+    runs-on: ubuntu-latest
+    env:
+      DOCKER_USERNAME: ${{secrets.DOCKER_USERNAME}}
+      DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
+    steps:
+      - name: Clone
+        uses: actions/checkout@v5
+      - name: JDK Setup
+        uses: actions/setup-java@v4
+        with:
+          java-version: 25
+          distribution: 'temurin'
+          architecture: x64
+          cache: 'maven'
+      - name: Build/Test
+        id: build
+        run: mvn -B package --file cqrs/gateway/pom.xml
   query-ms:
     runs-on: ubuntu-latest
     env:
