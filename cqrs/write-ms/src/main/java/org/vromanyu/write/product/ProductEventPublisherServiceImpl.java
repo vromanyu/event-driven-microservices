@@ -25,18 +25,21 @@ public class ProductEventPublisherServiceImpl implements ProductEventPublisherSe
     @Override
     @Transactional
     public void publishProductCreatedEvent(ProductCreatedEvent productCreatedEvent) {
+        logger.info("publishProductCreatedEvent called with productCreatedEvent: {}", productCreatedEvent);
         kafkaTemplate.send(productTopic, productCreatedEvent.productId().toString(), productCreatedEvent);
     }
 
     @Override
     @Transactional
     public void publishProductUpdatedEvent(ProductUpdatedEvent productUpdatedEvent) {
+        logger.info("publishProductUpdatedEvent called with productUpdatedEvent: {}", productUpdatedEvent);
         kafkaTemplate.send(productTopic, productUpdatedEvent.productId().toString(), productUpdatedEvent);
     }
 
     @Override
     @Transactional
     public void publishProductDeletedEvent(ProductDeletedEvent productDeletedEvent) {
+        logger.info("publishProductDeletedEvent called with productDeletedEvent: {}", productDeletedEvent);
         kafkaTemplate.send(productTopic, productDeletedEvent.productId().toString(), productDeletedEvent);
     }
 
