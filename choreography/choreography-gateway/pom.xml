@@ -11,8 +11,8 @@
     <groupId>org.vromanyu</groupId>
     <artifactId>choreography-gateway</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>gateway</name>
-    <description>gateway</description>
+    <name>choreography-gateway</name>
+    <description>choreography-gateway</description>
     <url/>
     <licenses>
         <license/>
