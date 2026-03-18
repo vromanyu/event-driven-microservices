@@ -4,9 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f53cd7e9-042e-48da-856a-18c59663b55c" name="Changes" comment="add docker oci plugin and configuration">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/build-all.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/build-all.yml" afterDir="false" />
+    <list default="true" id="f53cd7e9-042e-48da-856a-18c59663b55c" name="Changes" comment="change module name">
+      <change afterPath="$PROJECT_DIR$/cqrs/cqrs-gateway/src/main/java/org/vromanyu/gateway/config/GatewayRoutesConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cqrs/cqrs-gateway/src/main/java/org/vromanyu/gateway/config/LoadBalancerConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cqrs/cqrs-gateway/src/main/java/org/vromanyu/gateway/config/QueryServiceLoadBalancerConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cqrs/cqrs-gateway/src/main/java/org/vromanyu/gateway/config/WriteServiceLoadBalancerConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/choreography/choreography-gateway/src/main/java/org/vromanyu/gateway/config/OrderServiceLoadBalancerConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/choreography/choreography-gateway/src/main/java/org/vromanyu/gateway/config/OrderServiceLoadBalancerConfiguration.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,6 +128,7 @@
     "JUnit.query in query-ms.executor": "Run",
     "JUnit.write in write-ms.executor": "Run",
     "Maven.choreography [clean].executor": "Run",
+    "Maven.choreography [test].executor": "Run",
     "Maven.cqrs [clean].executor": "Run",
     "Maven.cqrs-core [clean].executor": "Run",
     "Maven.gateway [clean,install].executor": "Run",
@@ -147,7 +155,7 @@
     "git-widget-placeholder": "main",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/vromanyu/Repositories/event-driven-microservices/cqrs/cqrs-core",
+    "last_opened_file_path": "/home/vromanyu/Repositories/event-driven-microservices/cqrs/cqrs-gateway/src/main/java/org/vromanyu/gateway",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -167,11 +175,11 @@
       <recent name="org.vromanyu.order.service" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/cqrs/cqrs-gateway/src/main/java/org/vromanyu/gateway" />
       <recent name="$PROJECT_DIR$/cqrs/cqrs-core" />
       <recent name="$PROJECT_DIR$/cqrs/write-ms/src/main/java/org/vromanyu/write/config" />
       <recent name="$PROJECT_DIR$/cqrs/cqrs-core/src/main/java/org/vromanyu/core" />
       <recent name="$PROJECT_DIR$/cqrs/write-ms/src/main/java/org/vromanyu/write/product" />
-      <recent name="$PROJECT_DIR$/choreography/gateway/src/main/java/org/vromanyu/gateway/config" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -261,9 +269,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+    <configuration name="ChoreographyGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="choreography-gateway" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="org.vromanyu.gateway.GatewayApplication" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.vromanyu.gateway.ChoreographyGatewayApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CqrsGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="cqrs-gateway" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.vromanyu.gateway.CqrsGatewayApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -329,46 +344,6 @@
       <workItem from="1773740955594" duration="549000" />
       <workItem from="1773747168706" duration="697000" />
       <workItem from="1773826693808" duration="5178000" />
-    </task>
-    <task id="LOCAL-00057" summary="add wiremock dependency for testing">
-      <option name="closed" value="true" />
-      <created>1773668298087</created>
-      <option name="number" value="00057" />
-      <option name="presentableId" value="LOCAL-00057" />
-      <option name="project" value="LOCAL" />
-      <updated>1773668298087</updated>
-    </task>
-    <task id="LOCAL-00058" summary="add GatewayTests">
-      <option name="closed" value="true" />
-      <created>1773668307933</created>
-      <option name="number" value="00058" />
-      <option name="presentableId" value="LOCAL-00058" />
-      <option name="project" value="LOCAL" />
-      <updated>1773668307933</updated>
-    </task>
-    <task id="LOCAL-00059" summary="remove preserveHostHeader">
-      <option name="closed" value="true" />
-      <created>1773670050474</created>
-      <option name="number" value="00059" />
-      <option name="presentableId" value="LOCAL-00059" />
-      <option name="project" value="LOCAL" />
-      <updated>1773670050474</updated>
-    </task>
-    <task id="LOCAL-00060" summary="trust all IPs to send X-Forwarded-* headers to downstream services">
-      <option name="closed" value="true" />
-      <created>1773670079742</created>
-      <option name="number" value="00060" />
-      <option name="presentableId" value="LOCAL-00060" />
-      <option name="project" value="LOCAL" />
-      <updated>1773670079742</updated>
-    </task>
-    <task id="LOCAL-00061" summary="add groupId">
-      <option name="closed" value="true" />
-      <created>1773672511226</created>
-      <option name="number" value="00061" />
-      <option name="presentableId" value="LOCAL-00061" />
-      <option name="project" value="LOCAL" />
-      <updated>1773672511227</updated>
     </task>
     <task id="LOCAL-00062" summary="update core dependency">
       <option name="closed" value="true" />
@@ -722,7 +697,47 @@
       <option name="project" value="LOCAL" />
       <updated>1773833073793</updated>
     </task>
-    <option name="localTasksCounter" value="106" />
+    <task id="LOCAL-00106" summary="change job name">
+      <option name="closed" value="true" />
+      <created>1773833452798</created>
+      <option name="number" value="00106" />
+      <option name="presentableId" value="LOCAL-00106" />
+      <option name="project" value="LOCAL" />
+      <updated>1773833452798</updated>
+    </task>
+    <task id="LOCAL-00107" summary="change module name">
+      <option name="closed" value="true" />
+      <created>1773833500410</created>
+      <option name="number" value="00107" />
+      <option name="presentableId" value="LOCAL-00107" />
+      <option name="project" value="LOCAL" />
+      <updated>1773833500410</updated>
+    </task>
+    <task id="LOCAL-00108" summary="init module cqrs-gateway">
+      <option name="closed" value="true" />
+      <created>1773833560879</created>
+      <option name="number" value="00108" />
+      <option name="presentableId" value="LOCAL-00108" />
+      <option name="project" value="LOCAL" />
+      <updated>1773833560879</updated>
+    </task>
+    <task id="LOCAL-00109" summary="add jackson2 dependency for gateway">
+      <option name="closed" value="true" />
+      <created>1773833590267</created>
+      <option name="number" value="00109" />
+      <option name="presentableId" value="LOCAL-00109" />
+      <option name="project" value="LOCAL" />
+      <updated>1773833590267</updated>
+    </task>
+    <task id="LOCAL-00110" summary="change module name">
+      <option name="closed" value="true" />
+      <created>1773833712828</created>
+      <option name="number" value="00110" />
+      <option name="presentableId" value="LOCAL-00110" />
+      <option name="project" value="LOCAL" />
+      <updated>1773833712828</updated>
+    </task>
+    <option name="localTasksCounter" value="111" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -755,10 +770,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add sendPaidEvent method to PaymentPublisher for sending successful payment events" />
-    <MESSAGE value="expose endpoint to obtain all users balances" />
-    <MESSAGE value="fix UserInitService to populate userIds" />
-    <MESSAGE value="modularize load balancer configuration" />
     <MESSAGE value="break down routes to paymentRoutes and orderRoutes" />
     <MESSAGE value="fix test since kafkaTemplate has been removed" />
     <MESSAGE value="change request mapping for query-ms" />
@@ -780,6 +791,10 @@
     <MESSAGE value=".idea" />
     <MESSAGE value="remove duplicate dependencies" />
     <MESSAGE value="add docker oci plugin and configuration" />
-    <option name="LAST_COMMIT_MESSAGE" value="add docker oci plugin and configuration" />
+    <MESSAGE value="change job name" />
+    <MESSAGE value="init module cqrs-gateway" />
+    <MESSAGE value="add jackson2 dependency for gateway" />
+    <MESSAGE value="change module name" />
+    <option name="LAST_COMMIT_MESSAGE" value="change module name" />
   </component>
 </project>
