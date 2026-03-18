@@ -20,7 +20,7 @@ public class OrderServiceLoadBalancerConfiguration {
 
     @Bean
     @Profile("prod")
-    public ServiceInstanceListSupplier prodSupplier() {
+    public ServiceInstanceListSupplier orderServiceInstanceListSupplier() {
         return new InstanceSupplier("order-ms", "order-ms", 8085);
     }
 
