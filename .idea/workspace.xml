@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f53cd7e9-042e-48da-856a-18c59663b55c" name="Changes" comment="add caching support to query-ms">
+    <list default="true" id="f53cd7e9-042e-48da-856a-18c59663b55c" name="Changes" comment="add postman collection">
+      <change afterPath="$PROJECT_DIR$/cqrs/docker/nginx/conf/nginx.conf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cqrs/cqrs-gateway/src/main/java/org/vromanyu/gateway/config/GatewayRoutesConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/cqrs/cqrs-gateway/src/main/java/org/vromanyu/gateway/config/GatewayRoutesConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cqrs/cqrs-gateway/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/cqrs/cqrs-gateway/src/main/resources/application.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cqrs/docker/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cqrs/docker/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cqrs/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cqrs/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +33,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
@@ -59,122 +68,122 @@
     <option name="showLibraryContents" value="true" />
     <option name="showScratchesAndConsoles" value="false" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "JUnit.All in gateway (1).executor": "Run",
-    "JUnit.All in gateway (2).executor": "Run",
-    "JUnit.All in gateway (3).executor": "Run",
-    "JUnit.All in gateway.executor": "Run",
-    "JUnit.All in order-ms (1).executor": "Run",
-    "JUnit.All in order-ms.executor": "Run",
-    "JUnit.All in query-ms.executor": "Run",
-    "JUnit.GatewayTests.executor": "Run",
-    "JUnit.GatewayTests.givenInvalidOrderId_shouldReturnNotFound.executor": "Run",
-    "JUnit.GatewayTests.givenInvalidProductId_shouldReturnNotFound.executor": "Run",
-    "JUnit.GatewayTests.givenOrderRequest_shouldReturnCreated.executor": "Run",
-    "JUnit.GatewayTests.givenProductDeleteRequest_shouldReturnNoContent.executor": "Run",
-    "JUnit.GatewayTests.givenProductRequest_shouldReturnCreated.executor": "Run",
-    "JUnit.GatewayTests.givenProductUpdateRequest_shouldReturnUpdatedProduct.executor": "Run",
-    "JUnit.GatewayTests.givenValidOrderId_shouldReturnOk.executor": "Run",
-    "JUnit.GatewayTests.givenValidProductId_shouldReturnOk.executor": "Run",
-    "JUnit.GatewayTests.test.executor": "Run",
-    "JUnit.GatewayTests.whenAllProductsAndThereAreNoProducts_thenReturnEmptyList.executor": "Run",
-    "JUnit.GatewayTests.whenAllProductsAndThereAreProducts_thenReturnAllProducts.executor": "Run",
-    "JUnit.OrderControllerTests.whenCreateOrder_thenSuccess.executor": "Run",
-    "JUnit.OrderControllerTests.whenGetOrderByInvalidId_thenFail.executor": "Run",
-    "JUnit.OrderControllerTests.whenGetOrderByValidId_thenSuccess.executor": "Run",
-    "JUnit.OrderPublisherTests.whenSend_thenFail.executor": "Run",
-    "JUnit.OrderPublisherTests.whenSend_thenSuccess.executor": "Run",
-    "JUnit.OrderRepositoryTests.givenInvalidOrderId_whenFindBy_shouldThrowException.executor": "Run",
-    "JUnit.OrderRepositoryTests.givenOrder_whenSave_thenPopulateAuditFields.executor": "Run",
-    "JUnit.OrderRepositoryTests.givenOrder_whenSave_thenSuccess.executor": "Run",
-    "JUnit.OrderRepositoryTests.givenThreeOrders_whenFindAll_shouldReturnThreeOrders.executor": "Run",
-    "JUnit.OrderRepositoryTests.givenValidOrderId_whenFindBy_shouldReturnOrder.executor": "Run",
-    "JUnit.OrderServiceTests.givenInvalidOrderId_whenGetOrder_thenThrowException.executor": "Run",
-    "JUnit.OrderServiceTests.givenOrderId_whenGetOrder_thenSuccess.executor": "Run",
-    "JUnit.OrderServiceTests.givenOrderRequest_whenCreateOrder_thenSuccess.executor": "Run",
-    "JUnit.OrderServiceTests.test.executor": "Run",
-    "JUnit.PaymentServiceTests.whenInvalidOrderStatus_thenThrowException.executor": "Run",
-    "JUnit.PaymentServiceTests.whenInvalidUserBalance_thenThrowException.executor": "Run",
-    "JUnit.PaymentServiceTests.whenValidPaymentEvent_thenSuccess.executor": "Run",
-    "JUnit.ProductControllerTests.executor": "Run",
-    "JUnit.ProductControllerTests.whenCreateProduct_thenReturnCreatedProduct.executor": "Run",
-    "JUnit.ProductControllerTests.whenDeleteProductWithInValidId_thenReturnBadRequest.executor": "Run",
-    "JUnit.ProductControllerTests.whenDeleteProductWithValidId_thenReturnNoContent.executor": "Run",
-    "JUnit.ProductControllerTests.whenGetAllProductsAndThereAreNoProducts_thenSuccess.executor": "Run",
-    "JUnit.ProductControllerTests.whenGetAllProducts_thenSuccess.executor": "Run",
-    "JUnit.ProductControllerTests.whenGetProductByIdInvalidId_thenFail.executor": "Run",
-    "JUnit.ProductControllerTests.whenGetProductById_thenSuccess.executor": "Run",
-    "JUnit.ProductControllerTests.whenUpdateProductWithInValidId_thenReturnBadRequest.executor": "Run",
-    "JUnit.ProductControllerTests.whenUpdateProductWithValidId_thenReturnUpdatedProduct.executor": "Run",
-    "JUnit.ProductEventConsumerServiceTests.executor": "Run",
-    "JUnit.ProductEventConsumerServiceTests.whenProductCreatedEvent_thenProductSaved.executor": "Run",
-    "JUnit.ProductEventConsumerServiceTests.whenProductDeletedEvent_thenSuccess.executor": "Run",
-    "JUnit.ProductEventConsumerServiceTests.whenProductDeletedEvent_thenThrowException.executor": "Run",
-    "JUnit.ProductEventConsumerServiceTests.whenProductUpdatedEvent_thenThrowException.executor": "Run",
-    "JUnit.ProductEventConsumerServiceTests.whenProductUpdatedEvent_thenUpdateProduct.executor": "Run",
-    "JUnit.ProductServiceTests.givenInvalidProductId_whenDeleteProduct_thenThrowException.executor": "Run",
-    "JUnit.ProductServiceTests.givenInvalidProductId_whenPublishUpdateProduct_thenThrowException.executor": "Run",
-    "JUnit.ProductServiceTests.givenProductId_whenDeleteProduct_thenReturnNothing.executor": "Run",
-    "JUnit.ProductServiceTests.givenProductRequest_whenCreateProduct_thenReturnProduct.executor": "Run",
-    "JUnit.ProductServiceTests.givenProductRequest_whenPublishFails_throwException.executor": "Run",
-    "JUnit.ProductServiceTests.givenValidProductIdAndUpdateProductRequest_whenUpdateProduct_thenReturnProduct.executor": "Run",
-    "JUnit.ProductServiceTests.givenValidProductId_whenPublishDeleteEvent_thenThrowException.executor": "Run",
-    "JUnit.UserBalanceRepositoryTest.executor": "Run",
-    "JUnit.UserBalanceRepositoryTest.givenInvalidUserId_whenFindByUserId_shouldReturnEmptyList.executor": "Run",
-    "JUnit.UserBalanceRepositoryTest.givenValidUserId_whenFindByUserId_shouldReturnUserBalance.executor": "Run",
-    "JUnit.UserTransactionRepositoryTests.executor": "Run",
-    "JUnit.gateway in gateway.executor": "Run",
-    "JUnit.java in payment-ms.executor": "Run",
-    "JUnit.java in query-ms.executor": "Run",
-    "JUnit.org.vromanyu.query in query-ms.executor": "Run",
-    "JUnit.query in query-ms.executor": "Run",
-    "JUnit.write in write-ms.executor": "Run",
-    "Maven.choreography [clean].executor": "Run",
-    "Maven.choreography [test].executor": "Run",
-    "Maven.cqrs [clean].executor": "Run",
-    "Maven.cqrs [test].executor": "Run",
-    "Maven.cqrs-core [clean].executor": "Run",
-    "Maven.gateway [clean,install].executor": "Run",
-    "Maven.gateway [clean].executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Notification.DisplayName-DoNotAsk-DatabaseConfigFileWatcher.found": "New/updated database configurations found",
-    "Notification.DoNotAsk-DatabaseConfigFileWatcher.found": "true",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.MCP Project settings loaded": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.CqrsGatewayApplication.executor": "Run",
-    "Spring Boot.GatewayApplication.executor": "Run",
-    "Spring Boot.OrderMsApplication.executor": "Run",
-    "Spring Boot.PaymentMsApplication.executor": "Run",
-    "Spring Boot.QueryMsApplication.executor": "Run",
-    "Spring Boot.WriteMsApplication.executor": "Run",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "main",
-    "junie.onboarding.icon.badge.shown": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/vromanyu/Repositories/event-driven-microservices/cqrs/write-ms/src/main/java/org/vromanyu/write/config",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "run.configurations.included.in.services": "true",
-    "settings.editor.selected.configurable": "settings.sync",
-    "to.speed.mode.migration.done": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JUnit.All in gateway (1).executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.All in gateway (2).executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.All in gateway (3).executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.All in gateway.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.All in order-ms (1).executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.All in order-ms.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.All in query-ms.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.GatewayTests.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.GatewayTests.givenInvalidOrderId_shouldReturnNotFound.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.GatewayTests.givenInvalidProductId_shouldReturnNotFound.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.GatewayTests.givenOrderRequest_shouldReturnCreated.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.GatewayTests.givenProductDeleteRequest_shouldReturnNoContent.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.GatewayTests.givenProductRequest_shouldReturnCreated.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.GatewayTests.givenProductUpdateRequest_shouldReturnUpdatedProduct.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.GatewayTests.givenValidOrderId_shouldReturnOk.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.GatewayTests.givenValidProductId_shouldReturnOk.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.GatewayTests.test.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.GatewayTests.whenAllProductsAndThereAreNoProducts_thenReturnEmptyList.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.GatewayTests.whenAllProductsAndThereAreProducts_thenReturnAllProducts.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.OrderControllerTests.whenCreateOrder_thenSuccess.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.OrderControllerTests.whenGetOrderByInvalidId_thenFail.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.OrderControllerTests.whenGetOrderByValidId_thenSuccess.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.OrderPublisherTests.whenSend_thenFail.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.OrderPublisherTests.whenSend_thenSuccess.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.OrderRepositoryTests.givenInvalidOrderId_whenFindBy_shouldThrowException.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.OrderRepositoryTests.givenOrder_whenSave_thenPopulateAuditFields.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.OrderRepositoryTests.givenOrder_whenSave_thenSuccess.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.OrderRepositoryTests.givenThreeOrders_whenFindAll_shouldReturnThreeOrders.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.OrderRepositoryTests.givenValidOrderId_whenFindBy_shouldReturnOrder.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.OrderServiceTests.givenInvalidOrderId_whenGetOrder_thenThrowException.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.OrderServiceTests.givenOrderId_whenGetOrder_thenSuccess.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.OrderServiceTests.givenOrderRequest_whenCreateOrder_thenSuccess.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.OrderServiceTests.test.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PaymentServiceTests.whenInvalidOrderStatus_thenThrowException.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PaymentServiceTests.whenInvalidUserBalance_thenThrowException.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PaymentServiceTests.whenValidPaymentEvent_thenSuccess.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProductControllerTests.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProductControllerTests.whenCreateProduct_thenReturnCreatedProduct.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProductControllerTests.whenDeleteProductWithInValidId_thenReturnBadRequest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProductControllerTests.whenDeleteProductWithValidId_thenReturnNoContent.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProductControllerTests.whenGetAllProductsAndThereAreNoProducts_thenSuccess.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProductControllerTests.whenGetAllProducts_thenSuccess.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProductControllerTests.whenGetProductByIdInvalidId_thenFail.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProductControllerTests.whenGetProductById_thenSuccess.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProductControllerTests.whenUpdateProductWithInValidId_thenReturnBadRequest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProductControllerTests.whenUpdateProductWithValidId_thenReturnUpdatedProduct.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProductEventConsumerServiceTests.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProductEventConsumerServiceTests.whenProductCreatedEvent_thenProductSaved.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProductEventConsumerServiceTests.whenProductDeletedEvent_thenSuccess.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProductEventConsumerServiceTests.whenProductDeletedEvent_thenThrowException.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProductEventConsumerServiceTests.whenProductUpdatedEvent_thenThrowException.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProductEventConsumerServiceTests.whenProductUpdatedEvent_thenUpdateProduct.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProductServiceTests.givenInvalidProductId_whenDeleteProduct_thenThrowException.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProductServiceTests.givenInvalidProductId_whenPublishUpdateProduct_thenThrowException.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProductServiceTests.givenProductId_whenDeleteProduct_thenReturnNothing.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProductServiceTests.givenProductRequest_whenCreateProduct_thenReturnProduct.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProductServiceTests.givenProductRequest_whenPublishFails_throwException.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProductServiceTests.givenValidProductIdAndUpdateProductRequest_whenUpdateProduct_thenReturnProduct.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProductServiceTests.givenValidProductId_whenPublishDeleteEvent_thenThrowException.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserBalanceRepositoryTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserBalanceRepositoryTest.givenInvalidUserId_whenFindByUserId_shouldReturnEmptyList.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserBalanceRepositoryTest.givenValidUserId_whenFindByUserId_shouldReturnUserBalance.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserTransactionRepositoryTests.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.gateway in gateway.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.java in payment-ms.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.java in query-ms.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.org.vromanyu.query in query-ms.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.query in query-ms.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.write in write-ms.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.choreography [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.choreography [test].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.cqrs [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.cqrs [test].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.cqrs-core [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.gateway [clean,install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.gateway [clean].executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Notification.DisplayName-DoNotAsk-DatabaseConfigFileWatcher.found&quot;: &quot;New/updated database configurations found&quot;,
+    &quot;Notification.DoNotAsk-DatabaseConfigFileWatcher.found&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.CqrsGatewayApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.GatewayApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.OrderMsApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.PaymentMsApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.QueryMsApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.WriteMsApplication.executor&quot;: &quot;Run&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;proxy&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/vromanyu/Repositories/event-driven-microservices/cqrs/write-ms/src/main/java/org/vromanyu/write/config&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.sync&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -188,6 +197,9 @@
       <recent name="$PROJECT_DIR$/cqrs/cqrs-gateway/src/main/java/org/vromanyu/gateway" />
       <recent name="$PROJECT_DIR$/cqrs/cqrs-core" />
       <recent name="$PROJECT_DIR$/cqrs/cqrs-core/src/main/java/org/vromanyu/core" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -204,6 +216,7 @@
         <entry key="SpringBootApplicationConfigurationType">
           <value>
             <map>
+              <entry key="CqrsGatewayApplication" value="STOPPED" />
               <entry key="QueryMsApplication" value="STOPPED" />
               <entry key="WriteMsApplication" value="STOPPED" />
             </map>
@@ -319,10 +332,10 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.All in query-ms" />
-      <item itemvalue="JUnit.ProductEventConsumerServiceTests" />
       <item itemvalue="JUnit.All in write-ms" />
-      <item itemvalue="JUnit.org.vromanyu.query in query-ms" />
       <item itemvalue="JUnit.ProductControllerTests.whenCreateProduct_thenReturnCreatedProduct" />
+      <item itemvalue="JUnit.ProductEventConsumerServiceTests" />
+      <item itemvalue="JUnit.org.vromanyu.query in query-ms" />
       <item itemvalue="Spring Boot.ChoreographyGatewayApplication" />
       <item itemvalue="Spring Boot.CqrsGatewayApplication" />
       <item itemvalue="Spring Boot.OrderMsApplication" />
@@ -363,30 +376,8 @@
       <workItem from="1773740955594" duration="549000" />
       <workItem from="1773747168706" duration="697000" />
       <workItem from="1773826693808" duration="5178000" />
-    </task>
-    <task id="LOCAL-00076" summary="expose endpoint to obtain all users balances">
-      <option name="closed" value="true" />
-      <created>1773737021684</created>
-      <option name="number" value="00076" />
-      <option name="presentableId" value="LOCAL-00076" />
-      <option name="project" value="LOCAL" />
-      <updated>1773737021685</updated>
-    </task>
-    <task id="LOCAL-00077" summary="fix UserInitService to populate userIds">
-      <option name="closed" value="true" />
-      <created>1773737035608</created>
-      <option name="number" value="00077" />
-      <option name="presentableId" value="LOCAL-00077" />
-      <option name="project" value="LOCAL" />
-      <updated>1773737035608</updated>
-    </task>
-    <task id="LOCAL-00078" summary="modularize load balancer configuration">
-      <option name="closed" value="true" />
-      <created>1773737051697</created>
-      <option name="number" value="00078" />
-      <option name="presentableId" value="LOCAL-00078" />
-      <option name="project" value="LOCAL" />
-      <updated>1773737051698</updated>
+      <workItem from="1773863468737" duration="41000" />
+      <workItem from="1773914130200" duration="4876000" />
     </task>
     <task id="LOCAL-00079" summary="break down routes to paymentRoutes and orderRoutes">
       <option name="closed" value="true" />
@@ -756,7 +747,31 @@
       <option name="project" value="LOCAL" />
       <updated>1773850532574</updated>
     </task>
-    <option name="localTasksCounter" value="125" />
+    <task id="LOCAL-00125" summary="update docker-compose.yml to use redis for caching">
+      <option name="closed" value="true" />
+      <created>1773851200952</created>
+      <option name="number" value="00125" />
+      <option name="presentableId" value="LOCAL-00125" />
+      <option name="project" value="LOCAL" />
+      <updated>1773851200952</updated>
+    </task>
+    <task id="LOCAL-00126" summary=".idea">
+      <option name="closed" value="true" />
+      <created>1773851207403</created>
+      <option name="number" value="00126" />
+      <option name="presentableId" value="LOCAL-00126" />
+      <option name="project" value="LOCAL" />
+      <updated>1773851207403</updated>
+    </task>
+    <task id="LOCAL-00127" summary="add postman collection">
+      <option name="closed" value="true" />
+      <created>1773863501424</created>
+      <option name="number" value="00127" />
+      <option name="presentableId" value="LOCAL-00127" />
+      <option name="project" value="LOCAL" />
+      <updated>1773863501425</updated>
+    </task>
+    <option name="localTasksCounter" value="128" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -789,8 +804,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add ProductEventConsumerService to listen to Product manipulation events" />
-    <MESSAGE value="publish Product events after manipulating product" />
     <MESSAGE value="search for product before deleting to throw exception if id is invalid" />
     <MESSAGE value="add logging statements" />
     <MESSAGE value="add tests for publisher and listener" />
@@ -804,7 +817,6 @@
     <MESSAGE value="change method name" />
     <MESSAGE value="change application name" />
     <MESSAGE value="add cqrs-gateway routes and loadbalancer configurations" />
-    <MESSAGE value=".idea" />
     <MESSAGE value="build docker oci image for cqrs-gateway and add it to the build-all workflow" />
     <MESSAGE value="fix build-all workflow" />
     <MESSAGE value="change artifact names to plain 'gateway'" />
@@ -814,6 +826,9 @@
     <MESSAGE value="change Location header response" />
     <MESSAGE value="add gateway tests" />
     <MESSAGE value="add caching support to query-ms" />
-    <option name="LAST_COMMIT_MESSAGE" value="add caching support to query-ms" />
+    <MESSAGE value="update docker-compose.yml to use redis for caching" />
+    <MESSAGE value=".idea" />
+    <MESSAGE value="add postman collection" />
+    <option name="LAST_COMMIT_MESSAGE" value="add postman collection" />
   </component>
 </project>
