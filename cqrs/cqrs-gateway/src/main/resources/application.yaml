@@ -9,5 +9,20 @@ spring:
       server:
         webmvc:
           trusted-proxies: ".*"
+  security:
+    oauth2:
+      client:
+        provider:
+          keycloak:
+            issuer-uri: http://localhost:7080/realms/event-drive-microservices-cqrs
+            authorization-uri: http://localhost:7080/realms/event-drive-microservices-cqrs/protocol/openid-connect/auth
+            token-uri: http://localhost:7080/realms/event-drive-microservices-cqrs/protocol/openid-connect/token
+            user-info-uri: http://localhost:7080/realms/event-drive-microservices-cqrs/protocol/openid-connect/userinfo
+        registration:
+          keycloak:
+            client-id: cqrs-client
+            client-secret: 98daU7yEZAnNnTklnfAIft7rcv4zEMr7
+            authorization-grant-type: authorization_code
+            scope: openid
 server:
   port: 8585
