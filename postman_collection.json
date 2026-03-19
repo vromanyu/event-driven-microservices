@@ -81,14 +81,14 @@
       "name": "cqrs",
       "item": [
         {
-          "name": "getAllProductsGateway",
+          "name": "getAllProducts",
           "request": {
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "{{cqrs-gateway-server}}/api/products/get/all",
+              "raw": "{{cqrs-nginx}}/api/products/get/all",
               "host": [
-                "{{cqrs-gateway-server}}"
+                "{{cqrs-nginx}}"
               ],
               "path": [
                 "api",
@@ -101,14 +101,14 @@
           "response": []
         },
         {
-          "name": "getProductByIdGateway",
+          "name": "getProductById",
           "request": {
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "{{cqrs-gateway-server}}/api/products/get/1",
+              "raw": "{{cqrs-nginx}}/api/products/get/1",
               "host": [
-                "{{cqrs-gateway-server}}"
+                "{{cqrs-nginx}}"
               ],
               "path": [
                 "api",
@@ -121,7 +121,7 @@
           "response": []
         },
         {
-          "name": "createProductGateway",
+          "name": "createProduct",
           "request": {
             "method": "POST",
             "header": [],
@@ -135,9 +135,9 @@
               }
             },
             "url": {
-              "raw": "{{cqrs-gateway-server}}/api/products/write/",
+              "raw": "{{cqrs-nginx}}/api/products/write/",
               "host": [
-                "{{cqrs-gateway-server}}"
+                "{{cqrs-nginx}}"
               ],
               "path": [
                 "api",
@@ -150,7 +150,7 @@
           "response": []
         },
         {
-          "name": "updateProductGateway",
+          "name": "updateProduct",
           "request": {
             "method": "PUT",
             "header": [],
@@ -164,9 +164,9 @@
               }
             },
             "url": {
-              "raw": "{{cqrs-gateway-server}}/api/products/write/1",
+              "raw": "{{cqrs-nginx}}/api/products/write/1",
               "host": [
-                "{{cqrs-gateway-server}}"
+                "{{cqrs-nginx}}"
               ],
               "path": [
                 "api",
@@ -179,7 +179,7 @@
           "response": []
         },
         {
-          "name": "deleteProductGateway",
+          "name": "deleteProduct",
           "request": {
             "method": "DELETE",
             "header": [],
@@ -188,9 +188,9 @@
               "raw": "{\n    \"productName\": \"socks\",\n    \"price\": 10,\n    \"quantity\": 100\n}"
             },
             "url": {
-              "raw": "{{cqrs-gateway-server}}/api/products/write/1",
+              "raw": "{{cqrs-nginx}}/api/products/write/1",
               "host": [
-                "{{cqrs-gateway-server}}"
+                "{{cqrs-nginx}}"
               ],
               "path": [
                 "api",
@@ -252,6 +252,10 @@
     },
     {
       "key": "cqrs-gateway-server",
+      "value": ""
+    },
+    {
+      "key": "cqrs-nginx",
       "value": "",
       "type": "default"
     }
