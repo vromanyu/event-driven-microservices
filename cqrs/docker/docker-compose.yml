@@ -2,6 +2,22 @@ name: spring-boot-microservices
 
 services:
 
+  nginx:
+    image: nginx:latest
+    container_name: nginx
+    hostname: nginx
+    ports:
+      - "443:443"
+      - "80:80"
+    depends_on:
+      gateway:
+        condition: service_started
+    volumes:
+      - ./nginx/conf/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./nginx/certs:/etc/nginx/certs:ro
+    networks:
+      - microservices-network
+
   gateway:
     image: vromanyu/cqrs:gateway
     container_name: gateway
