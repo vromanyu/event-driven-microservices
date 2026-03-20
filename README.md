@@ -16,7 +16,7 @@ This repository explores **event-driven microservices** patterns. It demonstrate
   cd choreography/docker
   docker compose up -d
   ```
-
+**NGINX** was added to handle **SSL** termination in front of the gateway!
 </details>
 <details>
 <summary>CQRS</summary>
