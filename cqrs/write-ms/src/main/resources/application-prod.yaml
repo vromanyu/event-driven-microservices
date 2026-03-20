@@ -1,7 +1,4 @@
 spring:
-  data:
-    redis:
-      host: ${REDIS_HOST:localhost}
   security:
     oauth2:
       resourceserver:
