@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f53cd7e9-042e-48da-856a-18c59663b55c" name="Changes" comment=".idea">
+    <list default="true" id="f53cd7e9-042e-48da-856a-18c59663b55c" name="Changes" comment="change method name and endpoint">
+      <change afterPath="$PROJECT_DIR$/choreography/docker/nginx/certs/fullchain.pem" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/choreography/docker/nginx/certs/privkey.pem" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/choreography/docker/nginx/conf/nginx.conf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/choreography/docker/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/choreography/docker/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,8 +25,8 @@
       <list>
         <option value="Enum" />
         <option value="GitHub Workflow" />
-        <option value="Record" />
         <option value="Interface" />
+        <option value="Record" />
         <option value="Class" />
       </list>
     </option>
@@ -163,10 +167,10 @@
     &quot;Spring Boot.QueryMsApplication.executor&quot;: &quot;Run&quot;,
     &quot;Spring Boot.WriteMsApplication.executor&quot;: &quot;Run&quot;,
     &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;oauth&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/vromanyu/Repositories/event-driven-microservices/cqrs/write-ms/src/main/resources&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/vromanyu/Repositories/event-driven-microservices/choreography/docker&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -189,11 +193,11 @@
       <recent name="org.vromanyu.order.service" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/choreography/docker" />
       <recent name="$PROJECT_DIR$/cqrs/write-ms/src/main/resources" />
       <recent name="$PROJECT_DIR$/cqrs/write-ms/src/main/java/org/vromanyu/write/config" />
       <recent name="$PROJECT_DIR$/cqrs" />
       <recent name="$PROJECT_DIR$/cqrs/cqrs-gateway/src/main/java/org/vromanyu/gateway" />
-      <recent name="$PROJECT_DIR$/cqrs/cqrs-core" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -207,30 +211,6 @@
         <option value="QuarkusRunConfigurationType" />
         <option value="SpringBootApplicationConfigurationType" />
       </set>
-    </option>
-    <option name="hiddenConfigurations">
-      <map>
-        <entry key="SpringBootApplicationConfigurationType">
-          <value>
-            <set>
-              <option value="CqrsGatewayApplication" />
-            </set>
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="configurationStatuses">
-      <map>
-        <entry key="SpringBootApplicationConfigurationType">
-          <value>
-            <map>
-              <entry key="CqrsGatewayApplication" value="STOPPED" />
-              <entry key="QueryMsApplication" value="STOPPED" />
-              <entry key="WriteMsApplication" value="STOPPED" />
-            </map>
-          </value>
-        </entry>
-      </map>
     </option>
   </component>
   <component name="RunManager" selected="JUnit.GatewayTests">
@@ -410,22 +390,6 @@
       <workItem from="1773914130200" duration="4876000" />
       <workItem from="1774001573783" duration="6871000" />
       <workItem from="1774008453007" duration="1361000" />
-    </task>
-    <task id="LOCAL-00087" summary="add webmvc-test dependency for testing controllers">
-      <option name="closed" value="true" />
-      <created>1773774937195</created>
-      <option name="number" value="00087" />
-      <option name="presentableId" value="LOCAL-00087" />
-      <option name="project" value="LOCAL" />
-      <updated>1773774937195</updated>
-    </task>
-    <task id="LOCAL-00088" summary="change endpoint for all products">
-      <option name="closed" value="true" />
-      <created>1773775680607</created>
-      <option name="number" value="00088" />
-      <option name="presentableId" value="LOCAL-00088" />
-      <option name="project" value="LOCAL" />
-      <updated>1773775680607</updated>
     </task>
     <task id="LOCAL-00089" summary="add ProductControllerTests for writing and querying">
       <option name="closed" value="true" />
@@ -803,7 +767,23 @@
       <option name="project" value="LOCAL" />
       <updated>1774010671481</updated>
     </task>
-    <option name="localTasksCounter" value="136" />
+    <task id="LOCAL-00136" summary="add UserTransactionService to get all transactions">
+      <option name="closed" value="true" />
+      <created>1774019227004</created>
+      <option name="number" value="00136" />
+      <option name="presentableId" value="LOCAL-00136" />
+      <option name="project" value="LOCAL" />
+      <updated>1774019227004</updated>
+    </task>
+    <task id="LOCAL-00137" summary="change method name and endpoint">
+      <option name="closed" value="true" />
+      <created>1774019242550</created>
+      <option name="number" value="00137" />
+      <option name="presentableId" value="LOCAL-00137" />
+      <option name="project" value="LOCAL" />
+      <updated>1774019242550</updated>
+    </task>
+    <option name="localTasksCounter" value="138" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -836,8 +816,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="init module cqrs-gateway" />
-    <MESSAGE value="add jackson2 dependency for gateway" />
     <MESSAGE value="change module name" />
     <MESSAGE value="change method name" />
     <MESSAGE value="change application name" />
@@ -861,7 +839,9 @@
     <MESSAGE value="exclude OAuth2ResourceServerAutoConfiguration in ProductControllerTests" />
     <MESSAGE value="security configuration for prod and other environments" />
     <MESSAGE value=".idea" />
-    <option name="LAST_COMMIT_MESSAGE" value=".idea" />
+    <MESSAGE value="add UserTransactionService to get all transactions" />
+    <MESSAGE value="change method name and endpoint" />
+    <option name="LAST_COMMIT_MESSAGE" value="change method name and endpoint" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
