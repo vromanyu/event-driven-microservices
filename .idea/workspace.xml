@@ -4,22 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f53cd7e9-042e-48da-856a-18c59663b55c" name="Changes" comment="use nginx">
-      <change afterPath="$PROJECT_DIR$/cqrs/cqrs-gateway/src/main/java/org/vromanyu/gateway/config/BearerTokenLoggingFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cqrs/cqrs-gateway/src/main/resources/application-prod.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cqrs/query-ms/src/main/java/org/vromanyu/query/config/SecurityConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cqrs/write-ms/src/main/java/org/vromanyu/write/config/SecurityConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cqrs/write-ms/src/main/resources/application-prod.yaml" afterDir="false" />
+    <list default="true" id="f53cd7e9-042e-48da-856a-18c59663b55c" name="Changes" comment=".idea">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cqrs/cqrs-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cqrs/cqrs-gateway/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cqrs/cqrs-gateway/src/main/java/org/vromanyu/gateway/config/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/cqrs/cqrs-gateway/src/main/java/org/vromanyu/gateway/config/SecurityConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cqrs/cqrs-gateway/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/cqrs/cqrs-gateway/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cqrs/query-ms/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cqrs/query-ms/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cqrs/query-ms/src/main/resources/application-prod.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/cqrs/query-ms/src/main/resources/application-prod.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cqrs/query-ms/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/cqrs/query-ms/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cqrs/query-ms/src/test/java/org/vromanyu/query/ProductControllerTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/cqrs/query-ms/src/test/java/org/vromanyu/query/ProductControllerTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cqrs/write-ms/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/cqrs/write-ms/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cqrs/write-ms/src/test/java/org/vromanyu/write/ProductControllerTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/cqrs/write-ms/src/test/java/org/vromanyu/write/ProductControllerTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -423,71 +409,7 @@
       <workItem from="1773863468737" duration="41000" />
       <workItem from="1773914130200" duration="4876000" />
       <workItem from="1774001573783" duration="6871000" />
-      <workItem from="1774008453007" duration="173000" />
-    </task>
-    <task id="LOCAL-00079" summary="break down routes to paymentRoutes and orderRoutes">
-      <option name="closed" value="true" />
-      <created>1773737072896</created>
-      <option name="number" value="00079" />
-      <option name="presentableId" value="LOCAL-00079" />
-      <option name="project" value="LOCAL" />
-      <updated>1773737072896</updated>
-    </task>
-    <task id="LOCAL-00080" summary=".idea">
-      <option name="closed" value="true" />
-      <created>1773737076246</created>
-      <option name="number" value="00080" />
-      <option name="presentableId" value="LOCAL-00080" />
-      <option name="project" value="LOCAL" />
-      <updated>1773737076246</updated>
-    </task>
-    <task id="LOCAL-00081" summary="fix test since kafkaTemplate has been removed">
-      <option name="closed" value="true" />
-      <created>1773737464383</created>
-      <option name="number" value="00081" />
-      <option name="presentableId" value="LOCAL-00081" />
-      <option name="project" value="LOCAL" />
-      <updated>1773737464383</updated>
-    </task>
-    <task id="LOCAL-00082" summary=".idea">
-      <option name="closed" value="true" />
-      <created>1773737468895</created>
-      <option name="number" value="00082" />
-      <option name="presentableId" value="LOCAL-00082" />
-      <option name="project" value="LOCAL" />
-      <updated>1773737468895</updated>
-    </task>
-    <task id="LOCAL-00083" summary="change request mapping for query-ms">
-      <option name="closed" value="true" />
-      <created>1773774613974</created>
-      <option name="number" value="00083" />
-      <option name="presentableId" value="LOCAL-00083" />
-      <option name="project" value="LOCAL" />
-      <updated>1773774613974</updated>
-    </task>
-    <task id="LOCAL-00084" summary="add ProductController and ProductControllerAdvice classes for writing and updating products">
-      <option name="closed" value="true" />
-      <created>1773774874010</created>
-      <option name="number" value="00084" />
-      <option name="presentableId" value="LOCAL-00084" />
-      <option name="project" value="LOCAL" />
-      <updated>1773774874010</updated>
-    </task>
-    <task id="LOCAL-00085" summary="add ProductController and ProductControllerAdvice classes for writing and updating products">
-      <option name="closed" value="true" />
-      <created>1773774883994</created>
-      <option name="number" value="00085" />
-      <option name="presentableId" value="LOCAL-00085" />
-      <option name="project" value="LOCAL" />
-      <updated>1773774883994</updated>
-    </task>
-    <task id="LOCAL-00086" summary=".idea">
-      <option name="closed" value="true" />
-      <created>1773774889787</created>
-      <option name="number" value="00086" />
-      <option name="presentableId" value="LOCAL-00086" />
-      <option name="project" value="LOCAL" />
-      <updated>1773774889787</updated>
+      <workItem from="1774008453007" duration="1361000" />
     </task>
     <task id="LOCAL-00087" summary="add webmvc-test dependency for testing controllers">
       <option name="closed" value="true" />
@@ -817,7 +739,71 @@
       <option name="project" value="LOCAL" />
       <updated>1773863501425</updated>
     </task>
-    <option name="localTasksCounter" value="128" />
+    <task id="LOCAL-00128" summary="remove duplicate dependency">
+      <option name="closed" value="true" />
+      <created>1774010524867</created>
+      <option name="number" value="00128" />
+      <option name="presentableId" value="LOCAL-00128" />
+      <option name="project" value="LOCAL" />
+      <updated>1774010524867</updated>
+    </task>
+    <task id="LOCAL-00129" summary="use resource server dependency">
+      <option name="closed" value="true" />
+      <created>1774010533326</created>
+      <option name="number" value="00129" />
+      <option name="presentableId" value="LOCAL-00129" />
+      <option name="project" value="LOCAL" />
+      <updated>1774010533326</updated>
+    </task>
+    <task id="LOCAL-00130" summary="remove oauth2 client dependency">
+      <option name="closed" value="true" />
+      <created>1774010546336</created>
+      <option name="number" value="00130" />
+      <option name="presentableId" value="LOCAL-00130" />
+      <option name="project" value="LOCAL" />
+      <updated>1774010546336</updated>
+    </task>
+    <task id="LOCAL-00131" summary="add resource server configuration">
+      <option name="closed" value="true" />
+      <created>1774010563768</created>
+      <option name="number" value="00131" />
+      <option name="presentableId" value="LOCAL-00131" />
+      <option name="project" value="LOCAL" />
+      <updated>1774010563768</updated>
+    </task>
+    <task id="LOCAL-00132" summary="log the bearer token when running in production mode">
+      <option name="closed" value="true" />
+      <created>1774010581158</created>
+      <option name="number" value="00132" />
+      <option name="presentableId" value="LOCAL-00132" />
+      <option name="project" value="LOCAL" />
+      <updated>1774010581158</updated>
+    </task>
+    <task id="LOCAL-00133" summary="exclude OAuth2ResourceServerAutoConfiguration in ProductControllerTests">
+      <option name="closed" value="true" />
+      <created>1774010617319</created>
+      <option name="number" value="00133" />
+      <option name="presentableId" value="LOCAL-00133" />
+      <option name="project" value="LOCAL" />
+      <updated>1774010617319</updated>
+    </task>
+    <task id="LOCAL-00134" summary="security configuration for prod and other environments">
+      <option name="closed" value="true" />
+      <created>1774010668018</created>
+      <option name="number" value="00134" />
+      <option name="presentableId" value="LOCAL-00134" />
+      <option name="project" value="LOCAL" />
+      <updated>1774010668018</updated>
+    </task>
+    <task id="LOCAL-00135" summary=".idea">
+      <option name="closed" value="true" />
+      <created>1774010671481</created>
+      <option name="number" value="00135" />
+      <option name="presentableId" value="LOCAL-00135" />
+      <option name="project" value="LOCAL" />
+      <updated>1774010671481</updated>
+    </task>
+    <option name="localTasksCounter" value="136" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -850,13 +836,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="search for product before deleting to throw exception if id is invalid" />
-    <MESSAGE value="add logging statements" />
-    <MESSAGE value="add tests for publisher and listener" />
-    <MESSAGE value="add .gitignore" />
-    <MESSAGE value="remove duplicate dependencies" />
-    <MESSAGE value="add docker oci plugin and configuration" />
-    <MESSAGE value="change job name" />
     <MESSAGE value="init module cqrs-gateway" />
     <MESSAGE value="add jackson2 dependency for gateway" />
     <MESSAGE value="change module name" />
@@ -873,9 +852,16 @@
     <MESSAGE value="add gateway tests" />
     <MESSAGE value="add caching support to query-ms" />
     <MESSAGE value="update docker-compose.yml to use redis for caching" />
-    <MESSAGE value=".idea" />
     <MESSAGE value="add postman collection" />
-    <option name="LAST_COMMIT_MESSAGE" value="add postman collection" />
+    <MESSAGE value="remove duplicate dependency" />
+    <MESSAGE value="use resource server dependency" />
+    <MESSAGE value="remove oauth2 client dependency" />
+    <MESSAGE value="add resource server configuration" />
+    <MESSAGE value="log the bearer token when running in production mode" />
+    <MESSAGE value="exclude OAuth2ResourceServerAutoConfiguration in ProductControllerTests" />
+    <MESSAGE value="security configuration for prod and other environments" />
+    <MESSAGE value=".idea" />
+    <option name="LAST_COMMIT_MESSAGE" value=".idea" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
