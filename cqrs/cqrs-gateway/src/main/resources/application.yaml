@@ -9,5 +9,6 @@ spring:
       server:
         webmvc:
           trusted-proxies: ".*"
+
 server:
   port: 8585
