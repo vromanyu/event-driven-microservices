@@ -18,7 +18,7 @@ public class UserBalanceServiceImpl implements UserBalanceService {
 
     @Override
     @Transactional(readOnly = true)
-    public List<UserBalanceDto> getAllUserBalances() {
+    public List<UserBalanceDto> getAllUsersWithBalance() {
         return userBalanceRepository.findAll().stream().map(balance -> new UserBalanceDto(balance.getUserId(), balance.getPrice())).toList();
     }
 }

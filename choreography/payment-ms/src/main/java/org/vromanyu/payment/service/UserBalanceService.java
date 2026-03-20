@@ -5,5 +5,5 @@ import org.vromanyu.core.UserBalanceDto;
 import java.util.List;
 
 public interface UserBalanceService {
-    List<UserBalanceDto> getAllUserBalances();
+    List<UserBalanceDto> getAllUsersWithBalance();
 }

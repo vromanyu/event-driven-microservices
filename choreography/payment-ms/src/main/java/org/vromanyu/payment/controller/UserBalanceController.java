@@ -19,9 +19,9 @@ public class UserBalanceController {
         this.userBalanceService = userBalanceService;
     }
 
-    @GetMapping("/user-balances")
+    @GetMapping("/all-balances")
     public ResponseEntity<List<UserBalanceDto>> getAllUserBalances() {
-        return ResponseEntity.ok().body(userBalanceService.getAllUserBalances());
+        return ResponseEntity.ok().body(userBalanceService.getAllUsersWithBalance());
     }
 
 }
