@@ -8,17 +8,36 @@ A hands-on playground for experimenting with **event-driven communication** usin
 
 This repository explores **event-driven microservices** patterns. It demonstrates how microservices can collaborate asynchronously using events, without tight coupling.
 
-The project now includes a Docker Compose setup that allows you to easily run and experiment with the SAGA Choreography pattern locally, providing a ready-to-use environment for testing interactions between services!
+<details>
+<summary>Orchestration</summary>
+<br/>
 
-```bash
-cd choreography/docker
-docker compose up -d
-```
-The CQRS pattern has been implemented! Here's the Docker Compose command:
+  ```bash
+  cd choreography/docker
+  docker compose up -d
+  ```
 
-```bash
-cd cqrs/docker
-docker compose up -d
-```
+</details>
+<details>
+<summary>CQRS</summary>
+<br/>
+  
+  ```bash
+  cd cqrs/docker
+  ISSUER_URI=<issuerUri> docker compose up -d
+  ```
 
+Some additional features were added:
+- Use **Redis** in production and **ConcurrentHashmap** in development to cache query-ms responses.
+- Protect the gateway and downstream services using **OAuth2 Resource Server**.
+- **NGINX** handles **SSL** termination in front of the gateway.
+- The `ISSUER_URI` variable must be provided in Docker Compose.
+
+</details>
+
+<details>
+<summary>SAGA</summary>
+<br/>
 SAGA Orchestration pattern is on the works!
+</details>
+
