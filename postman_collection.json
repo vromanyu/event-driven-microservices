@@ -15,14 +15,14 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "{{gateway-server}}/api/orders/{{orderId}}",
+              "raw": "{{nginx}}/api/orders/1",
               "host": [
-                "{{gateway-server}}"
+                "{{nginx}}"
               ],
               "path": [
                 "api",
                 "orders",
-                "{{orderId}}"
+                "1"
               ]
             }
           },
@@ -43,9 +43,9 @@
               }
             },
             "url": {
-              "raw": "{{gateway-server}}/api/orders/",
+              "raw": "{{nginx}}/api/orders/",
               "host": [
-                "{{gateway-server}}"
+                "{{nginx}}"
               ],
               "path": [
                 "api",
@@ -57,19 +57,38 @@
           "response": []
         },
         {
-          "name": "getAllUserBalances",
+          "name": "getAllBalances",
           "request": {
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "{{gateway-server}}/api/payments/user-balances",
+              "raw": "{{nginx}}/api/payments/all-balances",
               "host": [
-                "{{gateway-server}}"
+                "{{nginx}}"
               ],
               "path": [
                 "api",
                 "payments",
-                "user-balances"
+                "all-balances"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getAllTransactions",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{nginx}}/api/payments/all-transactions",
+              "host": [
+                "{{nginx}}"
+              ],
+              "path": [
+                "api",
+                "payments",
+                "all-transactions"
               ]
             }
           },
@@ -83,6 +102,16 @@
         {
           "name": "getAllProducts",
           "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "",
+                  "type": "string"
+                }
+              ]
+            },
             "method": "GET",
             "header": [],
             "url": {
@@ -201,6 +230,59 @@
             }
           },
           "response": []
+        },
+        {
+          "name": "getAccessToken",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "grant_type",
+                  "value": "client_credentials",
+                  "type": "text",
+                  "uuid": "0b4cd4ec-ddaa-4d26-9ccc-c444cebd9701"
+                },
+                {
+                  "key": "client_id",
+                  "value": "",
+                  "type": "text",
+                  "uuid": "3f66043d-8fec-492e-b9a7-d41e4074cfff"
+                },
+                {
+                  "key": "client_secret",
+                  "value": "",
+                  "type": "text",
+                  "uuid": "8509436f-5401-4611-b17f-f4b76c5389f6"
+                },
+                {
+                  "key": "scope",
+                  "value": "",
+                  "type": "text",
+                  "uuid": "200bd60e-d319-4aa5-8e35-c5b329c9760b"
+                },
+                {
+                  "key": "audience",
+                  "value": "",
+                  "type": "text",
+                  "uuid": "4fe630bf-3289-4a45-af8f-2fecfb01a4b3"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{issuer_uri}}/oauth/token",
+              "host": [
+                "{{issuer_uri}}"
+              ],
+              "path": [
+                "oauth",
+                "token"
+              ]
+            }
+          },
+          "response": []
         }
       ]
     }
@@ -235,14 +317,6 @@
       "value": ""
     },
     {
-      "key": "orderId",
-      "value": ""
-    },
-    {
-      "key": "choreography-gateway-server",
-      "value": ""
-    },
-    {
       "key": "write-ms-server",
       "value": ""
     },
@@ -251,11 +325,11 @@
       "value": ""
     },
     {
-      "key": "cqrs-gateway-server",
+      "key": "nginx",
       "value": ""
     },
     {
-      "key": "cqrs-nginx",
+      "key": "issuer_uri",
       "value": "",
       "type": "default"
     }
