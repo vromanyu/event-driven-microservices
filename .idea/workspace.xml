@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f53cd7e9-042e-48da-856a-18c59663b55c" name="Changes" comment=".idea">
-      <change afterPath="$PROJECT_DIR$/cqrs/cqrs-gateway/src/main/java/org/vromanyu/gateway/config/RateLimiterConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cqrs/cqrs-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cqrs/cqrs-gateway/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cqrs/cqrs-gateway/src/main/java/org/vromanyu/gateway/config/GatewayRoutesConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/cqrs/cqrs-gateway/src/main/java/org/vromanyu/gateway/config/GatewayRoutesConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cqrs/cqrs-gateway/src/test/java/org/vromanyu/gateway/GatewayTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/cqrs/cqrs-gateway/src/test/java/org/vromanyu/gateway/GatewayTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,6 +86,7 @@
     "JUnit.GatewayTests.test.executor": "Run",
     "JUnit.GatewayTests.whenAllProductsAndThereAreNoProducts_thenReturnEmptyList.executor": "Run",
     "JUnit.GatewayTests.whenAllProductsAndThereAreProducts_thenReturnAllProducts.executor": "Run",
+    "JUnit.GatewayTests.whenMoreThanOneRequestPerSecond_returnTooManyRequests.executor": "Run",
     "JUnit.OrderControllerTests.whenCreateOrder_thenSuccess.executor": "Run",
     "JUnit.OrderControllerTests.whenGetOrderByInvalidId_thenFail.executor": "Run",
     "JUnit.OrderControllerTests.whenGetOrderByValidId_thenSuccess.executor": "Run",
@@ -228,7 +227,7 @@
       </map>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.gateway in cqrs-gateway">
+  <component name="RunManager" selected="JUnit.GatewayTests.whenMoreThanOneRequestPerSecond_returnTooManyRequests">
     <configuration name="GatewayTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="cqrs-gateway" />
       <extension name="coverage">
@@ -276,18 +275,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="gateway in cqrs-gateway" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GatewayTests.whenMoreThanOneRequestPerSecond_returnTooManyRequests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="cqrs-gateway" />
-      <option name="TEST_OBJECT" value="directory" />
-      <dir value="$PROJECT_DIR$/cqrs/cqrs-gateway/src/test/java/org/vromanyu/gateway" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.vromanyu.gateway.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.vromanyu.gateway" />
+      <option name="MAIN_CLASS_NAME" value="org.vromanyu.gateway.GatewayTests" />
+      <option name="METHOD_NAME" value="whenMoreThanOneRequestPerSecond_returnTooManyRequests" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="query in query-ms" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="query-ms" />
+    <configuration name="gateway in cqrs-gateway" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cqrs-gateway" />
       <option name="TEST_OBJECT" value="directory" />
-      <dir value="$PROJECT_DIR$/cqrs/query-ms/src/test/java/org/vromanyu/query" />
+      <dir value="$PROJECT_DIR$/cqrs/cqrs-gateway/src/test/java/org/vromanyu/gateway" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -344,8 +351,8 @@
     <list>
       <item itemvalue="JUnit.GatewayTests.whenAllProductsAndThereAreNoProducts_thenReturnEmptyList" />
       <item itemvalue="JUnit.GatewayTests.whenAllProductsAndThereAreProducts_thenReturnAllProducts" />
+      <item itemvalue="JUnit.GatewayTests.whenMoreThanOneRequestPerSecond_returnTooManyRequests" />
       <item itemvalue="JUnit.gateway in cqrs-gateway" />
-      <item itemvalue="JUnit.query in query-ms" />
       <item itemvalue="JUnit.GatewayTests" />
       <item itemvalue="Spring Boot.ChoreographyGatewayApplication" />
       <item itemvalue="Spring Boot.CqrsGatewayApplication" />
@@ -356,11 +363,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.GatewayTests.whenMoreThanOneRequestPerSecond_returnTooManyRequests" />
         <item itemvalue="JUnit.gateway in cqrs-gateway" />
         <item itemvalue="JUnit.GatewayTests.whenAllProductsAndThereAreNoProducts_thenReturnEmptyList" />
         <item itemvalue="JUnit.GatewayTests" />
         <item itemvalue="JUnit.GatewayTests.whenAllProductsAndThereAreProducts_thenReturnAllProducts" />
-        <item itemvalue="JUnit.query in query-ms" />
       </list>
     </recent_temporary>
   </component>
@@ -394,23 +401,7 @@
       <workItem from="1774020008912" duration="104000" />
       <workItem from="1774020168110" duration="12000" />
       <workItem from="1774106683600" duration="4000" />
-      <workItem from="1774183738856" duration="6032000" />
-    </task>
-    <task id="LOCAL-00096" summary="publish Product events after manipulating product">
-      <option name="closed" value="true" />
-      <created>1773831530179</created>
-      <option name="number" value="00096" />
-      <option name="presentableId" value="LOCAL-00096" />
-      <option name="project" value="LOCAL" />
-      <updated>1773831530179</updated>
-    </task>
-    <task id="LOCAL-00097" summary=".idea">
-      <option name="closed" value="true" />
-      <created>1773831535955</created>
-      <option name="number" value="00097" />
-      <option name="presentableId" value="LOCAL-00097" />
-      <option name="project" value="LOCAL" />
-      <updated>1773831535955</updated>
+      <workItem from="1774183738856" duration="8082000" />
     </task>
     <task id="LOCAL-00098" summary="search for product before deleting to throw exception if id is invalid">
       <option name="closed" value="true" />
@@ -788,7 +779,23 @@
       <option name="project" value="LOCAL" />
       <updated>1774185216141</updated>
     </task>
-    <option name="localTasksCounter" value="145" />
+    <task id="LOCAL-00145" summary="apply rate limiting to allow one request per second&#10;&#10;The production environment uses Redis, while testing/development uses Caffeine">
+      <option name="closed" value="true" />
+      <created>1774192241155</created>
+      <option name="number" value="00145" />
+      <option name="presentableId" value="LOCAL-00145" />
+      <option name="project" value="LOCAL" />
+      <updated>1774192241155</updated>
+    </task>
+    <task id="LOCAL-00146" summary=".idea">
+      <option name="closed" value="true" />
+      <created>1774192248627</created>
+      <option name="number" value="00146" />
+      <option name="presentableId" value="LOCAL-00146" />
+      <option name="project" value="LOCAL" />
+      <updated>1774192248627</updated>
+    </task>
+    <option name="localTasksCounter" value="147" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -821,7 +828,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix build-all workflow" />
     <MESSAGE value="change artifact names to plain 'gateway'" />
     <MESSAGE value="fix host name" />
     <MESSAGE value="add docker-compose.yml for cqrs pattern" />
@@ -845,6 +851,7 @@
     <MESSAGE value="add api versioning" />
     <MESSAGE value="remove duplicate dependency for jpa test" />
     <MESSAGE value="routes for v1 and use strip prefix filter" />
+    <MESSAGE value="apply rate limiting to allow one request per second&#10;&#10;The production environment uses Redis, while testing/development uses Caffeine" />
     <MESSAGE value=".idea" />
     <option name="LAST_COMMIT_MESSAGE" value=".idea" />
   </component>
