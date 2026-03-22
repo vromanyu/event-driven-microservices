@@ -30,7 +30,7 @@ import java.util.Map;
 @EnableWireMock({@ConfigureWireMock(name = "query-ms", port = 8085), @ConfigureWireMock(name = "write-ms", port = 8086)})
 public class GatewayTests {
 
-    private RestClient restClient = null;
+    private final RestClient restClient = RestClient.builder().baseUrl("http://localhost:8585").build();
 
     @Autowired
     private JsonMapper jsonMapper;
@@ -41,16 +41,12 @@ public class GatewayTests {
     @InjectWireMock("write-ms")
     private WireMockServer writeMsWireMock;
 
-    private RestClient getRestClient() {
-        if (restClient == null) {
-            CloseableHttpClient client = HttpClientBuilder.create().disableAutomaticRetries().build();
-            restClient = RestClient.builder()
-                    .requestFactory(new BufferingClientHttpRequestFactory(new HttpComponentsClientHttpRequestFactory(client)))
-                    .baseUrl("http://localhost:8585")
-                    .build();
-            return restClient;
-        }
-        return restClient;
+    private RestClient getRestClientWithoutRetries() {
+        CloseableHttpClient client = HttpClientBuilder.create().disableAutomaticRetries().build();
+        return RestClient.builder()
+                .requestFactory(new BufferingClientHttpRequestFactory(new HttpComponentsClientHttpRequestFactory(client)))
+                .baseUrl("http://localhost:8585")
+                .build();
     }
 
     @Test
@@ -59,7 +55,7 @@ public class GatewayTests {
         queryMsWireMock.stubFor(WireMock.get(WireMock.urlEqualTo("/api/v1/products/get/all"))
                 .willReturn(WireMock.jsonResponse(jsonMapper.writeValueAsString(products), HttpStatus.OK.value())));
 
-        ResponseEntity<Map<String, Object>> response = getRestClient().get().uri("/api.gateway/api/v1/products/get/all").retrieve().toEntity(new ParameterizedTypeReference<>() {
+        ResponseEntity<Map<String, Object>> response = restClient.get().uri("/api.gateway/api/v1/products/get/all").retrieve().toEntity(new ParameterizedTypeReference<>() {
         });
 
         Assertions.assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
@@ -72,7 +68,7 @@ public class GatewayTests {
         queryMsWireMock.stubFor(WireMock.get(WireMock.urlEqualTo("/api/v1/products/get/all"))
                 .willReturn(WireMock.jsonResponse(jsonMapper.writeValueAsString(Collections.emptyList()), HttpStatus.OK.value())));
 
-        ResponseEntity<List<Object>> response = getRestClient().get().uri("/api.gateway/api/v1/products/get/all").retrieve().toEntity(new ParameterizedTypeReference<>() {
+        ResponseEntity<List<Object>> response = restClient.get().uri("/api.gateway/api/v1/products/get/all").retrieve().toEntity(new ParameterizedTypeReference<>() {
         });
 
         Assertions.assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
@@ -84,7 +80,7 @@ public class GatewayTests {
     public void givenValidProductId_shouldReturnOk() {
         Map<String, Object> product = Map.of("id", 1, "name", "cookies");
         queryMsWireMock.stubFor(WireMock.get(WireMock.urlEqualTo("/api/v1/products/get/1")).willReturn(WireMock.jsonResponse(jsonMapper.writeValueAsString(product), HttpStatus.OK.value())));
-        ResponseEntity<Map<String, Object>> response = getRestClient().get().uri("/api.gateway/api/v1/products/get/1").retrieve().toEntity(new ParameterizedTypeReference<>() {
+        ResponseEntity<Map<String, Object>> response = restClient.get().uri("/api.gateway/api/v1/products/get/1").retrieve().toEntity(new ParameterizedTypeReference<>() {
         });
 
         Assertions.assertThat(response).isNotNull();
@@ -100,7 +96,7 @@ public class GatewayTests {
 
         Assertions.assertThatThrownBy(() ->
         {
-            ResponseEntity<Map<String, Object>> response = getRestClient().get().uri("/api.gateway/api/v1/products/get/1").retrieve().toEntity(new ParameterizedTypeReference<>() {
+            ResponseEntity<Map<String, Object>> response = restClient.get().uri("/api.gateway/api/v1/products/get/1").retrieve().toEntity(new ParameterizedTypeReference<>() {
             });
             Assertions.assertThat(response).isNotNull();
             Assertions.assertThat(response.getStatusCode()).isEqualTo(HttpStatus.BAD_REQUEST);
@@ -120,7 +116,7 @@ public class GatewayTests {
                         .withHeader("Content-Type", MediaType.APPLICATION_JSON_VALUE)
                         .withHeader("Location", "/api/prodcuts/get/1").
                         withBody(jsonMapper.writeValueAsBytes(product))));
-        ResponseEntity<Map<String, Object>> response = getRestClient().post().uri("/api.gateway/api/v1/products/write/").body(productRequest).retrieve().toEntity(new ParameterizedTypeReference<>() {
+        ResponseEntity<Map<String, Object>> response = restClient.post().uri("/api.gateway/api/v1/products/write/").body(productRequest).retrieve().toEntity(new ParameterizedTypeReference<>() {
         });
 
         Assertions.assertThat(response).isNotNull();
@@ -141,7 +137,7 @@ public class GatewayTests {
                 .willReturn(WireMock.aResponse().withStatus(200)
                         .withHeader("Content-Type", MediaType.APPLICATION_JSON_VALUE)
                         .withBody(jsonMapper.writeValueAsBytes(product))));
-        ResponseEntity<Map<String, Object>> response = getRestClient().put().uri("api.gateway/api/v1/products/write/1").body(productRequest).retrieve().toEntity(new ParameterizedTypeReference<>() {
+        ResponseEntity<Map<String, Object>> response = restClient.put().uri("api.gateway/api/v1/products/write/1").body(productRequest).retrieve().toEntity(new ParameterizedTypeReference<>() {
         });
 
         Assertions.assertThat(response).isNotNull();
@@ -153,7 +149,7 @@ public class GatewayTests {
     @Test
     public void givenProductDeleteRequest_shouldReturnNoContent() {
         writeMsWireMock.stubFor(WireMock.delete(WireMock.urlEqualTo("/api/v1/products/write/1")).willReturn(WireMock.noContent()));
-        ResponseEntity<Void> response = getRestClient().delete().uri("/api.gateway/api/v1/products/write/1").retrieve().toBodilessEntity();
+        ResponseEntity<Void> response = restClient.delete().uri("/api.gateway/api/v1/products/write/1").retrieve().toBodilessEntity();
         Assertions.assertThat(response).isNotNull();
         Assertions.assertThat(response.getStatusCode()).isEqualTo(HttpStatus.NO_CONTENT);
     }
@@ -163,14 +159,11 @@ public class GatewayTests {
         Map<String, Object> products = Map.of("products", List.of(Map.of("id", 1, "name", "cookies")));
         queryMsWireMock.stubFor(WireMock.get(WireMock.urlEqualTo("/api/v1/products/get/all"))
                 .willReturn(WireMock.jsonResponse(jsonMapper.writeValueAsString(products), HttpStatus.OK.value())));
-        ResponseEntity<Void> response = getRestClient().get().uri("/api.gateway/api/v1/products/get/all").retrieve().toBodilessEntity();
+        ResponseEntity<Void> response = restClient.get().uri("/api.gateway/api/v1/products/get/all").retrieve().toBodilessEntity();
         Assertions.assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
         Assertions.assertThatThrownBy(() -> {
-            ResponseEntity<Void> failedRequest = getRestClient().get().uri("/api.gateway/api/v1/products/get/all")
+            ResponseEntity<Void> failedRequest = getRestClientWithoutRetries().get().uri("/api.gateway/api/v1/products/get/all")
                     .retrieve()
-                    .onStatus(status -> status.equals(HttpStatus.TOO_MANY_REQUESTS), (_, _) -> {
-                        throw new RuntimeException("too many requests");
-                    })
                     .toBodilessEntity();
             Assertions.assertThat(failedRequest.getStatusCode()).isEqualTo(HttpStatus.TOO_MANY_REQUESTS);
         });
