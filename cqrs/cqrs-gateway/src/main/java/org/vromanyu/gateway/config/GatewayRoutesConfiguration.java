@@ -17,7 +17,8 @@ public class GatewayRoutesConfiguration {
     @Bean
     public RouterFunction<ServerResponse> queryRoutes() {
         return RouterFunctions.route()
-                .route(RequestPredicates.path("/api/products/get/**"), HandlerFunctions.http())
+                .route(RequestPredicates.path("api.gateway/api/v1/products/get/**"), HandlerFunctions.http())
+                .before(BeforeFilterFunctions.stripPrefix())
                 .before(BeforeFilterFunctions.addRequestHeader("X-Gateway", "true"))
                 .filter(LoadBalancerFilterFunctions.lb("query-ms"))
                 .after(AfterFilterFunctions.addResponseHeader("X-Gateway", "true"))
@@ -27,7 +28,8 @@ public class GatewayRoutesConfiguration {
     @Bean
     public RouterFunction<ServerResponse> writeRoutes() {
         return RouterFunctions.route()
-                .route(RequestPredicates.path("/api/products/write/**"), HandlerFunctions.http())
+                .route(RequestPredicates.path("api.gateway/api/v1/products/write/**"), HandlerFunctions.http())
+                .before(BeforeFilterFunctions.stripPrefix())
                 .before(BeforeFilterFunctions.addRequestHeader("X-Gateway", "true"))
                 .filter(LoadBalancerFilterFunctions.lb("write-ms"))
                 .after(AfterFilterFunctions.addResponseHeader("X-Gateway", "true"))
