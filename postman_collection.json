@@ -107,7 +107,7 @@
               "bearer": [
                 {
                   "key": "token",
-                  "value": "",
+                  "value": "{{token}}",
                   "type": "string"
                 }
               ]
@@ -115,12 +115,14 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "{{cqrs-nginx}}/api/products/get/all",
+              "raw": "{{cqrs-nginx}}/api.gateway/api/v1/products/get/all",
               "host": [
                 "{{cqrs-nginx}}"
               ],
               "path": [
+                "api.gateway",
                 "api",
+                "v1",
                 "products",
                 "get",
                 "all"
@@ -132,15 +134,27 @@
         {
           "name": "getProductById",
           "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "{{cqrs-nginx}}/api/products/get/1",
+              "raw": "{{cqrs-nginx}}/api.gateway/api/v1/products/get/1",
               "host": [
                 "{{cqrs-nginx}}"
               ],
               "path": [
+                "api.gateway",
                 "api",
+                "v1",
                 "products",
                 "get",
                 "1"
@@ -152,6 +166,16 @@
         {
           "name": "createProduct",
           "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
             "method": "POST",
             "header": [],
             "body": {
@@ -164,12 +188,14 @@
               }
             },
             "url": {
-              "raw": "{{cqrs-nginx}}/api/products/write/",
+              "raw": "{{cqrs-nginx}}/api.gateway/api/v1/products/write/",
               "host": [
                 "{{cqrs-nginx}}"
               ],
               "path": [
+                "api.gateway",
                 "api",
+                "v1",
                 "products",
                 "write",
                 ""
@@ -181,6 +207,16 @@
         {
           "name": "updateProduct",
           "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
             "method": "PUT",
             "header": [],
             "body": {
@@ -193,12 +229,14 @@
               }
             },
             "url": {
-              "raw": "{{cqrs-nginx}}/api/products/write/1",
+              "raw": "{{cqrs-nginx}}/api.gateway/api/v1/products/write/1",
               "host": [
                 "{{cqrs-nginx}}"
               ],
               "path": [
+                "api.gateway",
                 "api",
+                "v1",
                 "products",
                 "write",
                 "1"
@@ -210,6 +248,16 @@
         {
           "name": "deleteProduct",
           "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
             "method": "DELETE",
             "header": [],
             "body": {
@@ -217,12 +265,14 @@
               "raw": "{\n    \"productName\": \"socks\",\n    \"price\": 10,\n    \"quantity\": 100\n}"
             },
             "url": {
-              "raw": "{{cqrs-nginx}}/api/products/write/1",
+              "raw": "{{cqrs-nginx}}/api.gateway/api/v1/products/write/1",
               "host": [
                 "{{cqrs-nginx}}"
               ],
               "path": [
+                "api.gateway",
                 "api",
+                "v1",
                 "products",
                 "write",
                 "1"
@@ -330,6 +380,11 @@
     },
     {
       "key": "issuer_uri",
+      "value": "",
+      "type": "default"
+    },
+    {
+      "key": "token",
       "value": "",
       "type": "default"
     }
