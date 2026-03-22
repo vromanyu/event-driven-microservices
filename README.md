@@ -29,7 +29,7 @@ This repository explores **event-driven microservices** patterns. It demonstrate
 
 Some additional features were added:
 - Use **Redis** in production and **ConcurrentHashmap** in development to cache query-ms responses.
-- Use Rate Limiting using **Bucket4j**. Redis is used in production, while Caffeine is used in development/testing.
+- Apply Rate Limiting using **Bucket4j**. Redis is used in production, while Caffeine is used in development/testing.
 - Protect the gateway and downstream services using **OAuth2 Resource Server**.
 - **NGINX** handles **SSL** termination in front of the gateway.
 - The `ISSUER_URI` variable must be provided in Docker Compose.
