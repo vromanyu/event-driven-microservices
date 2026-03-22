@@ -33,7 +33,7 @@ public class ProductControllerTests {
         GetProductResponse getProductResponse = new GetProductResponse(1, "cookies", 100, 10);
         Mockito.when(productService.getProductById(Mockito.anyInt())).thenReturn(getProductResponse);
 
-        mockMvc.perform(MockMvcRequestBuilders.get("/api/products/get/{id}", 1))
+        mockMvc.perform(MockMvcRequestBuilders.get("/api/v1/products/get/{id}", 1))
                 .andDo(MockMvcResultHandlers.print())
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andExpect(MockMvcResultMatchers.jsonPath("$.productId", CoreMatchers.is(1)))
@@ -48,7 +48,7 @@ public class ProductControllerTests {
     public void whenGetProductByIdInvalidId_thenFail() throws Exception {
         Mockito.when(productService.getProductById(Mockito.anyInt())).thenThrow(new RuntimeException("product not found"));
 
-        mockMvc.perform(MockMvcRequestBuilders.get("/api/products/get/{id}", 1))
+        mockMvc.perform(MockMvcRequestBuilders.get("/api/v1/products/get/{id}", 1))
                 .andDo(MockMvcResultHandlers.print())
                 .andExpect(MockMvcResultMatchers.status().isBadRequest())
                 .andExpect(MockMvcResultMatchers.jsonPath("$.size()", CoreMatchers.is(4)))
@@ -69,7 +69,7 @@ public class ProductControllerTests {
 
         Mockito.when(productService.getAllProducts()).thenReturn(getProductListResponse);
 
-        mockMvc.perform(MockMvcRequestBuilders.get("/api/products/get/all"))
+        mockMvc.perform(MockMvcRequestBuilders.get("/api/v1/products/get/all"))
                 .andDo(MockMvcResultHandlers.print())
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andExpect(MockMvcResultMatchers.jsonPath("$.products.size()", CoreMatchers.is(2)));
@@ -81,7 +81,7 @@ public class ProductControllerTests {
 
         Mockito.when(productService.getAllProducts()).thenReturn(getProductListResponse);
 
-        mockMvc.perform(MockMvcRequestBuilders.get("/api/products/get/all"))
+        mockMvc.perform(MockMvcRequestBuilders.get("/api/v1/products/get/all"))
                 .andDo(MockMvcResultHandlers.print())
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andExpect(MockMvcResultMatchers.jsonPath("$.products.size()", CoreMatchers.is(0)));

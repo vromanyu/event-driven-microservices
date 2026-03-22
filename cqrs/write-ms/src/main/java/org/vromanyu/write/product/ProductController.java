@@ -14,7 +14,7 @@ import org.vromanyu.core.UpdateProductResponse;
 import java.net.URI;
 
 @RestController
-@RequestMapping("/api/products/write")
+@RequestMapping(value = "/api/v{version}/products/write")
 public class ProductController {
 
     private static final Logger logger = LoggerFactory.getLogger(ProductController.class);

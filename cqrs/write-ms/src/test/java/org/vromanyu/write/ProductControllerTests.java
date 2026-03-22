@@ -39,7 +39,7 @@ public class ProductControllerTests {
         CreateProductResponse createProductResponse = new CreateProductResponse(1, "cookies", 100, 10);
         Mockito.when(productService.createProduct(createProductRequest)).thenReturn(createProductResponse);
 
-        mockMvc.perform(MockMvcRequestBuilders.post("/api/products/write/")
+        mockMvc.perform(MockMvcRequestBuilders.post("/api/v1/products/write/")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(jsonMapper.writeValueAsString(createProductRequest)))
                 .andDo(MockMvcResultHandlers.print())
@@ -57,7 +57,7 @@ public class ProductControllerTests {
         UpdateProductResponse updateProductResponse = new UpdateProductResponse(1, "cookies", 150, 10);
         Mockito.when(productService.updateProduct(Mockito.anyInt(), Mockito.eq(updateProductRequest))).thenReturn(updateProductResponse);
 
-        mockMvc.perform(MockMvcRequestBuilders.put("/api/products/write/{id}", 1)
+        mockMvc.perform(MockMvcRequestBuilders.put("/api/v1/products/write/{id}", 1)
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(jsonMapper.writeValueAsString(updateProductRequest)))
                 .andDo(MockMvcResultHandlers.print())
@@ -73,7 +73,7 @@ public class ProductControllerTests {
         UpdateProductRequest updateProductRequest = new UpdateProductRequest("cookies", 150, 10);
         Mockito.when(productService.updateProduct(Mockito.anyInt(), Mockito.eq(updateProductRequest))).thenThrow(new RuntimeException("product not found"));
 
-        mockMvc.perform(MockMvcRequestBuilders.put("/api/products/write/{id}", 1)
+        mockMvc.perform(MockMvcRequestBuilders.put("/api/v1/products/write/{id}", 1)
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(jsonMapper.writeValueAsString(updateProductRequest)))
                 .andDo(MockMvcResultHandlers.print())
@@ -89,7 +89,7 @@ public class ProductControllerTests {
     public void whenDeleteProductWithValidId_thenReturnNoContent() throws Exception {
         Mockito.doNothing().when(productService).deleteProduct(Mockito.anyInt());
 
-        mockMvc.perform(MockMvcRequestBuilders.delete("/api/products/write/{id}", 1))
+        mockMvc.perform(MockMvcRequestBuilders.delete("/api/v1/products/write/{id}", 1))
                 .andDo(MockMvcResultHandlers.print())
                 .andExpect(MockMvcResultMatchers.status().isNoContent());
     }
@@ -98,7 +98,7 @@ public class ProductControllerTests {
     public void whenDeleteProductWithInValidId_thenReturnBadRequest() throws Exception {
         Mockito.doThrow(new RuntimeException("product not found")).when(productService).deleteProduct(Mockito.anyInt());
 
-        mockMvc.perform(MockMvcRequestBuilders.delete("/api/products/write/{id}", 1))
+        mockMvc.perform(MockMvcRequestBuilders.delete("/api/v1/products/write/{id}", 1))
                 .andDo(MockMvcResultHandlers.print())
                 .andExpect(MockMvcResultMatchers.status().isBadRequest())
                 .andExpect(MockMvcResultMatchers.jsonPath("$.size()", CoreMatchers.is(4)))
