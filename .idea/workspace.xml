@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f53cd7e9-042e-48da-856a-18c59663b55c" name="Changes" comment="add api versioning">
+    <list default="true" id="f53cd7e9-042e-48da-856a-18c59663b55c" name="Changes" comment=".idea">
+      <change afterPath="$PROJECT_DIR$/cqrs/cqrs-gateway/src/main/java/org/vromanyu/gateway/config/RateLimiterConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cqrs/cqrs-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cqrs/cqrs-gateway/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cqrs/cqrs-gateway/src/main/java/org/vromanyu/gateway/config/GatewayRoutesConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/cqrs/cqrs-gateway/src/main/java/org/vromanyu/gateway/config/GatewayRoutesConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cqrs/cqrs-gateway/src/test/java/org/vromanyu/gateway/GatewayTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/cqrs/cqrs-gateway/src/test/java/org/vromanyu/gateway/GatewayTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cqrs/write-ms/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cqrs/write-ms/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -213,6 +213,20 @@
         <option value="SpringBootApplicationConfigurationType" />
       </set>
     </option>
+    <option name="configurationStatuses">
+      <map>
+        <entry key="SpringBootApplicationConfigurationType">
+          <value>
+            <map>
+              <entry key="CqrsGatewayApplication" value="STOPPED" />
+              <entry key="OrderMsApplication" value="STOPPED" />
+              <entry key="QueryMsApplication" value="STOPPED" />
+              <entry key="WriteMsApplication" value="STOPPED" />
+            </map>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="RunManager" selected="JUnit.gateway in cqrs-gateway">
     <configuration name="GatewayTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
@@ -380,31 +394,7 @@
       <workItem from="1774020008912" duration="104000" />
       <workItem from="1774020168110" duration="12000" />
       <workItem from="1774106683600" duration="4000" />
-      <workItem from="1774183738856" duration="1419000" />
-    </task>
-    <task id="LOCAL-00093" summary="add kafka configuration">
-      <option name="closed" value="true" />
-      <created>1773831432865</created>
-      <option name="number" value="00093" />
-      <option name="presentableId" value="LOCAL-00093" />
-      <option name="project" value="LOCAL" />
-      <updated>1773831432865</updated>
-    </task>
-    <task id="LOCAL-00094" summary="log the exception in ProductControllerAdvice">
-      <option name="closed" value="true" />
-      <created>1773831443161</created>
-      <option name="number" value="00094" />
-      <option name="presentableId" value="LOCAL-00094" />
-      <option name="project" value="LOCAL" />
-      <updated>1773831443161</updated>
-    </task>
-    <task id="LOCAL-00095" summary="add ProductEventConsumerService to listen to Product manipulation events">
-      <option name="closed" value="true" />
-      <created>1773831499819</created>
-      <option name="number" value="00095" />
-      <option name="presentableId" value="LOCAL-00095" />
-      <option name="project" value="LOCAL" />
-      <updated>1773831499819</updated>
+      <workItem from="1774183738856" duration="6032000" />
     </task>
     <task id="LOCAL-00096" summary="publish Product events after manipulating product">
       <option name="closed" value="true" />
@@ -774,7 +764,31 @@
       <option name="project" value="LOCAL" />
       <updated>1774184299129</updated>
     </task>
-    <option name="localTasksCounter" value="142" />
+    <task id="LOCAL-00142" summary="remove duplicate dependency for jpa test">
+      <option name="closed" value="true" />
+      <created>1774185169223</created>
+      <option name="number" value="00142" />
+      <option name="presentableId" value="LOCAL-00142" />
+      <option name="project" value="LOCAL" />
+      <updated>1774185169223</updated>
+    </task>
+    <task id="LOCAL-00143" summary="routes for v1 and use strip prefix filter">
+      <option name="closed" value="true" />
+      <created>1774185211181</created>
+      <option name="number" value="00143" />
+      <option name="presentableId" value="LOCAL-00143" />
+      <option name="project" value="LOCAL" />
+      <updated>1774185211181</updated>
+    </task>
+    <task id="LOCAL-00144" summary=".idea">
+      <option name="closed" value="true" />
+      <created>1774185216141</created>
+      <option name="number" value="00144" />
+      <option name="presentableId" value="LOCAL-00144" />
+      <option name="project" value="LOCAL" />
+      <updated>1774185216141</updated>
+    </task>
+    <option name="localTasksCounter" value="145" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -807,8 +821,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add cqrs-gateway routes and loadbalancer configurations" />
-    <MESSAGE value="build docker oci image for cqrs-gateway and add it to the build-all workflow" />
     <MESSAGE value="fix build-all workflow" />
     <MESSAGE value="change artifact names to plain 'gateway'" />
     <MESSAGE value="fix host name" />
@@ -830,9 +842,11 @@
     <MESSAGE value="change method name and endpoint" />
     <MESSAGE value="add nginx in front of gateway and handle ssl termination" />
     <MESSAGE value="update postman collection" />
-    <MESSAGE value=".idea" />
     <MESSAGE value="add api versioning" />
-    <option name="LAST_COMMIT_MESSAGE" value="add api versioning" />
+    <MESSAGE value="remove duplicate dependency for jpa test" />
+    <MESSAGE value="routes for v1 and use strip prefix filter" />
+    <MESSAGE value=".idea" />
+    <option name="LAST_COMMIT_MESSAGE" value=".idea" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -845,7 +859,7 @@
         <line-breakpoint enabled="true" type="java-method">
           <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-oauth2-resource-server/7.0.3/spring-security-oauth2-resource-server-7.0.3-sources.jar!/org/springframework/security/oauth2/server/resource/web/authentication/BearerTokenAuthenticationFilter.java</url>
           <line>159</line>
-          <properties class="org.springframework.security.oauth2.server.resource.web.authentication.BearerTokenAuthenticationFilter">
+          <properties class="org.springframework.security.oauth2.server.resource.web.authentication.BearerTokenAuthenticationFilter" method="doFilterInternal">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
