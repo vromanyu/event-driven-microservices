@@ -15,10 +15,10 @@ springdoc:
     enabled: true
   swagger-ui:
     urls:
-      - url: https://localhost:443/api.gateway/query-ms/v3/api-docs
+      - url: /api.gateway/query-ms/v3/api-docs
         name: Query Microservice
         display-name: query-ms
-      - url: https://localhost:443/api.gateway/write-ms/v3/api-docs
+      - url: /api.gateway/write-ms/v3/api-docs
         name: Write Microservice
         display-name: write-ms
     path: /api.gateway/swagger-ui
