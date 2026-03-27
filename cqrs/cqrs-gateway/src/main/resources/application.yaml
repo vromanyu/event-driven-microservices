@@ -10,5 +10,18 @@ spring:
         webmvc:
           trusted-proxies: ".*"
 
+springdoc:
+  api-docs:
+    enabled: true
+  swagger-ui:
+    urls:
+      - url: /api.gateway/query-ms/v3/api-docs
+        name: Query Microservice
+        display-name: query-ms
+      - url: /api.gateway/write-ms/v3/api-docs
+        name: Write Microservice
+        display-name: write-ms
+    path: /api.gateway/swagger-ui
+
 server:
   port: 8585
