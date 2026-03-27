@@ -35,10 +35,7 @@ public class ProductController {
                             description = "product found",
                             content = {
                                     @Content(mediaType = MediaType.APPLICATION_JSON_VALUE,
-                                            schema = @Schema(implementation = GetProductResponse.class),
-                                            examples = {
-                                                    @ExampleObject()
-                                            }
+                                            schema = @Schema(implementation = GetProductResponse.class)
                                     )
                             }),
                     @ApiResponse(responseCode = "400",
