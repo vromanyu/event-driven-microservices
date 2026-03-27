@@ -22,7 +22,6 @@ springdoc:
         name: Write Microservice
         display-name: write-ms
     path: /api.gateway/swagger-ui
-    config-url: /api.gateway/v3/api-docs/swagger-config
 
 server:
   port: 8585

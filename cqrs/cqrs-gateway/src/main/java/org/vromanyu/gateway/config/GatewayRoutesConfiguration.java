@@ -12,6 +12,7 @@ import org.springframework.web.servlet.function.RouterFunction;
 import org.springframework.web.servlet.function.RouterFunctions;
 import org.springframework.web.servlet.function.ServerResponse;
 
+import java.net.URI;
 import java.time.Duration;
 
 @Configuration
@@ -70,4 +71,14 @@ public class GatewayRoutesConfiguration {
                 .after(AfterFilterFunctions.addResponseHeader("X-Gateway", "true"))
                 .build();
     }
+
+    @Bean
+    public RouterFunction<ServerResponse> swaggerConfigRoutes() {
+        return RouterFunctions.route()
+                .route(RequestPredicates.path("/api.gateway/v3/api-docs/swagger-config"), request ->
+                        ServerResponse.permanentRedirect(URI.create("/v3/api-docs/swagger-config")).build())
+                .before(BeforeFilterFunctions.stripPrefix())
+                .build();
+    }
+
 }
