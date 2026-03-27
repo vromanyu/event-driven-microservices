@@ -32,6 +32,7 @@ Some additional features were added:
 - Apply Rate Limiting using **Bucket4j**. Redis is used in production, while Caffeine is used in development/testing.
 - Protect the gateway and downstream services using **OAuth2 Resource Server**.
 - **NGINX** handles **SSL** termination in front of the gateway.
+- Add OpenAPI + Swagger Support. 
 - The `ISSUER_URI` variable must be provided in Docker Compose.
 
 </details>
