@@ -20,6 +20,10 @@ spring:
     virtual:
       enabled: true
 
+springdoc:
+  api-docs:
+    path: /query-ms/v3/api-docs
+
 server:
   port: 8085
 

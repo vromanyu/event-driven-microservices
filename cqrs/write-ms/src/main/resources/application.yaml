@@ -20,6 +20,10 @@ spring:
     virtual:
       enabled: true
 
+springdoc:
+  api-docs:
+    path: /write-ms/v3/api-docs
+
 server:
   port: 8086
 
