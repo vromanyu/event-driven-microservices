@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Configuration;
                 description = "query-ms responsible for querying",
                 version = "1.0"),
         servers = {
-                @Server(url = "https://localhost:443")
+                @Server(url = "/api.gateway/query-ms")
         }
 
 )
