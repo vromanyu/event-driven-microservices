@@ -20,7 +20,7 @@ public class GatewayRoutesConfiguration {
     @Bean
     public RouterFunction<ServerResponse> queryRoutes() {
         return RouterFunctions.route()
-                .route(RequestPredicates.path("api.gateway/api/v1/products/get/**"), HandlerFunctions.http())
+                .route(RequestPredicates.path("/api.gateway/api/v1/products/get/**"), HandlerFunctions.http())
                 .before(BeforeFilterFunctions.stripPrefix())
                 .before(BeforeFilterFunctions.addRequestHeader("X-Gateway", "true"))
                 .filter(Bucket4jFilterFunctions.rateLimit(c -> {
@@ -38,7 +38,7 @@ public class GatewayRoutesConfiguration {
     @Bean
     public RouterFunction<ServerResponse> queryMsOpenApiRoute() {
         return RouterFunctions.route()
-                .route(RequestPredicates.path("api.gateway/query-ms/v3/api-docs"), HandlerFunctions.http())
+                .route(RequestPredicates.path("/api.gateway/query-ms/v3/api-docs"), HandlerFunctions.http())
                 .before(BeforeFilterFunctions.stripPrefix())
                 .filter(LoadBalancerFilterFunctions.lb("query-ms"))
                 .build();
@@ -47,7 +47,7 @@ public class GatewayRoutesConfiguration {
     @Bean
     public RouterFunction<ServerResponse> writeMsOpenApiRoute() {
         return RouterFunctions.route()
-                .route(RequestPredicates.path("api.gateway/write-ms/v3/api-docs"), HandlerFunctions.http())
+                .route(RequestPredicates.path("/api.gateway/write-ms/v3/api-docs"), HandlerFunctions.http())
                 .before(BeforeFilterFunctions.stripPrefix())
                 .filter(LoadBalancerFilterFunctions.lb("write-ms"))
                 .build();
@@ -56,7 +56,7 @@ public class GatewayRoutesConfiguration {
     @Bean
     public RouterFunction<ServerResponse> writeRoutes() {
         return RouterFunctions.route()
-                .route(RequestPredicates.path("api.gateway/api/v1/products/write/**"), HandlerFunctions.http())
+                .route(RequestPredicates.path("/api.gateway/api/v1/products/write/**"), HandlerFunctions.http())
                 .before(BeforeFilterFunctions.stripPrefix())
                 .before(BeforeFilterFunctions.addRequestHeader("X-Gateway", "true"))
                 .filter(Bucket4jFilterFunctions.rateLimit(c -> {
