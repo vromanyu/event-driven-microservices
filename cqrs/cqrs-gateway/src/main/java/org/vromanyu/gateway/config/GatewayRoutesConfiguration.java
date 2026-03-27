@@ -36,6 +36,24 @@ public class GatewayRoutesConfiguration {
     }
 
     @Bean
+    public RouterFunction<ServerResponse> queryMsOpenApiRoute() {
+        return RouterFunctions.route()
+                .route(RequestPredicates.path("api.gateway/query-ms/v3/api-docs"), HandlerFunctions.http())
+                .before(BeforeFilterFunctions.stripPrefix())
+                .filter(LoadBalancerFilterFunctions.lb("query-ms"))
+                .build();
+    }
+
+    @Bean
+    public RouterFunction<ServerResponse> writeMsOpenApiRoute() {
+        return RouterFunctions.route()
+                .route(RequestPredicates.path("api.gateway/write-ms/v3/api-docs"), HandlerFunctions.http())
+                .before(BeforeFilterFunctions.stripPrefix())
+                .filter(LoadBalancerFilterFunctions.lb("write-ms"))
+                .build();
+    }
+
+    @Bean
     public RouterFunction<ServerResponse> writeRoutes() {
         return RouterFunctions.route()
                 .route(RequestPredicates.path("api.gateway/api/v1/products/write/**"), HandlerFunctions.http())
