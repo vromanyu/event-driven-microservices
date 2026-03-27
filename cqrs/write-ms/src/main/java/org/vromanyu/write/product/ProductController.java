@@ -40,6 +40,11 @@ public class ProductController {
                                     @Content(mediaType = MediaType.APPLICATION_JSON_VALUE,
                                             schema = @Schema(implementation = CreateProductResponse.class)
                                     )
+                            }),
+                    @ApiResponse(responseCode = "403",
+                            description = "forbidden",
+                            content = {
+                                    @Content()
                             })
             },
             requestBody = @io.swagger.v3.oas.annotations.parameters.RequestBody(
@@ -72,7 +77,12 @@ public class ProductController {
                             }),
                     @ApiResponse(responseCode = "400",
                             description = "product not found",
-                            content = @Content())
+                            content = @Content()),
+                    @ApiResponse(responseCode = "403",
+                            description = "forbidden",
+                            content = {
+                                    @Content()
+                            })
             },
             requestBody = @io.swagger.v3.oas.annotations.parameters.RequestBody(
                     description = "product updated data",
@@ -101,7 +111,12 @@ public class ProductController {
                             }),
                     @ApiResponse(responseCode = "400",
                             description = "product not found",
-                            content = @Content())
+                            content = @Content()),
+                    @ApiResponse(responseCode = "403",
+                            description = "forbidden",
+                            content = {
+                                    @Content()
+                            })
             }
     )
     @DeleteMapping(value = "/{id}")

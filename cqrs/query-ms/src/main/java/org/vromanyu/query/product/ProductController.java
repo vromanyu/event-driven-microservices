@@ -43,6 +43,11 @@ public class ProductController {
                             description = "product not found",
                             content = {
                                     @Content()
+                            }),
+                    @ApiResponse(responseCode = "403",
+                            description = "forbidden",
+                            content = {
+                                    @Content()
                             })
             }
     )
@@ -63,6 +68,11 @@ public class ProductController {
                             content = {
                                     @Content(mediaType = MediaType.APPLICATION_JSON_VALUE,
                                             schema = @Schema(implementation = GetProductListResponse.class))
+                            }),
+                    @ApiResponse(responseCode = "403",
+                            description = "forbidden",
+                            content = {
+                                    @Content()
                             })
             }
     )
