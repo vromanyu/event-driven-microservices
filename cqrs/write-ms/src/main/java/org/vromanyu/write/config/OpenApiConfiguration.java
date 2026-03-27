@@ -2,6 +2,7 @@ package org.vromanyu.write.config;
 
 import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import io.swagger.v3.oas.annotations.info.Info;
+import io.swagger.v3.oas.annotations.servers.Server;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
@@ -9,7 +10,10 @@ import org.springframework.context.annotation.Configuration;
         info =
         @Info(title = "write-ms",
                 description = "write-ms responsible for writing/updating",
-                version = "1.0")
+                version = "1.0"),
+        servers = {
+                @Server(url = "https://localhost:443")
+        }
 
 )
 public class OpenApiConfiguration {
