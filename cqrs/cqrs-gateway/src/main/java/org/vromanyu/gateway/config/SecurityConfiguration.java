@@ -23,8 +23,9 @@ public class SecurityConfiguration {
         return httpSecurity
                 .csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(auth -> {
-                    auth.requestMatchers("/api.gateway/*/v3/api-docs").permitAll();
+                    auth.requestMatchers("/api.gateway/*/v3/api-docs/**").permitAll();
                     auth.requestMatchers("/api.gateway/swagger-ui/*").permitAll();
+                    auth.requestMatchers("/api.gateway/v3/api-docs/**").permitAll();
                     auth.anyRequest().authenticated();
                 })
                 .oauth2ResourceServer(oauth2 ->
