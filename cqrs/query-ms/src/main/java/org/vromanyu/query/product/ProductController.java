@@ -3,9 +3,12 @@ package org.vromanyu.query.product;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.enums.ParameterIn;
+import io.swagger.v3.oas.annotations.enums.SecuritySchemeType;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
+import io.swagger.v3.oas.annotations.security.SecurityScheme;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.MediaType;
@@ -19,6 +22,12 @@ import org.vromanyu.core.GetProductResponse;
 
 @RestController
 @RequestMapping("/api/v{version}/products/get")
+@SecurityScheme(
+        name = "bearerAuth",
+        type = SecuritySchemeType.HTTP,
+        scheme = "bearer",
+        bearerFormat = "JWT"
+)
 public class ProductController {
 
     private static final Logger logger = LoggerFactory.getLogger(ProductController.class);
@@ -31,6 +40,11 @@ public class ProductController {
 
     @Operation(
             summary = "get product by id",
+            security = {
+                    @SecurityRequirement(
+                            name = "bearerAuth"
+                    )
+            },
             responses = {
                     @ApiResponse(responseCode = "200",
                             description = "product found",
@@ -62,6 +76,11 @@ public class ProductController {
 
     @Operation(
             summary = "get all available products",
+            security = {
+                    @SecurityRequirement(
+                            name = "bearerAuth"
+                    )
+            },
             responses = {
                     @ApiResponse(responseCode = "200",
                             description = "all products",
