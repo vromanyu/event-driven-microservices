@@ -1,8 +1,9 @@
 package org.vromanyu.query.product;
 
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.enums.ParameterIn;
 import io.swagger.v3.oas.annotations.media.Content;
-import io.swagger.v3.oas.annotations.media.ExampleObject;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import org.slf4j.Logger;
@@ -46,6 +47,7 @@ public class ProductController {
             }
     )
     @GetMapping(value = "/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
+    @Parameter(required = true, name = "version", description = "API Version", in = ParameterIn.PATH, schema = @Schema(implementation = Integer.class, defaultValue = "1"))
     public ResponseEntity<GetProductResponse> getProduct(@PathVariable Integer id) {
         logger.info("getProduct called with id: {}", id);
         GetProductResponse product = productService.getProductById(id);
@@ -65,6 +67,7 @@ public class ProductController {
             }
     )
     @GetMapping(value = "/all", produces = MediaType.APPLICATION_JSON_VALUE)
+    @Parameter(required = true, name = "version", description = "API Version", in = ParameterIn.PATH, schema = @Schema(implementation = Integer.class, defaultValue = "1"))
     public ResponseEntity<GetProductListResponse> getAllProducts() {
         logger.info("getAllProducts called");
         GetProductListResponse products = productService.getAllProducts();

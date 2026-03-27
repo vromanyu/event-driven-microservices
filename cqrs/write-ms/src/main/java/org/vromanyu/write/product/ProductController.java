@@ -1,6 +1,8 @@
 package org.vromanyu.write.product;
 
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.enums.ParameterIn;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
@@ -49,6 +51,7 @@ public class ProductController {
                     ))
     )
     @PostMapping(value = "/", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    @Parameter(required = true, name = "version", description = "API Version", in = ParameterIn.PATH, schema = @Schema(implementation = Integer.class, defaultValue = "1"))
     public ResponseEntity<CreateProductResponse> createProduct(@RequestBody CreateProductRequest request) {
         logger.info("createProduct called with request: {}", request);
         CreateProductResponse response = productService.createProduct(request);
@@ -80,6 +83,7 @@ public class ProductController {
                     ))
     )
     @PutMapping(value = "/{id}", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    @Parameter(required = true, name = "version", description = "API Version", in = ParameterIn.PATH, schema = @Schema(implementation = Integer.class, defaultValue = "1"))
     public ResponseEntity<UpdateProductResponse> updateProduct(@PathVariable Integer id, @RequestBody UpdateProductRequest request) {
         logger.info("updateProduct called with productId: {}, request: {}", id, request);
         UpdateProductResponse response = productService.updateProduct(id, request);
@@ -101,6 +105,7 @@ public class ProductController {
             }
     )
     @DeleteMapping(value = "/{id}")
+    @Parameter(required = true, name = "version", description = "API Version", in = ParameterIn.PATH, schema = @Schema(implementation = Integer.class, defaultValue = "1"))
     public ResponseEntity<Void> deleteProduct(@PathVariable Integer id) {
         logger.info("deleteProduct called with productId: {}", id);
         productService.deleteProduct(id);
