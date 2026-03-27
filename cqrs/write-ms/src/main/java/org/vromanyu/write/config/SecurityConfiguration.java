@@ -18,6 +18,10 @@ public class SecurityConfiguration {
     public SecurityFilterChain prodFilterChain(HttpSecurity httpSecurity) throws Exception {
         return httpSecurity.oauth2ResourceServer(server ->
                         server.jwt(Customizer.withDefaults()))
+                .authorizeHttpRequests(auth -> {
+                    auth.requestMatchers("/write-ms/v3/api-docs").permitAll();
+                    auth.anyRequest().authenticated();
+                })
                 .csrf(AbstractHttpConfigurer::disable)
                 .build();
     }

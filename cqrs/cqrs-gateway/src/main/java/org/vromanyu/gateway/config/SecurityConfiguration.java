@@ -22,7 +22,11 @@ public class SecurityConfiguration {
 
         return httpSecurity
                 .csrf(AbstractHttpConfigurer::disable)
-                .authorizeHttpRequests(auth -> auth.anyRequest().authenticated())
+                .authorizeHttpRequests(auth -> {
+                    auth.requestMatchers("/api.gateway/*/v3/api-docs").permitAll();
+                    auth.requestMatchers("/api.gateway/swagger-ui/*").permitAll();
+                    auth.anyRequest().authenticated();
+                })
                 .oauth2ResourceServer(oauth2 ->
                         oauth2.jwt(Customizer.withDefaults()))
                 .exceptionHandling(ex -> ex.authenticationEntryPoint(new Http403ForbiddenEntryPoint()))
