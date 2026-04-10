@@ -54,8 +54,8 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>org.vromanyu</groupId>
-            <artifactId>cqrs-core</artifactId>
+            <groupId>com.vromanyu</groupId>
+            <artifactId>cqrs-core-qrk</artifactId>
             <version>1.0.0</version>
         </dependency>
         <dependency>
