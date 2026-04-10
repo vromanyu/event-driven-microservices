@@ -10,6 +10,8 @@
     <file url="file://$PROJECT_DIR$/cqrs-quarkus/query-ms-qrk/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cqrs-quarkus/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cqrs-quarkus/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cqrs-quarkus/write-ms-qrk/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cqrs-quarkus/write-ms-qrk/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cqrs/cqrs-core/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cqrs/cqrs-core/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cqrs/cqrs-gateway/src/main/java" charset="UTF-8" />

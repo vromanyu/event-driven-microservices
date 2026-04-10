@@ -14,6 +14,7 @@
         <option value="$PROJECT_DIR$/cqrs/cqrs-gateway/pom.xml" />
         <option value="$PROJECT_DIR$/cqrs-quarkus/pom.xml" />
         <option value="$PROJECT_DIR$/cqrs-quarkus/query-ms-qrk/pom.xml" />
+        <option value="$PROJECT_DIR$/cqrs-quarkus/write-ms-qrk/pom.xml" />
       </list>
     </option>
   </component>
