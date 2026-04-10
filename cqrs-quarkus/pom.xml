@@ -10,7 +10,9 @@
     <packaging>pom</packaging>
 
     <modules>
-
+        <module>cqrs-core-qrk</module>
+        <module>query-ms-qrk</module>
+        <module>write-ms-qrk</module>
     </modules>
 
 </project>
