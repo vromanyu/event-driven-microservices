@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="gateway (1)" />
         <module name="cqrs-gateway" />
         <module name="order-ms" />
         <module name="write-ms" />
@@ -21,6 +22,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="choreography-gateway" options="-parameters" />
       <module name="cqrs-gateway" options="-parameters" />
+      <module name="gateway (1)" options="-parameters" />
       <module name="order-ms" options="-parameters" />
       <module name="payment-ms" options="-parameters" />
       <module name="query-ms" options="-parameters" />

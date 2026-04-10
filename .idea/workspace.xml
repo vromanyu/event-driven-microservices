@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f53cd7e9-042e-48da-856a-18c59663b55c" name="Changes" comment=".idea">
+    <list default="true" id="f53cd7e9-042e-48da-856a-18c59663b55c" name="Changes" comment="update postman collection">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_18_26,_1_25 PM_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_18_26__1_25PM__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cqrs/cqrs-gateway/src/test/java/org/vromanyu/gateway/GatewayTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/cqrs/cqrs-gateway/src/test/java/org/vromanyu/gateway/GatewayTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,7 +16,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="176" />
+    <option name="cachedIndexableFilesCount" value="179" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
@@ -166,11 +168,12 @@
     &quot;Spring Boot.PaymentMsApplication.executor&quot;: &quot;Run&quot;,
     &quot;Spring Boot.QueryMsApplication.executor&quot;: &quot;Run&quot;,
     &quot;Spring Boot.WriteMsApplication.executor&quot;: &quot;Run&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
     &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/vromanyu/Repositories/event-driven-microservices/cqrs/write-ms/src/main/java/org/vromanyu/write/config&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/vromanyu/Repositories/spring-boot-testing&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -286,7 +289,7 @@
       </method>
     </configuration>
     <configuration name="ChoreographyGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="choreography-gateway" />
+      <module name="gateway (1)" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="org.vromanyu.gateway.ChoreographyGatewayApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -335,11 +338,11 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="JUnit.GatewayTests" />
       <item itemvalue="JUnit.GatewayTests.whenAllProductsAndThereAreNoProducts_thenReturnEmptyList" />
       <item itemvalue="JUnit.GatewayTests.whenAllProductsAndThereAreProducts_thenReturnAllProducts" />
       <item itemvalue="JUnit.GatewayTests.whenMoreThanOneRequestPerSecond_returnTooManyRequests" />
       <item itemvalue="JUnit.gateway in cqrs-gateway" />
-      <item itemvalue="JUnit.GatewayTests" />
       <item itemvalue="Spring Boot.ChoreographyGatewayApplication" />
       <item itemvalue="Spring Boot.CqrsGatewayApplication" />
       <item itemvalue="Spring Boot.OrderMsApplication" />
@@ -388,6 +391,16 @@
       <workItem from="1774020168110" duration="12000" />
       <workItem from="1774106683600" duration="4000" />
       <workItem from="1774183738856" duration="8403000" />
+      <workItem from="1774744424562" duration="20000" />
+      <workItem from="1774744834959" duration="26000" />
+      <workItem from="1774744908630" duration="8000" />
+      <workItem from="1774779179677" duration="75000" />
+      <workItem from="1774800787891" duration="4000" />
+      <workItem from="1774801608804" duration="11000" />
+      <workItem from="1774801717647" duration="9000" />
+      <workItem from="1774801729133" duration="27000" />
+      <workItem from="1774801772734" duration="1000" />
+      <workItem from="1774881170156" duration="26000" />
     </task>
     <task id="LOCAL-00100" summary="add tests for publisher and listener">
       <option name="closed" value="true" />
@@ -861,7 +874,7 @@
         <line-breakpoint type="java-method">
           <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/7.0.3/spring-security-web-7.0.3-sources.jar!/org/springframework/security/web/access/ExceptionTranslationFilter.java</url>
           <line>117</line>
-          <properties class="org.springframework.security.web.access.ExceptionTranslationFilter">
+          <properties class="org.springframework.security.web.access.ExceptionTranslationFilter" method="doFilter">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
