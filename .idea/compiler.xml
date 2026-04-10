@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="gateway (1)" />
         <module name="cqrs-gateway" />
+        <module name="cqrs-core-qrk" />
         <module name="order-ms" />
         <module name="write-ms" />
         <module name="cqrs-core" />
