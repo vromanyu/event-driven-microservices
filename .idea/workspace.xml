@@ -4,19 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f53cd7e9-042e-48da-856a-18c59663b55c" name="Changes" comment="add modules">
-      <change afterPath="$PROJECT_DIR$/.idea/diff-generator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jpb-settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cqrs-quarkus/query-ms-qrk/src/main/java/com/vromanyu/product/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cqrs-quarkus/query-ms-qrk/src/main/resources/db/migration/V1__create_product_table.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cqrs-quarkus/write-ms-qrk/src/main/java/com/vromanyu/product/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cqrs-quarkus/write-ms-qrk/src/main/resources/db/migration/V1__create_product_table.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cqrs-quarkus/query-ms-qrk/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/cqrs-quarkus/query-ms-qrk/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cqrs-quarkus/write-ms-qrk/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/cqrs-quarkus/write-ms-qrk/src/main/resources/application.properties" afterDir="false" />
+    <list default="true" id="f53cd7e9-042e-48da-856a-18c59663b55c" name="Changes" comment=".idea">
+      <change afterPath="$PROJECT_DIR$/cqrs-quarkus/write-ms-qrk/src/main/java/com/vromanyu/product/ProductNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cqrs-quarkus/write-ms-qrk/src/main/java/com/vromanyu/product/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cqrs-quarkus/write-ms-qrk/src/main/java/com/vromanyu/product/ProductServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cqrs-quarkus/write-ms-qrk/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cqrs-quarkus/write-ms-qrk/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cqrs-quarkus/write-ms-qrk/src/main/java/com/vromanyu/product/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/cqrs-quarkus/write-ms-qrk/src/main/java/com/vromanyu/product/Product.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,9 +25,10 @@
       <list>
         <option value="Enum" />
         <option value="GitHub Workflow" />
-        <option value="Interface" />
         <option value="Record" />
+        <option value="Interface" />
         <option value="Class" />
+        <option value="Exception" />
       </list>
     </option>
   </component>
@@ -242,7 +236,7 @@
           <value>
             <map>
               <entry key="query-ms-qrk" value="STOPPED" />
-              <entry key="write-ms-qrk" value="STOPPED" />
+              <entry key="write-ms-qrk" value="FAILED" />
             </map>
           </value>
         </entry>
@@ -512,31 +506,7 @@
       <workItem from="1774801729133" duration="27000" />
       <workItem from="1774801772734" duration="1000" />
       <workItem from="1774881170156" duration="26000" />
-      <workItem from="1775859885401" duration="1546000" />
-    </task>
-    <task id="LOCAL-00110" summary="change module name">
-      <option name="closed" value="true" />
-      <created>1773833712828</created>
-      <option name="number" value="00110" />
-      <option name="presentableId" value="LOCAL-00110" />
-      <option name="project" value="LOCAL" />
-      <updated>1773833712828</updated>
-    </task>
-    <task id="LOCAL-00111" summary="change method name">
-      <option name="closed" value="true" />
-      <created>1773833828621</created>
-      <option name="number" value="00111" />
-      <option name="presentableId" value="LOCAL-00111" />
-      <option name="project" value="LOCAL" />
-      <updated>1773833828621</updated>
-    </task>
-    <task id="LOCAL-00112" summary="change application name">
-      <option name="closed" value="true" />
-      <created>1773833985591</created>
-      <option name="number" value="00112" />
-      <option name="presentableId" value="LOCAL-00112" />
-      <option name="project" value="LOCAL" />
-      <updated>1773833985591</updated>
+      <workItem from="1775859885401" duration="2533000" />
     </task>
     <task id="LOCAL-00113" summary="add cqrs-gateway routes and loadbalancer configurations">
       <option name="closed" value="true" />
@@ -906,7 +876,31 @@
       <option name="project" value="LOCAL" />
       <updated>1775861051458</updated>
     </task>
-    <option name="localTasksCounter" value="159" />
+    <task id="LOCAL-00159" summary="add init migration scripts and specify flyway configuration">
+      <option name="closed" value="true" />
+      <created>1775861449427</created>
+      <option name="number" value="00159" />
+      <option name="presentableId" value="LOCAL-00159" />
+      <option name="project" value="LOCAL" />
+      <updated>1775861449427</updated>
+    </task>
+    <task id="LOCAL-00160" summary="add Product entity and validate strategy">
+      <option name="closed" value="true" />
+      <created>1775861558700</created>
+      <option name="number" value="00160" />
+      <option name="presentableId" value="LOCAL-00160" />
+      <option name="project" value="LOCAL" />
+      <updated>1775861558700</updated>
+    </task>
+    <task id="LOCAL-00161" summary=".idea">
+      <option name="closed" value="true" />
+      <created>1775861563064</created>
+      <option name="number" value="00161" />
+      <option name="presentableId" value="LOCAL-00161" />
+      <option name="project" value="LOCAL" />
+      <updated>1775861563064</updated>
+    </task>
+    <option name="localTasksCounter" value="162" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -939,8 +933,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="remove oauth2 client dependency" />
-    <MESSAGE value="add resource server configuration" />
     <MESSAGE value="log the bearer token when running in production mode" />
     <MESSAGE value="exclude OAuth2ResourceServerAutoConfiguration in ProductControllerTests" />
     <MESSAGE value="security configuration for prod and other environments" />
@@ -953,7 +945,6 @@
     <MESSAGE value="routes for v1 and use strip prefix filter" />
     <MESSAGE value="apply rate limiting to allow one request per second&#10;&#10;The production environment uses Redis, while testing/development uses Caffeine" />
     <MESSAGE value="disable retries for the RestClient and test rate limiter" />
-    <MESSAGE value=".idea" />
     <MESSAGE value="init cqrs-quarkus" />
     <MESSAGE value="init query-ms-qrk" />
     <MESSAGE value="init write-ms-qrk" />
@@ -964,7 +955,10 @@
     <MESSAGE value="specify packaging" />
     <MESSAGE value="change dep" />
     <MESSAGE value="add modules" />
-    <option name="LAST_COMMIT_MESSAGE" value="add modules" />
+    <MESSAGE value="add init migration scripts and specify flyway configuration" />
+    <MESSAGE value="add Product entity and validate strategy" />
+    <MESSAGE value=".idea" />
+    <option name="LAST_COMMIT_MESSAGE" value=".idea" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
