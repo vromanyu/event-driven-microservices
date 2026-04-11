@@ -4,6 +4,7 @@ import io.quarkus.logging.Log;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 import jakarta.persistence.EntityManager;
+import jakarta.transaction.Transactional;
 import org.vromanyu.core.*;
 
 import java.util.Optional;
@@ -35,6 +36,7 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
+    @Transactional
     public CreateProductResponse createProduct(CreateProductRequest request) {
         Log.infof("createProduct called with request: %s", request);
         var product = toProduct(request);
@@ -51,6 +53,7 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
+    @Transactional
     public UpdateProductResponse updateProduct(Integer productId, UpdateProductRequest request) {
         Log.infof("updateProduct called with productId: %s, request: %s", productId, request);
         var product = findProductById(productId).orElseThrow(() -> new ProductNotFoundException(String.format("product with id %s not found", productId)));
@@ -70,6 +73,7 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
+    @Transactional
     public void deleteProduct(Integer productId) {
         Log.infof("deleteProduct called with productId: %s", productId);
         var product = findProductById(productId).orElseThrow(() -> new ProductNotFoundException(String.format("product with id %s not found", productId)));
