@@ -19,6 +19,12 @@
         <option value="$PROJECT_DIR$/outbox-pattern/order-outbox/pom.xml" />
       </list>
     </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/outbox-pattern/order-outbox/pom.xml" />
+        <option value="$PROJECT_DIR$/outbox-pattern/pom.xml" />
+      </set>
+    </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_26" project-jdk-name="26" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
