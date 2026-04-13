@@ -6,16 +6,17 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="gateway (1)" />
         <module name="cqrs-gateway" />
-        <module name="cqrs-core-qrk" />
-        <module name="order-ms" />
         <module name="write-ms" />
-        <module name="cqrs-core" />
-        <module name="write-ms-qrk" />
         <module name="choreography-gateway" />
         <module name="choreography-core" />
         <module name="payment-ms" />
+        <module name="gateway (1)" />
+        <module name="outbox-pattern" />
+        <module name="cqrs-core-qrk" />
+        <module name="order-ms" />
+        <module name="cqrs-core" />
+        <module name="write-ms-qrk" />
         <module name="query-ms-qrk" />
         <module name="query-ms" />
       </profile>

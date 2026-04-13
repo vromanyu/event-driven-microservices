@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f53cd7e9-042e-48da-856a-18c59663b55c" name="Changes" comment="add reactive createProduct endpoint">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cqrs-quarkus/write-ms-qrk/src/main/java/com/vromanyu/product/ProductResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/cqrs-quarkus/write-ms-qrk/src/main/java/com/vromanyu/product/ProductResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cqrs-quarkus/write-ms-qrk/src/main/java/com/vromanyu/product/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/cqrs-quarkus/write-ms-qrk/src/main/java/com/vromanyu/product/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cqrs-quarkus/write-ms-qrk/src/main/java/com/vromanyu/product/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/cqrs-quarkus/write-ms-qrk/src/main/java/com/vromanyu/product/ProductServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cqrs-quarkus/write-ms-qrk/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/cqrs-quarkus/write-ms-qrk/src/main/resources/application.properties" afterDir="false" />
-    </list>
+    <list default="true" id="f53cd7e9-042e-48da-856a-18c59663b55c" name="Changes" comment=".idea" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -511,31 +505,7 @@
       <workItem from="1775908052063" duration="352000" />
       <workItem from="1775921645661" duration="5694000" />
       <workItem from="1775945122965" duration="6418000" />
-      <workItem from="1776097779885" duration="2932000" />
-    </task>
-    <task id="LOCAL-00118" summary="fix host name">
-      <option name="closed" value="true" />
-      <created>1773835292476</created>
-      <option name="number" value="00118" />
-      <option name="presentableId" value="LOCAL-00118" />
-      <option name="project" value="LOCAL" />
-      <updated>1773835292476</updated>
-    </task>
-    <task id="LOCAL-00119" summary="add docker-compose.yml for cqrs pattern">
-      <option name="closed" value="true" />
-      <created>1773835371889</created>
-      <option name="number" value="00119" />
-      <option name="presentableId" value="LOCAL-00119" />
-      <option name="project" value="LOCAL" />
-      <updated>1773835371889</updated>
-    </task>
-    <task id="LOCAL-00120" summary="add wiremock dependency for testing gateway">
-      <option name="closed" value="true" />
-      <created>1773839124401</created>
-      <option name="number" value="00120" />
-      <option name="presentableId" value="LOCAL-00120" />
-      <option name="project" value="LOCAL" />
-      <updated>1773839124401</updated>
+      <workItem from="1776097779885" duration="3573000" />
     </task>
     <task id="LOCAL-00121" summary="change Location header response">
       <option name="closed" value="true" />
@@ -905,7 +875,31 @@
       <option name="project" value="LOCAL" />
       <updated>1775951520709</updated>
     </task>
-    <option name="localTasksCounter" value="167" />
+    <task id="LOCAL-00167" summary="provide write, delete, and update operations for product">
+      <option name="closed" value="true" />
+      <created>1776100762537</created>
+      <option name="number" value="00167" />
+      <option name="presentableId" value="LOCAL-00167" />
+      <option name="project" value="LOCAL" />
+      <updated>1776100762538</updated>
+    </task>
+    <task id="LOCAL-00168" summary="add channel configuration">
+      <option name="closed" value="true" />
+      <created>1776100774113</created>
+      <option name="number" value="00168" />
+      <option name="presentableId" value="LOCAL-00168" />
+      <option name="project" value="LOCAL" />
+      <updated>1776100774113</updated>
+    </task>
+    <task id="LOCAL-00169" summary=".idea">
+      <option name="closed" value="true" />
+      <created>1776100778688</created>
+      <option name="number" value="00169" />
+      <option name="presentableId" value="LOCAL-00169" />
+      <option name="project" value="LOCAL" />
+      <updated>1776100778688</updated>
+    </task>
+    <option name="localTasksCounter" value="170" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -938,8 +932,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add nginx in front of gateway and handle ssl termination" />
-    <MESSAGE value="update postman collection" />
     <MESSAGE value="add api versioning" />
     <MESSAGE value="remove duplicate dependency for jpa test" />
     <MESSAGE value="routes for v1 and use strip prefix filter" />
@@ -957,13 +949,15 @@
     <MESSAGE value="add modules" />
     <MESSAGE value="add init migration scripts and specify flyway configuration" />
     <MESSAGE value="add Product entity and validate strategy" />
-    <MESSAGE value=".idea" />
     <MESSAGE value="format" />
     <MESSAGE value="implement ProductService methods" />
     <MESSAGE value="add @Transactional annotation on service methods" />
     <MESSAGE value="add reactive dependencies" />
     <MESSAGE value="add reactive createProduct endpoint" />
-    <option name="LAST_COMMIT_MESSAGE" value="add reactive createProduct endpoint" />
+    <MESSAGE value="provide write, delete, and update operations for product" />
+    <MESSAGE value="add channel configuration" />
+    <MESSAGE value=".idea" />
+    <option name="LAST_COMMIT_MESSAGE" value=".idea" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
