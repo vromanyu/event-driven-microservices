@@ -7,12 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="cqrs-gateway" />
+        <module name="order-outbox" />
         <module name="write-ms" />
         <module name="choreography-gateway" />
         <module name="choreography-core" />
         <module name="payment-ms" />
         <module name="gateway (1)" />
-        <module name="outbox-pattern" />
         <module name="cqrs-core-qrk" />
         <module name="order-ms" />
         <module name="cqrs-core" />
@@ -28,6 +28,7 @@
       <module name="cqrs-gateway" options="-parameters" />
       <module name="gateway (1)" options="-parameters" />
       <module name="order-ms" options="-parameters" />
+      <module name="order-outbox" options="-parameters" />
       <module name="payment-ms" options="-parameters" />
       <module name="query-ms" options="-parameters" />
       <module name="query-ms-qrk" options="-parameters" />

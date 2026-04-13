@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f53cd7e9-042e-48da-856a-18c59663b55c" name="Changes" comment=".idea" />
+    <list default="true" id="f53cd7e9-042e-48da-856a-18c59663b55c" name="Changes" comment="init outbox-pattern module" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -406,6 +406,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="OrderOutboxApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="order-outbox" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.vromanyu.orderoutbox.OrderOutboxApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="PaymentMsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="payment-ms" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="org.vromanyu.payment.PaymentMsApplication" />
@@ -442,6 +449,7 @@
       <item itemvalue="JUnit.gateway in cqrs-gateway" />
       <item itemvalue="Quarkus.query-ms-qrk" />
       <item itemvalue="Quarkus.write-ms-qrk" />
+      <item itemvalue="Spring Boot.OrderOutboxApplication" />
       <item itemvalue="Spring Boot.ChoreographyGatewayApplication" />
       <item itemvalue="Spring Boot.CqrsGatewayApplication" />
       <item itemvalue="Spring Boot.OrderMsApplication" />
@@ -505,23 +513,7 @@
       <workItem from="1775908052063" duration="352000" />
       <workItem from="1775921645661" duration="5694000" />
       <workItem from="1775945122965" duration="6418000" />
-      <workItem from="1776097779885" duration="3573000" />
-    </task>
-    <task id="LOCAL-00121" summary="change Location header response">
-      <option name="closed" value="true" />
-      <created>1773839134305</created>
-      <option name="number" value="00121" />
-      <option name="presentableId" value="LOCAL-00121" />
-      <option name="project" value="LOCAL" />
-      <updated>1773839134305</updated>
-    </task>
-    <task id="LOCAL-00122" summary="add gateway tests">
-      <option name="closed" value="true" />
-      <created>1773839147539</created>
-      <option name="number" value="00122" />
-      <option name="presentableId" value="LOCAL-00122" />
-      <option name="project" value="LOCAL" />
-      <updated>1773839147539</updated>
+      <workItem from="1776097779885" duration="4525000" />
     </task>
     <task id="LOCAL-00123" summary="add caching support to query-ms">
       <option name="closed" value="true" />
@@ -899,7 +891,23 @@
       <option name="project" value="LOCAL" />
       <updated>1776100778688</updated>
     </task>
-    <option name="localTasksCounter" value="170" />
+    <task id="LOCAL-00170" summary="init outbox-pattern module">
+      <option name="closed" value="true" />
+      <created>1776101385838</created>
+      <option name="number" value="00170" />
+      <option name="presentableId" value="LOCAL-00170" />
+      <option name="project" value="LOCAL" />
+      <updated>1776101385838</updated>
+    </task>
+    <task id="LOCAL-00171" summary="init outbox-pattern module">
+      <option name="closed" value="true" />
+      <created>1776101391006</created>
+      <option name="number" value="00171" />
+      <option name="presentableId" value="LOCAL-00171" />
+      <option name="project" value="LOCAL" />
+      <updated>1776101391006</updated>
+    </task>
+    <option name="localTasksCounter" value="172" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -932,7 +940,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add api versioning" />
     <MESSAGE value="remove duplicate dependency for jpa test" />
     <MESSAGE value="routes for v1 and use strip prefix filter" />
     <MESSAGE value="apply rate limiting to allow one request per second&#10;&#10;The production environment uses Redis, while testing/development uses Caffeine" />
@@ -957,7 +964,8 @@
     <MESSAGE value="provide write, delete, and update operations for product" />
     <MESSAGE value="add channel configuration" />
     <MESSAGE value=".idea" />
-    <option name="LAST_COMMIT_MESSAGE" value=".idea" />
+    <MESSAGE value="init outbox-pattern module" />
+    <option name="LAST_COMMIT_MESSAGE" value="init outbox-pattern module" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

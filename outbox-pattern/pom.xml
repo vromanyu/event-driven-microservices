@@ -9,9 +9,7 @@
     <version>1.0.0</version>
 
     <modules>
-        <module>
-
-        </module>
+        <module>order-outbox</module>
     </modules>
 
 </project>
