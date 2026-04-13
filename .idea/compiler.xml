@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="cqrs-gateway" />
+        <module name="order-outbox" />
         <module name="write-ms" />
         <module name="choreography-gateway" />
         <module name="choreography-core" />
@@ -20,10 +21,6 @@
         <module name="query-ms" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="order-outbox" target="1.8" />
-      <module name="outbox-pattern" target="1.5" />
-    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
