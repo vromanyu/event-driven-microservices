@@ -20,6 +20,9 @@ public class Order {
     @Column(nullable = false)
     Double amount;
 
+    @Column(nullable = false)
+    Boolean isProcessed;
+
     @CreationTimestamp
     OffsetDateTime createdAt;
 
