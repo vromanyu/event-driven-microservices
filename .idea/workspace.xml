@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f53cd7e9-042e-48da-856a-18c59663b55c" name="Changes" comment="implement outbox pattern using quarkus" />
+    <list default="true" id="f53cd7e9-042e-48da-856a-18c59663b55c" name="Changes" comment="add quarkus-outbox-core module" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,8 +23,8 @@
         <option value="package-info" />
         <option value="com.intellij.jpb.FlywayMigrationScript" />
         <option value="Interface" />
-        <option value="Record" />
         <option value="Class" />
+        <option value="Record" />
       </list>
     </option>
   </component>
@@ -546,31 +546,7 @@
       <workItem from="1775945122965" duration="6418000" />
       <workItem from="1776097779885" duration="5062000" />
       <workItem from="1776102855788" duration="2384000" />
-      <workItem from="1777046489137" duration="396000" />
-    </task>
-    <task id="LOCAL-00134" summary="security configuration for prod and other environments">
-      <option name="closed" value="true" />
-      <created>1774010668018</created>
-      <option name="number" value="00134" />
-      <option name="presentableId" value="LOCAL-00134" />
-      <option name="project" value="LOCAL" />
-      <updated>1774010668018</updated>
-    </task>
-    <task id="LOCAL-00135" summary=".idea">
-      <option name="closed" value="true" />
-      <created>1774010671481</created>
-      <option name="number" value="00135" />
-      <option name="presentableId" value="LOCAL-00135" />
-      <option name="project" value="LOCAL" />
-      <updated>1774010671481</updated>
-    </task>
-    <task id="LOCAL-00136" summary="add UserTransactionService to get all transactions">
-      <option name="closed" value="true" />
-      <created>1774019227004</created>
-      <option name="number" value="00136" />
-      <option name="presentableId" value="LOCAL-00136" />
-      <option name="project" value="LOCAL" />
-      <updated>1774019227004</updated>
+      <workItem from="1777046489137" duration="880000" />
     </task>
     <task id="LOCAL-00137" summary="change method name and endpoint">
       <option name="closed" value="true" />
@@ -940,7 +916,31 @@
       <option name="project" value="LOCAL" />
       <updated>1777046555656</updated>
     </task>
-    <option name="localTasksCounter" value="183" />
+    <task id="LOCAL-00183" summary="init quarkus-outbox aggregator">
+      <option name="closed" value="true" />
+      <created>1777046915108</created>
+      <option name="number" value="00183" />
+      <option name="presentableId" value="LOCAL-00183" />
+      <option name="project" value="LOCAL" />
+      <updated>1777046915108</updated>
+    </task>
+    <task id="LOCAL-00184" summary="add quarkus-outbox-core module with creation DTOs">
+      <option name="closed" value="true" />
+      <created>1777047158787</created>
+      <option name="number" value="00184" />
+      <option name="presentableId" value="LOCAL-00184" />
+      <option name="project" value="LOCAL" />
+      <updated>1777047158787</updated>
+    </task>
+    <task id="LOCAL-00185" summary="add quarkus-outbox-core module">
+      <option name="closed" value="true" />
+      <created>1777047168221</created>
+      <option name="number" value="00185" />
+      <option name="presentableId" value="LOCAL-00185" />
+      <option name="project" value="LOCAL" />
+      <updated>1777047168221</updated>
+    </task>
+    <option name="localTasksCounter" value="186" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -973,9 +973,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="specify packaging" />
-    <MESSAGE value="change dep" />
-    <MESSAGE value="add modules" />
     <MESSAGE value="add init migration scripts and specify flyway configuration" />
     <MESSAGE value="add Product entity and validate strategy" />
     <MESSAGE value="format" />
@@ -998,7 +995,10 @@
     <MESSAGE value="create dtos" />
     <MESSAGE value="add service and controller" />
     <MESSAGE value="implement outbox pattern using quarkus" />
-    <option name="LAST_COMMIT_MESSAGE" value="implement outbox pattern using quarkus" />
+    <MESSAGE value="init quarkus-outbox aggregator" />
+    <MESSAGE value="add quarkus-outbox-core module with creation DTOs" />
+    <MESSAGE value="add quarkus-outbox-core module" />
+    <option name="LAST_COMMIT_MESSAGE" value="add quarkus-outbox-core module" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
