@@ -2,6 +2,6 @@
 <project version="4">
   <component name="DiffGenerationConfig">
     <option name="snapshotDb" value="false" />
-    <option name="snapshotModelValue" value="order-outbox:order-outbox" />
+    <option name="snapshotModelValue" value="quarkus-order-ms:quarkus-order-ms" />
   </component>
 </project>

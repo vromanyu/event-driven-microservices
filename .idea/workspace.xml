@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f53cd7e9-042e-48da-856a-18c59663b55c" name="Changes" comment="add quarkus-outbox-core module" />
+    <list default="true" id="f53cd7e9-042e-48da-856a-18c59663b55c" name="Changes" comment="add .gitignore">
+      <change afterPath="$PROJECT_DIR$/quarkus-outbox/quarkus-order-ms/src/main/java/com/vromanyu/order/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quarkus-outbox/quarkus-order-ms/src/main/resources/db/migration/V1__create_order_table.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/diff-generator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/diff-generator.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jpb-settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jpb-settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quarkus-outbox/quarkus-order-ms/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/quarkus-outbox/quarkus-order-ms/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quarkus-outbox/quarkus-order-ms/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/quarkus-outbox/quarkus-order-ms/src/main/resources/application.properties" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,10 +29,10 @@
         <option value="GitHub Workflow" />
         <option value="Exception" />
         <option value="package-info" />
-        <option value="com.intellij.jpb.FlywayMigrationScript" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="Record" />
+        <option value="Class" />
+        <option value="com.intellij.jpb.FlywayMigrationScript" />
       </list>
     </option>
   </component>
@@ -71,143 +79,146 @@
     <option name="showLibraryContents" value="true" />
     <option name="showScratchesAndConsoles" value="false" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;JUnit.All in gateway (1).executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.All in gateway (2).executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.All in gateway (3).executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.All in gateway.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.All in order-ms (1).executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.All in order-ms.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.All in query-ms.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.All in write-ms.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.GatewayTests.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.GatewayTests.givenInvalidOrderId_shouldReturnNotFound.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.GatewayTests.givenInvalidProductId_shouldReturnNotFound.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.GatewayTests.givenOrderRequest_shouldReturnCreated.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.GatewayTests.givenProductDeleteRequest_shouldReturnNoContent.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.GatewayTests.givenProductRequest_shouldReturnCreated.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.GatewayTests.givenProductUpdateRequest_shouldReturnUpdatedProduct.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.GatewayTests.givenValidOrderId_shouldReturnOk.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.GatewayTests.givenValidProductId_shouldReturnOk.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.GatewayTests.test.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.GatewayTests.whenAllProductsAndThereAreNoProducts_thenReturnEmptyList.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.GatewayTests.whenAllProductsAndThereAreProducts_thenReturnAllProducts.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.GatewayTests.whenMoreThanOneRequestPerSecond_returnTooManyRequests.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.OrderControllerTests.whenCreateOrder_thenSuccess.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.OrderControllerTests.whenGetOrderByInvalidId_thenFail.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.OrderControllerTests.whenGetOrderByValidId_thenSuccess.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.OrderPublisherTests.whenSend_thenFail.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.OrderPublisherTests.whenSend_thenSuccess.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.OrderRepositoryTests.givenInvalidOrderId_whenFindBy_shouldThrowException.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.OrderRepositoryTests.givenOrder_whenSave_thenPopulateAuditFields.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.OrderRepositoryTests.givenOrder_whenSave_thenSuccess.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.OrderRepositoryTests.givenThreeOrders_whenFindAll_shouldReturnThreeOrders.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.OrderRepositoryTests.givenValidOrderId_whenFindBy_shouldReturnOrder.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.OrderServiceTests.givenInvalidOrderId_whenGetOrder_thenThrowException.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.OrderServiceTests.givenOrderId_whenGetOrder_thenSuccess.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.OrderServiceTests.givenOrderRequest_whenCreateOrder_thenSuccess.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.OrderServiceTests.test.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.PaymentServiceTests.whenInvalidOrderStatus_thenThrowException.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.PaymentServiceTests.whenInvalidUserBalance_thenThrowException.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.PaymentServiceTests.whenValidPaymentEvent_thenSuccess.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ProductControllerTests (1).executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ProductControllerTests.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ProductControllerTests.whenCreateProduct_thenReturnCreatedProduct.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ProductControllerTests.whenDeleteProductWithInValidId_thenReturnBadRequest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ProductControllerTests.whenDeleteProductWithValidId_thenReturnNoContent.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ProductControllerTests.whenGetAllProductsAndThereAreNoProducts_thenSuccess.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ProductControllerTests.whenGetAllProducts_thenSuccess.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ProductControllerTests.whenGetProductByIdInvalidId_thenFail.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ProductControllerTests.whenGetProductById_thenSuccess.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ProductControllerTests.whenUpdateProductWithInValidId_thenReturnBadRequest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ProductControllerTests.whenUpdateProductWithValidId_thenReturnUpdatedProduct.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ProductEventConsumerServiceTests.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ProductEventConsumerServiceTests.whenProductCreatedEvent_thenProductSaved.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ProductEventConsumerServiceTests.whenProductDeletedEvent_thenSuccess.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ProductEventConsumerServiceTests.whenProductDeletedEvent_thenThrowException.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ProductEventConsumerServiceTests.whenProductUpdatedEvent_thenThrowException.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ProductEventConsumerServiceTests.whenProductUpdatedEvent_thenUpdateProduct.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ProductServiceTests.givenInvalidProductId_whenDeleteProduct_thenThrowException.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ProductServiceTests.givenInvalidProductId_whenPublishUpdateProduct_thenThrowException.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ProductServiceTests.givenProductId_whenDeleteProduct_thenReturnNothing.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ProductServiceTests.givenProductRequest_whenCreateProduct_thenReturnProduct.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ProductServiceTests.givenProductRequest_whenPublishFails_throwException.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ProductServiceTests.givenValidProductIdAndUpdateProductRequest_whenUpdateProduct_thenReturnProduct.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ProductServiceTests.givenValidProductId_whenPublishDeleteEvent_thenThrowException.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserBalanceRepositoryTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserBalanceRepositoryTest.givenInvalidUserId_whenFindByUserId_shouldReturnEmptyList.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserBalanceRepositoryTest.givenValidUserId_whenFindByUserId_shouldReturnUserBalance.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserTransactionRepositoryTests.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.gateway in cqrs-gateway.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.gateway in gateway.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.java in cqrs-gateway.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.java in payment-ms.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.java in query-ms.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.org.vromanyu.query in query-ms.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.query in query-ms.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.write in write-ms.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.choreography [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.choreography [test].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.cqrs [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.cqrs [test].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.cqrs-core [clean,install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.cqrs-core [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.cqrs-core-qrk [clean,install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.cqrs-core-qrk [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.cqrs-core-qrk [install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.cqrs-quarkus [clean,install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.cqrs-quarkus [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.gateway [clean,install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.gateway [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.outbox-pattern [clean].executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Notification.DisplayName-DoNotAsk-DatabaseConfigFileWatcher.found&quot;: &quot;New/updated database configurations found&quot;,
-    &quot;Notification.DoNotAsk-DatabaseConfigFileWatcher.found&quot;: &quot;true&quot;,
-    &quot;Quarkus.query-ms-qrk.executor&quot;: &quot;Run&quot;,
-    &quot;Quarkus.write-ms-qrk.executor&quot;: &quot;Run&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Spring Boot.CqrsGatewayApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.GatewayApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.OrderMsApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.OrderOutboxApplication (1).executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.PaymentMsApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.QueryMsApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.WriteMsApplication.executor&quot;: &quot;Run&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/vromanyu/Repositories/event-driven-microservices/outbox-pattern/order-outbox&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.sync&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JUnit.All in gateway (1).executor": "Run",
+    "JUnit.All in gateway (2).executor": "Run",
+    "JUnit.All in gateway (3).executor": "Run",
+    "JUnit.All in gateway.executor": "Run",
+    "JUnit.All in order-ms (1).executor": "Run",
+    "JUnit.All in order-ms.executor": "Run",
+    "JUnit.All in query-ms.executor": "Run",
+    "JUnit.All in write-ms.executor": "Run",
+    "JUnit.GatewayTests.executor": "Run",
+    "JUnit.GatewayTests.givenInvalidOrderId_shouldReturnNotFound.executor": "Run",
+    "JUnit.GatewayTests.givenInvalidProductId_shouldReturnNotFound.executor": "Run",
+    "JUnit.GatewayTests.givenOrderRequest_shouldReturnCreated.executor": "Run",
+    "JUnit.GatewayTests.givenProductDeleteRequest_shouldReturnNoContent.executor": "Run",
+    "JUnit.GatewayTests.givenProductRequest_shouldReturnCreated.executor": "Run",
+    "JUnit.GatewayTests.givenProductUpdateRequest_shouldReturnUpdatedProduct.executor": "Run",
+    "JUnit.GatewayTests.givenValidOrderId_shouldReturnOk.executor": "Run",
+    "JUnit.GatewayTests.givenValidProductId_shouldReturnOk.executor": "Run",
+    "JUnit.GatewayTests.test.executor": "Run",
+    "JUnit.GatewayTests.whenAllProductsAndThereAreNoProducts_thenReturnEmptyList.executor": "Run",
+    "JUnit.GatewayTests.whenAllProductsAndThereAreProducts_thenReturnAllProducts.executor": "Run",
+    "JUnit.GatewayTests.whenMoreThanOneRequestPerSecond_returnTooManyRequests.executor": "Run",
+    "JUnit.OrderControllerTests.whenCreateOrder_thenSuccess.executor": "Run",
+    "JUnit.OrderControllerTests.whenGetOrderByInvalidId_thenFail.executor": "Run",
+    "JUnit.OrderControllerTests.whenGetOrderByValidId_thenSuccess.executor": "Run",
+    "JUnit.OrderPublisherTests.whenSend_thenFail.executor": "Run",
+    "JUnit.OrderPublisherTests.whenSend_thenSuccess.executor": "Run",
+    "JUnit.OrderRepositoryTests.givenInvalidOrderId_whenFindBy_shouldThrowException.executor": "Run",
+    "JUnit.OrderRepositoryTests.givenOrder_whenSave_thenPopulateAuditFields.executor": "Run",
+    "JUnit.OrderRepositoryTests.givenOrder_whenSave_thenSuccess.executor": "Run",
+    "JUnit.OrderRepositoryTests.givenThreeOrders_whenFindAll_shouldReturnThreeOrders.executor": "Run",
+    "JUnit.OrderRepositoryTests.givenValidOrderId_whenFindBy_shouldReturnOrder.executor": "Run",
+    "JUnit.OrderServiceTests.givenInvalidOrderId_whenGetOrder_thenThrowException.executor": "Run",
+    "JUnit.OrderServiceTests.givenOrderId_whenGetOrder_thenSuccess.executor": "Run",
+    "JUnit.OrderServiceTests.givenOrderRequest_whenCreateOrder_thenSuccess.executor": "Run",
+    "JUnit.OrderServiceTests.test.executor": "Run",
+    "JUnit.PaymentServiceTests.whenInvalidOrderStatus_thenThrowException.executor": "Run",
+    "JUnit.PaymentServiceTests.whenInvalidUserBalance_thenThrowException.executor": "Run",
+    "JUnit.PaymentServiceTests.whenValidPaymentEvent_thenSuccess.executor": "Run",
+    "JUnit.ProductControllerTests (1).executor": "Run",
+    "JUnit.ProductControllerTests.executor": "Run",
+    "JUnit.ProductControllerTests.whenCreateProduct_thenReturnCreatedProduct.executor": "Run",
+    "JUnit.ProductControllerTests.whenDeleteProductWithInValidId_thenReturnBadRequest.executor": "Run",
+    "JUnit.ProductControllerTests.whenDeleteProductWithValidId_thenReturnNoContent.executor": "Run",
+    "JUnit.ProductControllerTests.whenGetAllProductsAndThereAreNoProducts_thenSuccess.executor": "Run",
+    "JUnit.ProductControllerTests.whenGetAllProducts_thenSuccess.executor": "Run",
+    "JUnit.ProductControllerTests.whenGetProductByIdInvalidId_thenFail.executor": "Run",
+    "JUnit.ProductControllerTests.whenGetProductById_thenSuccess.executor": "Run",
+    "JUnit.ProductControllerTests.whenUpdateProductWithInValidId_thenReturnBadRequest.executor": "Run",
+    "JUnit.ProductControllerTests.whenUpdateProductWithValidId_thenReturnUpdatedProduct.executor": "Run",
+    "JUnit.ProductEventConsumerServiceTests.executor": "Run",
+    "JUnit.ProductEventConsumerServiceTests.whenProductCreatedEvent_thenProductSaved.executor": "Run",
+    "JUnit.ProductEventConsumerServiceTests.whenProductDeletedEvent_thenSuccess.executor": "Run",
+    "JUnit.ProductEventConsumerServiceTests.whenProductDeletedEvent_thenThrowException.executor": "Run",
+    "JUnit.ProductEventConsumerServiceTests.whenProductUpdatedEvent_thenThrowException.executor": "Run",
+    "JUnit.ProductEventConsumerServiceTests.whenProductUpdatedEvent_thenUpdateProduct.executor": "Run",
+    "JUnit.ProductServiceTests.givenInvalidProductId_whenDeleteProduct_thenThrowException.executor": "Run",
+    "JUnit.ProductServiceTests.givenInvalidProductId_whenPublishUpdateProduct_thenThrowException.executor": "Run",
+    "JUnit.ProductServiceTests.givenProductId_whenDeleteProduct_thenReturnNothing.executor": "Run",
+    "JUnit.ProductServiceTests.givenProductRequest_whenCreateProduct_thenReturnProduct.executor": "Run",
+    "JUnit.ProductServiceTests.givenProductRequest_whenPublishFails_throwException.executor": "Run",
+    "JUnit.ProductServiceTests.givenValidProductIdAndUpdateProductRequest_whenUpdateProduct_thenReturnProduct.executor": "Run",
+    "JUnit.ProductServiceTests.givenValidProductId_whenPublishDeleteEvent_thenThrowException.executor": "Run",
+    "JUnit.UserBalanceRepositoryTest.executor": "Run",
+    "JUnit.UserBalanceRepositoryTest.givenInvalidUserId_whenFindByUserId_shouldReturnEmptyList.executor": "Run",
+    "JUnit.UserBalanceRepositoryTest.givenValidUserId_whenFindByUserId_shouldReturnUserBalance.executor": "Run",
+    "JUnit.UserTransactionRepositoryTests.executor": "Run",
+    "JUnit.gateway in cqrs-gateway.executor": "Run",
+    "JUnit.gateway in gateway.executor": "Run",
+    "JUnit.java in cqrs-gateway.executor": "Run",
+    "JUnit.java in payment-ms.executor": "Run",
+    "JUnit.java in query-ms.executor": "Run",
+    "JUnit.org.vromanyu.query in query-ms.executor": "Run",
+    "JUnit.query in query-ms.executor": "Run",
+    "JUnit.write in write-ms.executor": "Run",
+    "Maven.choreography [clean].executor": "Run",
+    "Maven.choreography [test].executor": "Run",
+    "Maven.cqrs [clean].executor": "Run",
+    "Maven.cqrs [test].executor": "Run",
+    "Maven.cqrs-core [clean,install].executor": "Run",
+    "Maven.cqrs-core [clean].executor": "Run",
+    "Maven.cqrs-core-qrk [clean,install].executor": "Run",
+    "Maven.cqrs-core-qrk [clean].executor": "Run",
+    "Maven.cqrs-core-qrk [install].executor": "Run",
+    "Maven.cqrs-quarkus [clean,install].executor": "Run",
+    "Maven.cqrs-quarkus [clean].executor": "Run",
+    "Maven.gateway [clean,install].executor": "Run",
+    "Maven.gateway [clean].executor": "Run",
+    "Maven.outbox-pattern [clean].executor": "Run",
+    "Maven.quarkus-order-ms [package].executor": "Run",
+    "Maven.quarkus-outbox [clean,install].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Notification.DisplayName-DoNotAsk-DatabaseConfigFileWatcher.found": "New/updated database configurations found",
+    "Notification.DoNotAsk-DatabaseConfigFileWatcher.found": "true",
+    "Quarkus.quarkus-order-ms.executor": "Run",
+    "Quarkus.query-ms-qrk.executor": "Run",
+    "Quarkus.write-ms-qrk.executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.CqrsGatewayApplication.executor": "Run",
+    "Spring Boot.GatewayApplication.executor": "Run",
+    "Spring Boot.OrderMsApplication.executor": "Run",
+    "Spring Boot.OrderOutboxApplication (1).executor": "Run",
+    "Spring Boot.PaymentMsApplication.executor": "Run",
+    "Spring Boot.QueryMsApplication.executor": "Run",
+    "Spring Boot.WriteMsApplication.executor": "Run",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "main",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/vromanyu/Repositories/event-driven-microservices/quarkus-outbox/quarkus-outbox-core",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "run.configurations.included.in.services": "true",
+    "settings.editor.selected.configurable": "settings.sync",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;com.intellij.ide.scratch.LRUPopupBuilder$1/Change SQL Dialect&quot;: [
-      &quot;PostgreSQL&quot;
+  "keyToStringList": {
+    "com.intellij.ide.scratch.LRUPopupBuilder$1/Change SQL Dialect": [
+      "PostgreSQL"
     ]
   }
-}</component>
+}]]></component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -216,13 +227,14 @@
       <recent name="org.vromanyu.order.service" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/quarkus-outbox/quarkus-outbox-core" />
       <recent name="$PROJECT_DIR$/cqrs-quarkus/write-ms-qrk/src/main/java" />
       <recent name="$PROJECT_DIR$/cqrs-quarkus/cqrs-core-qrk" />
       <recent name="$PROJECT_DIR$/cqrs-quarkus/cqrs-core-qrk/src/main/java" />
       <recent name="$PROJECT_DIR$/cqrs-quarkus/query-ms-qrk/src/main/resources/db/migration" />
-      <recent name="$PROJECT_DIR$/cqrs/write-ms/src/main/java/org/vromanyu/write/config" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/quarkus-outbox/quarkus-order-ms" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
@@ -240,6 +252,7 @@
         <entry key="QuarkusRunConfigurationType">
           <value>
             <map>
+              <entry key="quarkus-order-ms" value="STOPPED" />
               <entry key="query-ms-qrk" value="STOPPED" />
               <entry key="write-ms-qrk" value="STOPPED" />
             </map>
@@ -255,7 +268,7 @@
       </map>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.OrderOutboxApplication (1)">
+  <component name="RunManager" selected="Quarkus.quarkus-order-ms">
     <configuration name="GatewayTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="cqrs-gateway" />
       <extension name="coverage">
@@ -585,47 +598,7 @@
       <workItem from="1775945122965" duration="6418000" />
       <workItem from="1776097779885" duration="5062000" />
       <workItem from="1776102855788" duration="2384000" />
-      <workItem from="1777046489137" duration="880000" />
-    </task>
-    <task id="LOCAL-00137" summary="change method name and endpoint">
-      <option name="closed" value="true" />
-      <created>1774019242550</created>
-      <option name="number" value="00137" />
-      <option name="presentableId" value="LOCAL-00137" />
-      <option name="project" value="LOCAL" />
-      <updated>1774019242550</updated>
-    </task>
-    <task id="LOCAL-00138" summary="add nginx in front of gateway and handle ssl termination">
-      <option name="closed" value="true" />
-      <created>1774019769397</created>
-      <option name="number" value="00138" />
-      <option name="presentableId" value="LOCAL-00138" />
-      <option name="project" value="LOCAL" />
-      <updated>1774019769397</updated>
-    </task>
-    <task id="LOCAL-00139" summary="update postman collection">
-      <option name="closed" value="true" />
-      <created>1774019777775</created>
-      <option name="number" value="00139" />
-      <option name="presentableId" value="LOCAL-00139" />
-      <option name="project" value="LOCAL" />
-      <updated>1774019777775</updated>
-    </task>
-    <task id="LOCAL-00140" summary=".idea">
-      <option name="closed" value="true" />
-      <created>1774019830120</created>
-      <option name="number" value="00140" />
-      <option name="presentableId" value="LOCAL-00140" />
-      <option name="project" value="LOCAL" />
-      <updated>1774019830120</updated>
-    </task>
-    <task id="LOCAL-00141" summary="add api versioning">
-      <option name="closed" value="true" />
-      <created>1774184299128</created>
-      <option name="number" value="00141" />
-      <option name="presentableId" value="LOCAL-00141" />
-      <option name="project" value="LOCAL" />
-      <updated>1774184299129</updated>
+      <workItem from="1777046489137" duration="2174000" />
     </task>
     <task id="LOCAL-00142" summary="remove duplicate dependency for jpa test">
       <option name="closed" value="true" />
@@ -979,7 +952,47 @@
       <option name="project" value="LOCAL" />
       <updated>1777047168221</updated>
     </task>
-    <option name="localTasksCounter" value="186" />
+    <task id="LOCAL-00186" summary="init quarkus-order-ms">
+      <option name="closed" value="true" />
+      <created>1777047386726</created>
+      <option name="number" value="00186" />
+      <option name="presentableId" value="LOCAL-00186" />
+      <option name="project" value="LOCAL" />
+      <updated>1777047386726</updated>
+    </task>
+    <task id="LOCAL-00187" summary="add quarkus-outbox-core dependency">
+      <option name="closed" value="true" />
+      <created>1777047417361</created>
+      <option name="number" value="00187" />
+      <option name="presentableId" value="LOCAL-00187" />
+      <option name="project" value="LOCAL" />
+      <updated>1777047417361</updated>
+    </task>
+    <task id="LOCAL-00188" summary="add quarkus-order-ms module to aggregator">
+      <option name="closed" value="true" />
+      <created>1777047449872</created>
+      <option name="number" value="00188" />
+      <option name="presentableId" value="LOCAL-00188" />
+      <option name="project" value="LOCAL" />
+      <updated>1777047449872</updated>
+    </task>
+    <task id="LOCAL-00189" summary="add flyway dependencies">
+      <option name="closed" value="true" />
+      <created>1777047540205</created>
+      <option name="number" value="00189" />
+      <option name="presentableId" value="LOCAL-00189" />
+      <option name="project" value="LOCAL" />
+      <updated>1777047540205</updated>
+    </task>
+    <task id="LOCAL-00190" summary="add .gitignore">
+      <option name="closed" value="true" />
+      <created>1777047567581</created>
+      <option name="number" value="00190" />
+      <option name="presentableId" value="LOCAL-00190" />
+      <option name="project" value="LOCAL" />
+      <updated>1777047567581</updated>
+    </task>
+    <option name="localTasksCounter" value="191" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1012,11 +1025,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add init migration scripts and specify flyway configuration" />
-    <MESSAGE value="add Product entity and validate strategy" />
-    <MESSAGE value="format" />
-    <MESSAGE value="implement ProductService methods" />
-    <MESSAGE value="add @Transactional annotation on service methods" />
     <MESSAGE value="add reactive dependencies" />
     <MESSAGE value="add reactive createProduct endpoint" />
     <MESSAGE value="provide write, delete, and update operations for product" />
@@ -1037,7 +1045,12 @@
     <MESSAGE value="init quarkus-outbox aggregator" />
     <MESSAGE value="add quarkus-outbox-core module with creation DTOs" />
     <MESSAGE value="add quarkus-outbox-core module" />
-    <option name="LAST_COMMIT_MESSAGE" value="add quarkus-outbox-core module" />
+    <MESSAGE value="init quarkus-order-ms" />
+    <MESSAGE value="add quarkus-outbox-core dependency" />
+    <MESSAGE value="add quarkus-order-ms module to aggregator" />
+    <MESSAGE value="add flyway dependencies" />
+    <MESSAGE value="add .gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="add .gitignore" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
