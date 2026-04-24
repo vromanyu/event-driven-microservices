@@ -35,4 +35,18 @@ public class Order {
     @UpdateTimestamp
     @Column(name = "updated_at")
     Instant updatedAt;
+
+    @Override
+    public String toString() {
+        return "Order{" +
+                "id=" + id +
+                ", orderUuid='" + orderUuid + '\'' +
+                ", itemName='" + itemName + '\'' +
+                ", productType='" + productType + '\'' +
+                ", price=" + price +
+                ", quantity=" + quantity +
+                ", createdAt=" + createdAt +
+                ", updatedAt=" + updatedAt +
+                '}';
+    }
 }
