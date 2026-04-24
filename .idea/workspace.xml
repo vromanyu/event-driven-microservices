@@ -4,17 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f53cd7e9-042e-48da-856a-18c59663b55c" name="Changes" comment="add order_uuid column">
-      <change afterPath="$PROJECT_DIR$/quarkus-outbox/quarkus-order-ms/src/main/java/com/vromanyu/order/OrderDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/quarkus-outbox/quarkus-order-ms/src/main/java/com/vromanyu/order/OrderMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/quarkus-outbox/quarkus-order-ms/src/main/java/com/vromanyu/order/OrderResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/quarkus-outbox/quarkus-order-ms/src/main/java/com/vromanyu/order/OrderService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/quarkus-outbox/quarkus-order-ms/src/main/resources/db/migration/V3__add_proce_column_to_order_table.sql" afterDir="false" />
+    <list default="true" id="f53cd7e9-042e-48da-856a-18c59663b55c" name="Changes" comment="reformat">
+      <change afterPath="$PROJECT_DIR$/quarkus-outbox/quarkus-order-ms/src/main/java/com/vromanyu/outbox/JsonPayloadConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quarkus-outbox/quarkus-order-ms/src/main/java/com/vromanyu/outbox/Outbox.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quarkus-outbox/quarkus-order-ms/src/main/java/com/vromanyu/outbox/OutboxDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quarkus-outbox/quarkus-order-ms/src/main/resources/db/migration/V4__create_outbox_table.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quarkus-outbox/quarkus-outbox-core/src/main/java/com/vromanyu/event/OrderCreatedEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jpb-settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jpb-settings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/quarkus-outbox/quarkus-order-ms/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/quarkus-outbox/quarkus-order-ms/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quarkus-outbox/quarkus-order-ms/src/main/java/com/vromanyu/order/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/quarkus-outbox/quarkus-order-ms/src/main/java/com/vromanyu/order/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quarkus-outbox/quarkus-outbox-core/src/main/java/com/vromanyu/dto/CreateOrderRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/quarkus-outbox/quarkus-outbox-core/src/main/java/com/vromanyu/dto/CreateOrderRequestDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quarkus-outbox/quarkus-outbox-core/src/main/java/com/vromanyu/dto/CreateOrderResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/quarkus-outbox/quarkus-outbox-core/src/main/java/com/vromanyu/dto/CreateOrderResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quarkus-outbox/quarkus-order-ms/src/main/java/com/vromanyu/order/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/quarkus-outbox/quarkus-order-ms/src/main/java/com/vromanyu/order/OrderService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,7 +21,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="251" />
+    <option name="cachedIndexableFilesCount" value="263" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
@@ -33,8 +32,8 @@
         <option value="Exception" />
         <option value="package-info" />
         <option value="Interface" />
-        <option value="Record" />
         <option value="com.intellij.jpb.FlywayMigrationScript" />
+        <option value="Record" />
         <option value="Class" />
       </list>
     </option>
@@ -60,6 +59,9 @@
     &quot;accountId&quot;: &quot;e7f8e21a-3b99-4e9f-9cd7-1295ec96f54d&quot;
   }
 }</component>
+  <component name="HttpClientOnboardingState">{
+  &quot;isOnboardingCommentShown&quot;: true
+}</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -84,6 +86,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "HTTP Request.generated-requests | #5.executor": "Run",
     "JUnit.All in gateway (1).executor": "Run",
     "JUnit.All in gateway (2).executor": "Run",
     "JUnit.All in gateway (3).executor": "Run",
@@ -253,10 +256,17 @@
     </option>
     <option name="configurationStatuses">
       <map>
+        <entry key="HttpClient.HttpRequestRunConfigurationType">
+          <value>
+            <map>
+              <entry key="generated-requests | #5" value="STOPPED" />
+            </map>
+          </value>
+        </entry>
         <entry key="QuarkusRunConfigurationType">
           <value>
             <map>
-              <entry key="quarkus-order-ms" value="FAILED" />
+              <entry key="quarkus-order-ms" value="STOPPED" />
               <entry key="query-ms-qrk" value="STOPPED" />
               <entry key="write-ms-qrk" value="STOPPED" />
             </map>
@@ -589,47 +599,8 @@
       <workItem from="1775945122965" duration="6418000" />
       <workItem from="1776097779885" duration="5062000" />
       <workItem from="1776102855788" duration="2384000" />
-      <workItem from="1777046489137" duration="3226000" />
-    </task>
-    <task id="LOCAL-00146" summary=".idea">
-      <option name="closed" value="true" />
-      <created>1774192248627</created>
-      <option name="number" value="00146" />
-      <option name="presentableId" value="LOCAL-00146" />
-      <option name="project" value="LOCAL" />
-      <updated>1774192248627</updated>
-    </task>
-    <task id="LOCAL-00147" summary="disable retries for the RestClient and test rate limiter">
-      <option name="closed" value="true" />
-      <created>1774194211989</created>
-      <option name="number" value="00147" />
-      <option name="presentableId" value="LOCAL-00147" />
-      <option name="project" value="LOCAL" />
-      <updated>1774194211989</updated>
-    </task>
-    <task id="LOCAL-00148" summary=".idea">
-      <option name="closed" value="true" />
-      <created>1774194218785</created>
-      <option name="number" value="00148" />
-      <option name="presentableId" value="LOCAL-00148" />
-      <option name="project" value="LOCAL" />
-      <updated>1774194218785</updated>
-    </task>
-    <task id="LOCAL-00149" summary="init cqrs-quarkus">
-      <option name="closed" value="true" />
-      <created>1775860113121</created>
-      <option name="number" value="00149" />
-      <option name="presentableId" value="LOCAL-00149" />
-      <option name="project" value="LOCAL" />
-      <updated>1775860113121</updated>
-    </task>
-    <task id="LOCAL-00150" summary="init query-ms-qrk">
-      <option name="closed" value="true" />
-      <created>1775860209014</created>
-      <option name="number" value="00150" />
-      <option name="presentableId" value="LOCAL-00150" />
-      <option name="project" value="LOCAL" />
-      <updated>1775860209014</updated>
+      <workItem from="1777046489137" duration="4121000" />
+      <workItem from="1777067700275" duration="1761000" />
     </task>
     <task id="LOCAL-00151" summary="init write-ms-qrk">
       <option name="closed" value="true" />
@@ -983,7 +954,47 @@
       <option name="project" value="LOCAL" />
       <updated>1777049058242</updated>
     </task>
-    <option name="localTasksCounter" value="195" />
+    <task id="LOCAL-00195" summary="add jackson dependency">
+      <option name="closed" value="true" />
+      <created>1777049928300</created>
+      <option name="number" value="00195" />
+      <option name="presentableId" value="LOCAL-00195" />
+      <option name="project" value="LOCAL" />
+      <updated>1777049928300</updated>
+    </task>
+    <task id="LOCAL-00196" summary="fix price datatype and add price to order entity and migration script">
+      <option name="closed" value="true" />
+      <created>1777049947445</created>
+      <option name="number" value="00196" />
+      <option name="presentableId" value="LOCAL-00196" />
+      <option name="project" value="LOCAL" />
+      <updated>1777049947445</updated>
+    </task>
+    <task id="LOCAL-00197" summary="expose endpoint to create an order">
+      <option name="closed" value="true" />
+      <created>1777049959214</created>
+      <option name="number" value="00197" />
+      <option name="presentableId" value="LOCAL-00197" />
+      <option name="project" value="LOCAL" />
+      <updated>1777049959215</updated>
+    </task>
+    <task id="LOCAL-00198" summary=".idea">
+      <option name="closed" value="true" />
+      <created>1777049962437</created>
+      <option name="number" value="00198" />
+      <option name="presentableId" value="LOCAL-00198" />
+      <option name="project" value="LOCAL" />
+      <updated>1777049962438</updated>
+    </task>
+    <task id="LOCAL-00199" summary="reformat">
+      <option name="closed" value="true" />
+      <created>1777049997070</created>
+      <option name="number" value="00199" />
+      <option name="presentableId" value="LOCAL-00199" />
+      <option name="project" value="LOCAL" />
+      <updated>1777049997070</updated>
+    </task>
+    <option name="localTasksCounter" value="200" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1016,10 +1027,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add channel configuration" />
-    <MESSAGE value="init outbox-pattern module" />
-    <MESSAGE value="init order-oubox microservice" />
-    <MESSAGE value="init order-outbox microservice" />
     <MESSAGE value="remove" />
     <MESSAGE value="init order-outbox module" />
     <MESSAGE value="add entities and initial migration" />
@@ -1039,9 +1046,13 @@
     <MESSAGE value="add .gitignore" />
     <MESSAGE value="add postgresql driver dependency" />
     <MESSAGE value="add Order entity and flyway migration + configuration" />
-    <MESSAGE value=".idea" />
     <MESSAGE value="add order_uuid column" />
-    <option name="LAST_COMMIT_MESSAGE" value="add order_uuid column" />
+    <MESSAGE value="add jackson dependency" />
+    <MESSAGE value="fix price datatype and add price to order entity and migration script" />
+    <MESSAGE value="expose endpoint to create an order" />
+    <MESSAGE value=".idea" />
+    <MESSAGE value="reformat" />
+    <option name="LAST_COMMIT_MESSAGE" value="reformat" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1054,7 +1065,7 @@
         <line-breakpoint enabled="true" type="java-method">
           <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-oauth2-resource-server/7.0.3/spring-security-oauth2-resource-server-7.0.3-sources.jar!/org/springframework/security/oauth2/server/resource/web/authentication/BearerTokenAuthenticationFilter.java</url>
           <line>159</line>
-          <properties class="org.springframework.security.oauth2.server.resource.web.authentication.BearerTokenAuthenticationFilter">
+          <properties class="org.springframework.security.oauth2.server.resource.web.authentication.BearerTokenAuthenticationFilter" method="doFilterInternal">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
@@ -1063,7 +1074,7 @@
         <line-breakpoint type="java-method">
           <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/7.0.3/spring-security-web-7.0.3-sources.jar!/org/springframework/security/web/access/ExceptionTranslationFilter.java</url>
           <line>117</line>
-          <properties class="org.springframework.security.web.access.ExceptionTranslationFilter">
+          <properties class="org.springframework.security.web.access.ExceptionTranslationFilter" method="doFilter">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
