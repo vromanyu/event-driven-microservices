@@ -16,6 +16,7 @@
         <module name="order-ms" />
         <module name="cqrs-core" />
         <module name="write-ms-qrk" />
+        <module name="quarkus-outbox-core" />
         <module name="query-ms-qrk" />
         <module name="query-ms" />
       </profile>
