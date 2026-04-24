@@ -4,9 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f53cd7e9-042e-48da-856a-18c59663b55c" name="Changes" comment=".idea">
-      <change afterPath="$PROJECT_DIR$/quarkus-outbox/quarkus-order-ms/src/main/resources/db/migration/V2__add_order_uuid_column_to_order.sql" afterDir="false" />
+    <list default="true" id="f53cd7e9-042e-48da-856a-18c59663b55c" name="Changes" comment="add order_uuid column">
+      <change afterPath="$PROJECT_DIR$/quarkus-outbox/quarkus-order-ms/src/main/java/com/vromanyu/order/OrderDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quarkus-outbox/quarkus-order-ms/src/main/java/com/vromanyu/order/OrderMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quarkus-outbox/quarkus-order-ms/src/main/java/com/vromanyu/order/OrderResource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quarkus-outbox/quarkus-order-ms/src/main/java/com/vromanyu/order/OrderService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quarkus-outbox/quarkus-order-ms/src/main/resources/db/migration/V3__add_proce_column_to_order_table.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quarkus-outbox/quarkus-order-ms/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/quarkus-outbox/quarkus-order-ms/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/quarkus-outbox/quarkus-order-ms/src/main/java/com/vromanyu/order/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/quarkus-outbox/quarkus-order-ms/src/main/java/com/vromanyu/order/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quarkus-outbox/quarkus-outbox-core/src/main/java/com/vromanyu/dto/CreateOrderRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/quarkus-outbox/quarkus-outbox-core/src/main/java/com/vromanyu/dto/CreateOrderRequestDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quarkus-outbox/quarkus-outbox-core/src/main/java/com/vromanyu/dto/CreateOrderResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/quarkus-outbox/quarkus-outbox-core/src/main/java/com/vromanyu/dto/CreateOrderResponseDto.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,8 +34,8 @@
         <option value="package-info" />
         <option value="Interface" />
         <option value="Record" />
-        <option value="Class" />
         <option value="com.intellij.jpb.FlywayMigrationScript" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -166,6 +174,7 @@
     "Maven.outbox-pattern [clean].executor": "Run",
     "Maven.quarkus-order-ms [package].executor": "Run",
     "Maven.quarkus-outbox [clean,install].executor": "Run",
+    "Maven.quarkus-outbox-core [clean,install].executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "Notification.DisplayName-DoNotAsk-DatabaseConfigFileWatcher.found": "New/updated database configurations found",
     "Notification.DoNotAsk-DatabaseConfigFileWatcher.found": "true",
@@ -247,7 +256,7 @@
         <entry key="QuarkusRunConfigurationType">
           <value>
             <map>
-              <entry key="quarkus-order-ms" value="STOPPED" />
+              <entry key="quarkus-order-ms" value="FAILED" />
               <entry key="query-ms-qrk" value="STOPPED" />
               <entry key="write-ms-qrk" value="STOPPED" />
             </map>
@@ -264,6 +273,9 @@
     </option>
   </component>
   <component name="RunManager" selected="Quarkus.quarkus-order-ms">
+    <configuration name="generated-requests | #5" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" executionIdentifier="#5" index="5" runType="Run single request">
+      <method v="2" />
+    </configuration>
     <configuration name="GatewayTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="cqrs-gateway" />
       <extension name="coverage">
@@ -290,22 +302,6 @@
       <option name="PACKAGE_NAME" value="org.vromanyu.gateway" />
       <option name="MAIN_CLASS_NAME" value="org.vromanyu.gateway.GatewayTests" />
       <option name="METHOD_NAME" value="whenAllProductsAndThereAreNoProducts_thenReturnEmptyList" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GatewayTests.whenAllProductsAndThereAreProducts_thenReturnAllProducts" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="cqrs-gateway" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.vromanyu.gateway.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.vromanyu.gateway" />
-      <option name="MAIN_CLASS_NAME" value="org.vromanyu.gateway.GatewayTests" />
-      <option name="METHOD_NAME" value="whenAllProductsAndThereAreProducts_thenReturnAllProducts" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -518,9 +514,9 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="HTTP Request.generated-requests | #5" />
       <item itemvalue="JUnit.GatewayTests" />
       <item itemvalue="JUnit.GatewayTests.whenAllProductsAndThereAreNoProducts_thenReturnEmptyList" />
-      <item itemvalue="JUnit.GatewayTests.whenAllProductsAndThereAreProducts_thenReturnAllProducts" />
       <item itemvalue="JUnit.GatewayTests.whenMoreThanOneRequestPerSecond_returnTooManyRequests" />
       <item itemvalue="JUnit.gateway in cqrs-gateway" />
       <item itemvalue="Quarkus.quarkus-order-ms" />
@@ -537,11 +533,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="HTTP Request.generated-requests | #5" />
         <item itemvalue="JUnit.GatewayTests" />
         <item itemvalue="JUnit.GatewayTests.whenMoreThanOneRequestPerSecond_returnTooManyRequests" />
         <item itemvalue="JUnit.gateway in cqrs-gateway" />
         <item itemvalue="JUnit.GatewayTests.whenAllProductsAndThereAreNoProducts_thenReturnEmptyList" />
-        <item itemvalue="JUnit.GatewayTests.whenAllProductsAndThereAreProducts_thenReturnAllProducts" />
       </list>
     </recent_temporary>
   </component>
@@ -593,15 +589,7 @@
       <workItem from="1775945122965" duration="6418000" />
       <workItem from="1776097779885" duration="5062000" />
       <workItem from="1776102855788" duration="2384000" />
-      <workItem from="1777046489137" duration="2490000" />
-    </task>
-    <task id="LOCAL-00145" summary="apply rate limiting to allow one request per second&#10;&#10;The production environment uses Redis, while testing/development uses Caffeine">
-      <option name="closed" value="true" />
-      <created>1774192241155</created>
-      <option name="number" value="00145" />
-      <option name="presentableId" value="LOCAL-00145" />
-      <option name="project" value="LOCAL" />
-      <updated>1774192241155</updated>
+      <workItem from="1777046489137" duration="3226000" />
     </task>
     <task id="LOCAL-00146" summary=".idea">
       <option name="closed" value="true" />
@@ -987,7 +975,15 @@
       <option name="project" value="LOCAL" />
       <updated>1777048696105</updated>
     </task>
-    <option name="localTasksCounter" value="194" />
+    <task id="LOCAL-00194" summary="add order_uuid column">
+      <option name="closed" value="true" />
+      <created>1777049058242</created>
+      <option name="number" value="00194" />
+      <option name="presentableId" value="LOCAL-00194" />
+      <option name="project" value="LOCAL" />
+      <updated>1777049058242</updated>
+    </task>
+    <option name="localTasksCounter" value="195" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1020,7 +1016,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="provide write, delete, and update operations for product" />
     <MESSAGE value="add channel configuration" />
     <MESSAGE value="init outbox-pattern module" />
     <MESSAGE value="init order-oubox microservice" />
@@ -1045,7 +1040,8 @@
     <MESSAGE value="add postgresql driver dependency" />
     <MESSAGE value="add Order entity and flyway migration + configuration" />
     <MESSAGE value=".idea" />
-    <option name="LAST_COMMIT_MESSAGE" value=".idea" />
+    <MESSAGE value="add order_uuid column" />
+    <option name="LAST_COMMIT_MESSAGE" value="add order_uuid column" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
