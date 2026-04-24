@@ -22,6 +22,9 @@ public class Order {
     @Column(name = "product_type", nullable = false, length = 500)
     String productType;
 
+    @Column(name = "price", nullable = false)
+    Double price;
+
     @Column(name = "quantity", nullable = false)
     Integer quantity;
 

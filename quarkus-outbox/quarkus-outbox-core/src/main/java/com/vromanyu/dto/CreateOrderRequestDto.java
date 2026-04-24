@@ -1,4 +1,4 @@
 package com.vromanyu.dto;
 
-public record CreateOrderRequestDto(String itemName, String productType, int quantity, long price) {
+public record CreateOrderRequestDto(String itemName, String productType, int quantity, double price) {
 }
