@@ -4,33 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f53cd7e9-042e-48da-856a-18c59663b55c" name="Changes" comment="add service and controller">
-      <change beforePath="$PROJECT_DIR$/.idea/diff-generator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/diff-generator.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jpb-settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jpb-settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outbox-pattern/order-outbox/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/outbox-pattern/order-outbox/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/outbox-pattern/order-outbox/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/outbox-pattern/order-outbox/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/outbox-pattern/order-outbox/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/outbox-pattern/order-outbox/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/outbox-pattern/order-outbox/src/main/java/com/vromanyu/outbox/OrderOutboxApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/outbox-pattern/order-outbox/src/main/java/com/vromanyu/outbox/order/CreateOrderRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/outbox-pattern/order-outbox/src/main/java/com/vromanyu/outbox/order/CreateOrderResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/outbox-pattern/order-outbox/src/main/java/com/vromanyu/outbox/order/Order.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/outbox-pattern/order-outbox/src/main/java/com/vromanyu/outbox/order/OrderController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/outbox-pattern/order-outbox/src/main/java/com/vromanyu/outbox/order/OrderOutbox.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/outbox-pattern/order-outbox/src/main/java/com/vromanyu/outbox/order/OrderOutboxRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/outbox-pattern/order-outbox/src/main/java/com/vromanyu/outbox/order/OrderRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/outbox-pattern/order-outbox/src/main/java/com/vromanyu/outbox/order/OrderService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/outbox-pattern/order-outbox/src/main/java/com/vromanyu/outbox/order/OrderServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/outbox-pattern/order-outbox/src/main/resources/application.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/outbox-pattern/order-outbox/src/main/resources/db/migration/V1__create_tables.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/outbox-pattern/order-outbox/src/main/resources/db/migration/V2__add_processed_column.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/outbox-pattern/order-outbox/src/test/java/com/vromanyu/outbox/OrderOutboxApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/outbox-pattern/pom.xml" beforeDir="false" />
-    </list>
+    <list default="true" id="f53cd7e9-042e-48da-856a-18c59663b55c" name="Changes" comment="implement outbox pattern using quarkus" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -572,15 +546,7 @@
       <workItem from="1775945122965" duration="6418000" />
       <workItem from="1776097779885" duration="5062000" />
       <workItem from="1776102855788" duration="2384000" />
-      <workItem from="1777046489137" duration="44000" />
-    </task>
-    <task id="LOCAL-00133" summary="exclude OAuth2ResourceServerAutoConfiguration in ProductControllerTests">
-      <option name="closed" value="true" />
-      <created>1774010617319</created>
-      <option name="number" value="00133" />
-      <option name="presentableId" value="LOCAL-00133" />
-      <option name="project" value="LOCAL" />
-      <updated>1774010617319</updated>
+      <workItem from="1777046489137" duration="396000" />
     </task>
     <task id="LOCAL-00134" summary="security configuration for prod and other environments">
       <option name="closed" value="true" />
@@ -966,7 +932,15 @@
       <option name="project" value="LOCAL" />
       <updated>1776105229310</updated>
     </task>
-    <option name="localTasksCounter" value="182" />
+    <task id="LOCAL-00182" summary="implement outbox pattern using quarkus">
+      <option name="closed" value="true" />
+      <created>1777046555656</created>
+      <option name="number" value="00182" />
+      <option name="presentableId" value="LOCAL-00182" />
+      <option name="project" value="LOCAL" />
+      <updated>1777046555656</updated>
+    </task>
+    <option name="localTasksCounter" value="183" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -999,7 +973,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add .gitignore" />
     <MESSAGE value="specify packaging" />
     <MESSAGE value="change dep" />
     <MESSAGE value="add modules" />
@@ -1024,7 +997,8 @@
     <MESSAGE value="add is_processed column to order table" />
     <MESSAGE value="create dtos" />
     <MESSAGE value="add service and controller" />
-    <option name="LAST_COMMIT_MESSAGE" value="add service and controller" />
+    <MESSAGE value="implement outbox pattern using quarkus" />
+    <option name="LAST_COMMIT_MESSAGE" value="implement outbox pattern using quarkus" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

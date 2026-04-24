@@ -17,6 +17,7 @@
         <option value="$PROJECT_DIR$/cqrs-quarkus/write-ms-qrk/pom.xml" />
         <option value="$PROJECT_DIR$/outbox-pattern/pom.xml" />
         <option value="$PROJECT_DIR$/outbox-pattern/order-outbox/pom.xml" />
+        <option value="$PROJECT_DIR$/quarkus-outbox/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

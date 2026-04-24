@@ -7,7 +7,6 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="cqrs-gateway" />
-        <module name="order-outbox" />
         <module name="write-ms" />
         <module name="choreography-gateway" />
         <module name="choreography-core" />
@@ -22,6 +21,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="order-outbox" target="26" />
       <module name="outbox-pattern" target="1.5" />
     </bytecodeTargetLevel>
   </component>
