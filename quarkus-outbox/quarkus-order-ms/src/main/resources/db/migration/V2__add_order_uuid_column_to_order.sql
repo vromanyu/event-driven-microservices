@@ -1,1 +1,2 @@
-ALTER TABLE "order" ADD COLUMN order_uuid VARCHAR(255) NOT NULL;
+ALTER TABLE "order"
+    ADD COLUMN order_uuid VARCHAR(255) NOT NULL;
