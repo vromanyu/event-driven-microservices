@@ -35,12 +35,14 @@ public class OrderService {
                 createdOrder.quantity,
                 createdOrder.price,
                 createdOrder.createdAt);
+
         Outbox outbox = new Outbox();
         outbox.setOrderId(createdOrder.id);
         outbox.setProcessed(false);
         outbox.setPayload(orderCreatedEvent);
         outboxDao.create(outbox);
         Log.infof("outbox created: %s", outbox);
+
         return OrderMapper.toOrderResponse(createdOrder);
     }
 }
