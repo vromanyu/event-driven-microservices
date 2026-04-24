@@ -11,5 +11,6 @@
 
     <modules>
         <module>quarkus-outbox-core</module>
+        <module>quarkus-order-ms</module>
     </modules>
 </project>
