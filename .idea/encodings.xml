@@ -24,6 +24,8 @@
     <file url="file://$PROJECT_DIR$/outbox-pattern/order-outbox/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/outbox-pattern/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/outbox-pattern/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/quarkus-outbox/quarkus-order-ms/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/quarkus-outbox/quarkus-order-ms/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/quarkus-outbox/quarkus-outbox-core/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/quarkus-outbox/quarkus-outbox-core/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/quarkus-outbox/src/main/java" charset="UTF-8" />

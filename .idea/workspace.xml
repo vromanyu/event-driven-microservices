@@ -327,6 +327,44 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="quarkus-order-ms" type="QuarkusRunConfigurationType" factoryName="Quarkus" nameIsGenerated="true">
+      <module name="quarkus-order-ms" />
+      <QsMavenRunConfiguration>
+        <MavenSettings>
+          <option name="myGeneralSettings" />
+          <option name="myRunnerSettings" />
+          <option name="myRunnerParameters">
+            <MavenRunnerParameters>
+              <option name="cmdOptions" />
+              <option name="profiles">
+                <set />
+              </option>
+              <option name="goals">
+                <list>
+                  <option value="quarkus:dev" />
+                </list>
+              </option>
+              <option name="multimoduleDir" />
+              <option name="pomFileName" value="pom.xml" />
+              <option name="profilesMap">
+                <map />
+              </option>
+              <option name="projectsCmdOptionValues">
+                <list />
+              </option>
+              <option name="resolveToWorkspace" value="false" />
+              <option name="workingDirPath" value="$PROJECT_DIR$/quarkus-outbox/quarkus-order-ms" />
+            </MavenRunnerParameters>
+          </option>
+        </MavenSettings>
+        <targetMavenLocalRepo />
+        <emulateTerminal>true</emulateTerminal>
+        <profile>dev</profile>
+      </QsMavenRunConfiguration>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="query-ms-qrk" type="QuarkusRunConfigurationType" factoryName="Quarkus" nameIsGenerated="true">
       <module name="query-ms-qrk" />
       <QsMavenRunConfiguration>
@@ -477,6 +515,7 @@
       <item itemvalue="JUnit.GatewayTests.whenAllProductsAndThereAreProducts_thenReturnAllProducts" />
       <item itemvalue="JUnit.GatewayTests.whenMoreThanOneRequestPerSecond_returnTooManyRequests" />
       <item itemvalue="JUnit.gateway in cqrs-gateway" />
+      <item itemvalue="Quarkus.quarkus-order-ms" />
       <item itemvalue="Quarkus.query-ms-qrk" />
       <item itemvalue="Quarkus.write-ms-qrk" />
       <item itemvalue="Spring Boot.ChoreographyGatewayApplication" />
