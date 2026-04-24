@@ -4,13 +4,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f53cd7e9-042e-48da-856a-18c59663b55c" name="Changes" comment="remove">
-      <change afterPath="$PROJECT_DIR$/outbox-pattern/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outbox-pattern/order-outbox/src/main/main.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/outbox-pattern/order-outbox/src/test/test.iml" beforeDir="false" />
+    <list default="true" id="f53cd7e9-042e-48da-856a-18c59663b55c" name="Changes" comment="add service and controller">
+      <change beforePath="$PROJECT_DIR$/.idea/diff-generator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/diff-generator.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jpb-settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jpb-settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outbox-pattern/order-outbox/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outbox-pattern/order-outbox/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outbox-pattern/order-outbox/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outbox-pattern/order-outbox/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outbox-pattern/order-outbox/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outbox-pattern/order-outbox/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outbox-pattern/order-outbox/src/main/java/com/vromanyu/outbox/OrderOutboxApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outbox-pattern/order-outbox/src/main/java/com/vromanyu/outbox/order/CreateOrderRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outbox-pattern/order-outbox/src/main/java/com/vromanyu/outbox/order/CreateOrderResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outbox-pattern/order-outbox/src/main/java/com/vromanyu/outbox/order/Order.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outbox-pattern/order-outbox/src/main/java/com/vromanyu/outbox/order/OrderController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outbox-pattern/order-outbox/src/main/java/com/vromanyu/outbox/order/OrderOutbox.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outbox-pattern/order-outbox/src/main/java/com/vromanyu/outbox/order/OrderOutboxRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outbox-pattern/order-outbox/src/main/java/com/vromanyu/outbox/order/OrderRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outbox-pattern/order-outbox/src/main/java/com/vromanyu/outbox/order/OrderService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outbox-pattern/order-outbox/src/main/java/com/vromanyu/outbox/order/OrderServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outbox-pattern/order-outbox/src/main/resources/application.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outbox-pattern/order-outbox/src/main/resources/db/migration/V1__create_tables.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outbox-pattern/order-outbox/src/main/resources/db/migration/V2__add_processed_column.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outbox-pattern/order-outbox/src/test/java/com/vromanyu/outbox/OrderOutboxApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outbox-pattern/pom.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,7 +37,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="228" />
+    <option name="cachedIndexableFilesCount" value="251" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
@@ -26,9 +45,11 @@
       <list>
         <option value="Enum" />
         <option value="GitHub Workflow" />
-        <option value="Record" />
-        <option value="Interface" />
         <option value="Exception" />
+        <option value="package-info" />
+        <option value="com.intellij.jpb.FlywayMigrationScript" />
+        <option value="Interface" />
+        <option value="Record" />
         <option value="Class" />
       </list>
     </option>
@@ -54,6 +75,13 @@
     &quot;accountId&quot;: &quot;e7f8e21a-3b99-4e9f-9cd7-1295ec96f54d&quot;
   }
 }</component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
@@ -177,6 +205,7 @@
     &quot;Spring Boot.CqrsGatewayApplication.executor&quot;: &quot;Run&quot;,
     &quot;Spring Boot.GatewayApplication.executor&quot;: &quot;Run&quot;,
     &quot;Spring Boot.OrderMsApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.OrderOutboxApplication (1).executor&quot;: &quot;Run&quot;,
     &quot;Spring Boot.PaymentMsApplication.executor&quot;: &quot;Run&quot;,
     &quot;Spring Boot.QueryMsApplication.executor&quot;: &quot;Run&quot;,
     &quot;Spring Boot.WriteMsApplication.executor&quot;: &quot;Run&quot;,
@@ -185,7 +214,7 @@
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/vromanyu/Repositories/event-driven-microservices/outbox-pattern&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/vromanyu/Repositories/event-driven-microservices/outbox-pattern/order-outbox&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -242,10 +271,17 @@
             </map>
           </value>
         </entry>
+        <entry key="SpringBootApplicationConfigurationType">
+          <value>
+            <map>
+              <entry key="OrderOutboxApplication (1)" value="STOPPED" />
+            </map>
+          </value>
+        </entry>
       </map>
     </option>
   </component>
-  <component name="RunManager" selected="Quarkus.write-ms-qrk">
+  <component name="RunManager" selected="Spring Boot.OrderOutboxApplication (1)">
     <configuration name="GatewayTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="cqrs-gateway" />
       <extension name="coverage">
@@ -415,6 +451,11 @@
       </method>
     </configuration>
     <configuration name="OrderOutboxApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <envs>
+        <env name="SPRING_DATASOURCE_USERNAME" value="vromanyu" />
+        <env name="SPRING_DATASOURCE_PASSWORD" value="vromanyu" />
+        <env name="SPRING_DATASOURCE_URL" value="jdbc:postgresql://localhost:5432/vromanyu_db" />
+      </envs>
       <module name="order-outbox" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.vromanyu.outbox.OrderOutboxApplication" />
       <method v="2">
@@ -464,11 +505,11 @@
       <item itemvalue="JUnit.gateway in cqrs-gateway" />
       <item itemvalue="Quarkus.query-ms-qrk" />
       <item itemvalue="Quarkus.write-ms-qrk" />
-      <item itemvalue="Spring Boot.OrderOutboxApplication (1)" />
-      <item itemvalue="Spring Boot.OrderOutboxApplication" />
       <item itemvalue="Spring Boot.ChoreographyGatewayApplication" />
       <item itemvalue="Spring Boot.CqrsGatewayApplication" />
       <item itemvalue="Spring Boot.OrderMsApplication" />
+      <item itemvalue="Spring Boot.OrderOutboxApplication (1)" />
+      <item itemvalue="Spring Boot.OrderOutboxApplication" />
       <item itemvalue="Spring Boot.PaymentMsApplication" />
       <item itemvalue="Spring Boot.QueryMsApplication" />
       <item itemvalue="Spring Boot.WriteMsApplication" />
@@ -530,62 +571,8 @@
       <workItem from="1775921645661" duration="5694000" />
       <workItem from="1775945122965" duration="6418000" />
       <workItem from="1776097779885" duration="5062000" />
-    </task>
-    <task id="LOCAL-00126" summary=".idea">
-      <option name="closed" value="true" />
-      <created>1773851207403</created>
-      <option name="number" value="00126" />
-      <option name="presentableId" value="LOCAL-00126" />
-      <option name="project" value="LOCAL" />
-      <updated>1773851207403</updated>
-    </task>
-    <task id="LOCAL-00127" summary="add postman collection">
-      <option name="closed" value="true" />
-      <created>1773863501424</created>
-      <option name="number" value="00127" />
-      <option name="presentableId" value="LOCAL-00127" />
-      <option name="project" value="LOCAL" />
-      <updated>1773863501425</updated>
-    </task>
-    <task id="LOCAL-00128" summary="remove duplicate dependency">
-      <option name="closed" value="true" />
-      <created>1774010524867</created>
-      <option name="number" value="00128" />
-      <option name="presentableId" value="LOCAL-00128" />
-      <option name="project" value="LOCAL" />
-      <updated>1774010524867</updated>
-    </task>
-    <task id="LOCAL-00129" summary="use resource server dependency">
-      <option name="closed" value="true" />
-      <created>1774010533326</created>
-      <option name="number" value="00129" />
-      <option name="presentableId" value="LOCAL-00129" />
-      <option name="project" value="LOCAL" />
-      <updated>1774010533326</updated>
-    </task>
-    <task id="LOCAL-00130" summary="remove oauth2 client dependency">
-      <option name="closed" value="true" />
-      <created>1774010546336</created>
-      <option name="number" value="00130" />
-      <option name="presentableId" value="LOCAL-00130" />
-      <option name="project" value="LOCAL" />
-      <updated>1774010546336</updated>
-    </task>
-    <task id="LOCAL-00131" summary="add resource server configuration">
-      <option name="closed" value="true" />
-      <created>1774010563768</created>
-      <option name="number" value="00131" />
-      <option name="presentableId" value="LOCAL-00131" />
-      <option name="project" value="LOCAL" />
-      <updated>1774010563768</updated>
-    </task>
-    <task id="LOCAL-00132" summary="log the bearer token when running in production mode">
-      <option name="closed" value="true" />
-      <created>1774010581158</created>
-      <option name="number" value="00132" />
-      <option name="presentableId" value="LOCAL-00132" />
-      <option name="project" value="LOCAL" />
-      <updated>1774010581158</updated>
+      <workItem from="1776102855788" duration="2384000" />
+      <workItem from="1777046489137" duration="44000" />
     </task>
     <task id="LOCAL-00133" summary="exclude OAuth2ResourceServerAutoConfiguration in ProductControllerTests">
       <option name="closed" value="true" />
@@ -923,7 +910,63 @@
       <option name="project" value="LOCAL" />
       <updated>1776102649509</updated>
     </task>
-    <option name="localTasksCounter" value="175" />
+    <task id="LOCAL-00175" summary="init order-outbox module">
+      <option name="closed" value="true" />
+      <created>1776102931085</created>
+      <option name="number" value="00175" />
+      <option name="presentableId" value="LOCAL-00175" />
+      <option name="project" value="LOCAL" />
+      <updated>1776102931085</updated>
+    </task>
+    <task id="LOCAL-00176" summary="add entities and initial migration">
+      <option name="closed" value="true" />
+      <created>1776103654340</created>
+      <option name="number" value="00176" />
+      <option name="presentableId" value="LOCAL-00176" />
+      <option name="project" value="LOCAL" />
+      <updated>1776103654340</updated>
+    </task>
+    <task id="LOCAL-00177" summary="define application.properties for basic and jpa/flyway configurations">
+      <option name="closed" value="true" />
+      <created>1776104432518</created>
+      <option name="number" value="00177" />
+      <option name="presentableId" value="LOCAL-00177" />
+      <option name="project" value="LOCAL" />
+      <updated>1776104432518</updated>
+    </task>
+    <task id="LOCAL-00178" summary="define repositories">
+      <option name="closed" value="true" />
+      <created>1776104483359</created>
+      <option name="number" value="00178" />
+      <option name="presentableId" value="LOCAL-00178" />
+      <option name="project" value="LOCAL" />
+      <updated>1776104483359</updated>
+    </task>
+    <task id="LOCAL-00179" summary="add is_processed column to order table">
+      <option name="closed" value="true" />
+      <created>1776104831763</created>
+      <option name="number" value="00179" />
+      <option name="presentableId" value="LOCAL-00179" />
+      <option name="project" value="LOCAL" />
+      <updated>1776104831763</updated>
+    </task>
+    <task id="LOCAL-00180" summary="create dtos">
+      <option name="closed" value="true" />
+      <created>1776105220244</created>
+      <option name="number" value="00180" />
+      <option name="presentableId" value="LOCAL-00180" />
+      <option name="project" value="LOCAL" />
+      <updated>1776105220244</updated>
+    </task>
+    <task id="LOCAL-00181" summary="add service and controller">
+      <option name="closed" value="true" />
+      <created>1776105229310</created>
+      <option name="number" value="00181" />
+      <option name="presentableId" value="LOCAL-00181" />
+      <option name="project" value="LOCAL" />
+      <updated>1776105229310</updated>
+    </task>
+    <option name="localTasksCounter" value="182" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -956,13 +999,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="disable retries for the RestClient and test rate limiter" />
-    <MESSAGE value="init cqrs-quarkus" />
-    <MESSAGE value="init query-ms-qrk" />
-    <MESSAGE value="init write-ms-qrk" />
-    <MESSAGE value="http port" />
-    <MESSAGE value="add postgres driver, hibernate and flyway" />
-    <MESSAGE value="add cqrs-core-qrk" />
     <MESSAGE value="add .gitignore" />
     <MESSAGE value="specify packaging" />
     <MESSAGE value="change dep" />
@@ -981,7 +1017,14 @@
     <MESSAGE value="init order-oubox microservice" />
     <MESSAGE value="init order-outbox microservice" />
     <MESSAGE value="remove" />
-    <option name="LAST_COMMIT_MESSAGE" value="remove" />
+    <MESSAGE value="init order-outbox module" />
+    <MESSAGE value="add entities and initial migration" />
+    <MESSAGE value="define application.properties for basic and jpa/flyway configurations" />
+    <MESSAGE value="define repositories" />
+    <MESSAGE value="add is_processed column to order table" />
+    <MESSAGE value="create dtos" />
+    <MESSAGE value="add service and controller" />
+    <option name="LAST_COMMIT_MESSAGE" value="add service and controller" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -994,7 +1037,7 @@
         <line-breakpoint enabled="true" type="java-method">
           <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-oauth2-resource-server/7.0.3/spring-security-oauth2-resource-server-7.0.3-sources.jar!/org/springframework/security/oauth2/server/resource/web/authentication/BearerTokenAuthenticationFilter.java</url>
           <line>159</line>
-          <properties class="org.springframework.security.oauth2.server.resource.web.authentication.BearerTokenAuthenticationFilter" method="doFilterInternal">
+          <properties class="org.springframework.security.oauth2.server.resource.web.authentication.BearerTokenAuthenticationFilter">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
@@ -1003,7 +1046,7 @@
         <line-breakpoint type="java-method">
           <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/7.0.3/spring-security-web-7.0.3-sources.jar!/org/springframework/security/web/access/ExceptionTranslationFilter.java</url>
           <line>117</line>
-          <properties class="org.springframework.security.web.access.ExceptionTranslationFilter" method="doFilter">
+          <properties class="org.springframework.security.web.access.ExceptionTranslationFilter">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
