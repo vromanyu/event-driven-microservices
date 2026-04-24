@@ -13,6 +13,9 @@ public class Order {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
 
+    @Column(name = "order_uuid", nullable = false)
+    String orderUuid;
+
     @Column(name = "item_name", nullable = false, length = 300)
     String itemName;
 

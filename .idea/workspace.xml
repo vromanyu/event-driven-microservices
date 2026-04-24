@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f53cd7e9-042e-48da-856a-18c59663b55c" name="Changes" comment="add .gitignore">
-      <change afterPath="$PROJECT_DIR$/quarkus-outbox/quarkus-order-ms/src/main/java/com/vromanyu/order/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/quarkus-outbox/quarkus-order-ms/src/main/resources/db/migration/V1__create_order_table.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/diff-generator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/diff-generator.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jpb-settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jpb-settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quarkus-outbox/quarkus-order-ms/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/quarkus-outbox/quarkus-order-ms/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quarkus-outbox/quarkus-order-ms/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/quarkus-outbox/quarkus-order-ms/src/main/resources/application.properties" afterDir="false" />
+    <list default="true" id="f53cd7e9-042e-48da-856a-18c59663b55c" name="Changes" comment=".idea">
+      <change afterPath="$PROJECT_DIR$/quarkus-outbox/quarkus-order-ms/src/main/resources/db/migration/V2__add_order_uuid_column_to_order.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quarkus-outbox/quarkus-order-ms/src/main/java/com/vromanyu/order/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/quarkus-outbox/quarkus-order-ms/src/main/java/com/vromanyu/order/Order.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -598,31 +593,7 @@
       <workItem from="1775945122965" duration="6418000" />
       <workItem from="1776097779885" duration="5062000" />
       <workItem from="1776102855788" duration="2384000" />
-      <workItem from="1777046489137" duration="2174000" />
-    </task>
-    <task id="LOCAL-00142" summary="remove duplicate dependency for jpa test">
-      <option name="closed" value="true" />
-      <created>1774185169223</created>
-      <option name="number" value="00142" />
-      <option name="presentableId" value="LOCAL-00142" />
-      <option name="project" value="LOCAL" />
-      <updated>1774185169223</updated>
-    </task>
-    <task id="LOCAL-00143" summary="routes for v1 and use strip prefix filter">
-      <option name="closed" value="true" />
-      <created>1774185211181</created>
-      <option name="number" value="00143" />
-      <option name="presentableId" value="LOCAL-00143" />
-      <option name="project" value="LOCAL" />
-      <updated>1774185211181</updated>
-    </task>
-    <task id="LOCAL-00144" summary=".idea">
-      <option name="closed" value="true" />
-      <created>1774185216141</created>
-      <option name="number" value="00144" />
-      <option name="presentableId" value="LOCAL-00144" />
-      <option name="project" value="LOCAL" />
-      <updated>1774185216141</updated>
+      <workItem from="1777046489137" duration="2490000" />
     </task>
     <task id="LOCAL-00145" summary="apply rate limiting to allow one request per second&#10;&#10;The production environment uses Redis, while testing/development uses Caffeine">
       <option name="closed" value="true" />
@@ -992,7 +963,31 @@
       <option name="project" value="LOCAL" />
       <updated>1777047567581</updated>
     </task>
-    <option name="localTasksCounter" value="191" />
+    <task id="LOCAL-00191" summary="add postgresql driver dependency">
+      <option name="closed" value="true" />
+      <created>1777048677299</created>
+      <option name="number" value="00191" />
+      <option name="presentableId" value="LOCAL-00191" />
+      <option name="project" value="LOCAL" />
+      <updated>1777048677299</updated>
+    </task>
+    <task id="LOCAL-00192" summary="add Order entity and flyway migration + configuration">
+      <option name="closed" value="true" />
+      <created>1777048693085</created>
+      <option name="number" value="00192" />
+      <option name="presentableId" value="LOCAL-00192" />
+      <option name="project" value="LOCAL" />
+      <updated>1777048693085</updated>
+    </task>
+    <task id="LOCAL-00193" summary=".idea">
+      <option name="closed" value="true" />
+      <created>1777048696105</created>
+      <option name="number" value="00193" />
+      <option name="presentableId" value="LOCAL-00193" />
+      <option name="project" value="LOCAL" />
+      <updated>1777048696105</updated>
+    </task>
+    <option name="localTasksCounter" value="194" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1025,11 +1020,8 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add reactive dependencies" />
-    <MESSAGE value="add reactive createProduct endpoint" />
     <MESSAGE value="provide write, delete, and update operations for product" />
     <MESSAGE value="add channel configuration" />
-    <MESSAGE value=".idea" />
     <MESSAGE value="init outbox-pattern module" />
     <MESSAGE value="init order-oubox microservice" />
     <MESSAGE value="init order-outbox microservice" />
@@ -1050,7 +1042,10 @@
     <MESSAGE value="add quarkus-order-ms module to aggregator" />
     <MESSAGE value="add flyway dependencies" />
     <MESSAGE value="add .gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="add .gitignore" />
+    <MESSAGE value="add postgresql driver dependency" />
+    <MESSAGE value="add Order entity and flyway migration + configuration" />
+    <MESSAGE value=".idea" />
+    <option name="LAST_COMMIT_MESSAGE" value=".idea" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
