@@ -1,2 +1,0 @@
-ALTER TABLE "order"
-    ADD COLUMN price FLOAT NOT NULL;

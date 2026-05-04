@@ -3,6 +3,8 @@ package com.vromanyu.order;
 import com.vromanyu.dto.CreateOrderRequestDto;
 import com.vromanyu.dto.CreateOrderResponseDto;
 
+import java.math.BigDecimal;
+
 public class OrderMapper {
     private OrderMapper() {
 
@@ -12,7 +14,7 @@ public class OrderMapper {
         Order order = new Order();
         order.itemName = dto.itemName();
         order.productType = dto.productType();
-        order.price = dto.price();
+        order.price = new BigDecimal(dto.price());
         order.quantity = dto.quantity();
         return order;
     }
@@ -22,7 +24,7 @@ public class OrderMapper {
                 order.itemName,
                 order.productType,
                 order.quantity,
-                order.price,
+                order.price.doubleValue(),
                 order.createdAt);
     }
 }

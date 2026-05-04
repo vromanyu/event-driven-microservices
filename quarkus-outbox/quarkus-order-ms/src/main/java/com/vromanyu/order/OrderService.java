@@ -33,12 +33,12 @@ public class OrderService {
                 createdOrder.itemName,
                 createdOrder.productType,
                 createdOrder.quantity,
-                createdOrder.price,
+                createdOrder.price.doubleValue(),
                 createdOrder.createdAt);
 
         Outbox outbox = new Outbox();
         outbox.setOrderId(createdOrder.id);
-        outbox.setProcessed(false);
+        outbox.setProcessed("0");
         outbox.setPayload(orderCreatedEvent);
         outboxDao.create(outbox);
         Log.infof("outbox created: %s", outbox);

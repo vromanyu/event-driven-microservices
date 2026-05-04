@@ -8,29 +8,29 @@ import org.hibernate.annotations.UpdateTimestamp;
 import java.time.Instant;
 
 @Entity
-@Table(name = "outbox", schema = "quarkus_outbox")
+@Table(name = "OUTBOX_TABLE", schema = "QUARKUS_OUTBOX")
 public class Outbox {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
 
-    @Column(name = "order_id", nullable = false)
+    @Column(name = "ORDER_ID", nullable = false)
     Long orderId;
 
     @Convert(converter = JsonPayloadConverter.class)
-    @Column(name = "payload", nullable = false, length = 500)
+    @Column(name = "PAYLOAD", nullable = false, length = 500)
     OrderCreatedEvent payload;
 
     @CreationTimestamp
-    @Column(name = "created_at", nullable = false)
+    @Column(name = "CREATED_AT", nullable = false)
     Instant createdAt;
 
-    @Column(name = "processed", nullable = false)
-    Boolean processed;
+    @Column(name = "PROCESSED", nullable = false)
+    String processed;
 
     @UpdateTimestamp
-    @Column(name = "updated_at")
+    @Column(name = "UPDATED_AT")
     Instant updatedAt;
 
     public Long getId() {
@@ -65,11 +65,11 @@ public class Outbox {
         this.createdAt = createdAt;
     }
 
-    public Boolean getProcessed() {
+    public String getProcessed() {
         return processed;
     }
 
-    public void setProcessed(Boolean processed) {
+    public void setProcessed(String processed) {
         this.processed = processed;
     }
 

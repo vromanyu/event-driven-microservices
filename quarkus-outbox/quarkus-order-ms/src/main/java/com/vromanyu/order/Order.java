@@ -4,49 +4,64 @@ import jakarta.persistence.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
+import java.math.BigDecimal;
 import java.time.Instant;
 
 @Entity
-@Table(name = "order", schema = "quarkus_outbox")
+@Table(name = "ORDER_TABLE", schema = "QUARKUS_OUTBOX")
 public class Order {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
 
-    @Column(name = "order_uuid", nullable = false)
+    @Column(name = "ORDER_UUID", nullable = false)
     String orderUuid;
 
-    @Column(name = "item_name", nullable = false, length = 300)
+    @Column(name = "ITEM_NAME", nullable = false, length = 300)
     String itemName;
 
-    @Column(name = "product_type", nullable = false, length = 500)
+    @Column(name = "PRODUCT_TYPE", nullable = false, length = 500)
     String productType;
 
-    @Column(name = "price", nullable = false)
-    Double price;
+    @Column(name = "PRICE", nullable = false)
+    BigDecimal price;
 
-    @Column(name = "quantity", nullable = false)
+    @Column(name = "QUANTITY", nullable = false)
     Integer quantity;
 
     @CreationTimestamp
-    @Column(name = "created_at", nullable = false)
+    @Column(name = "CREATED_AT", nullable = false)
     Instant createdAt;
 
     @UpdateTimestamp
-    @Column(name = "updated_at")
+    @Column(name = "UPDATED_AT")
     Instant updatedAt;
 
     @Override
     public String toString() {
-        return "Order{" +
-                "id=" + id +
-                ", orderUuid='" + orderUuid + '\'' +
-                ", itemName='" + itemName + '\'' +
-                ", productType='" + productType + '\'' +
-                ", price=" + price +
-                ", quantity=" + quantity +
-                ", createdAt=" + createdAt +
-                ", updatedAt=" + updatedAt +
-                '}';
+        return (
+                "Order{" +
+                        "id=" +
+                        id +
+                        ", orderUuid='" +
+                        orderUuid +
+                        '\'' +
+                        ", itemName='" +
+                        itemName +
+                        '\'' +
+                        ", productType='" +
+                        productType +
+                        '\'' +
+                        ", price=" +
+                        price +
+                        ", quantity=" +
+                        quantity +
+                        ", createdAt=" +
+                        createdAt +
+                        ", updatedAt=" +
+                        updatedAt +
+                        '}'
+        );
     }
 }
